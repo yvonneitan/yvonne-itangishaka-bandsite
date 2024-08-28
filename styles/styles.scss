@@ -2,3 +2,11 @@
 @use "./partials/global" as *;
 @use "./partials/responsive" as *;
 
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./assets/images/hero-bio.jpg');
+  background-size: cover; 
+
+}
