@@ -27,47 +27,6 @@ $font-weight-regular700:$font-weight-regular700;
   font-style: normal;
 }
 
-  // Mobile
-
-  .header {
-  
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: #323232;
-    align-items:center;
-    padding: 1rem;
-  
-    &__title {
-      color: #ffffff;
-      font-size: 1.5rem;
-      font-weight: $font-weight-regular700;
-      font-family: $font-family;
-      line-height: 2rem;
-      text-align: center;
-    }
-  
-    &__nav {
-      text-align: center;
-      display: inline-flex;
-      justify-content: center;
-      margin: 0 auto;
-      gap: 8em;
-    }
-     
-      
-    &__link {
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 1rem;
-        position: relative;
-  
-        // &--active {
-        //   font-weight: $font-weight-regular700;
-        // }
-      }
-  }
-
   
 .hero {
   position: relative;
