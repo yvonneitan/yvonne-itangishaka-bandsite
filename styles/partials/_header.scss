@@ -12,7 +12,7 @@
       color: #ffffff;
       font-size: 1.5rem;
       font-weight: $font-weight-regular700;
-      font-family: $font-family;
+      font-family: $primary-font;
       line-height: 2rem;
       text-align: center;
     }
@@ -33,7 +33,7 @@
         position: relative;
   
         // &--active {
-        //   font-weight: $font-weight-regular700;
+        //   font-weight: $font-weight-regular400;
         // }
       }
   }
