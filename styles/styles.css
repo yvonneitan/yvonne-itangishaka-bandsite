@@ -41,19 +41,19 @@ img {
   }
 }
 @font-face {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
   src: url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
@@ -131,8 +131,8 @@ img {
 }
 
 .about {
-  padding: 2rem;
   text-align: left;
+  padding: 2rem;
 }
 .about__title {
   font-size: 2rem;
@@ -167,10 +167,10 @@ img {
 }
 
 .footer {
-  background-color: #333;
+  background-color: #323232;
   color: white;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
 }
 .footer__title {
   font-size: 2rem;
@@ -188,6 +188,6 @@ img {
   margin-bottom: 2rem;
 }
 .footer .management__name, .footer .group__name, .footer .arc__name {
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,30 +1,34 @@
-
 @use "./partials/global" as *;
 @use "./partials/responsive" as *;
 
+$font-family: 'Avenir Next', sans-serif;
+$font-weight-regular400: 400;
+$font-weight-bold: 600;
+$font-weight-regular700:$font-weight-regular700;
 
 @font-face {
-  font-family: 'Avenir Next';
+  font-family: $font-family;
 
   src: url('../assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
-  font-weight: 700;
+  font-weight: $font-weight-regular700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Avenir Next';
+  font-family: $font-family;
   src: url('../assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype');
-  font-weight: 600;
+  font-weight: $font-weight-bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir Next';
+  font-family: $font-family;
   src: url('../assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
-  font-weight: 400;
+  font-weight: $font-weight-regular400;
   font-style: normal;
 }
 
   // Mobile
+
   .header {
   
     display: flex;
@@ -37,36 +41,33 @@
     &__title {
       color: #ffffff;
       font-size: 1.5rem;
-      font-weight: 700;
-      font-family: 'Avenir Next', sans-serif;
+      font-weight: $font-weight-regular700;
+      font-family: $font-family;
       line-height: 2rem;
       text-align: center;
     }
   
     &__nav {
-      color: #ffffff;
-      font-size: 0.875rem;
-      line-height: 1.375rem;
-      font-weight: 400;
-      font-family: "Avenir Next", sans-serif;
       text-align: center;
       display: inline-flex;
       justify-content: center;
       margin: 0 auto;
       gap: 8em;
+    }
      
+      
+    &__link {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1rem;
+        position: relative;
+  
+        // &--active {
+        //   font-weight: $font-weight-regular700;
+        // }
       }
-      &__link {
-          text-decoration: none;
-          color: #ffffff;
-          font-size: 1rem;
-          position: relative;
-    
-          // &--active {
-          //   font-weight: 700;
-          // }
-        }
   }
+
   
 .hero {
   position: relative;
@@ -106,30 +107,31 @@
 
   &__title {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: $font-weight-bold;
 
   }
 }
 
 .about {
-  padding: 2rem;
   text-align:left;
+  padding: 2rem;
 
   &__title {
     font-size: 2rem;
     margin-bottom: 1rem;
-    font-weight: 600;
+    font-weight: $font-weight-bold;
  
   }
 
   &__say {
-    font-weight: 600;
+    font-weight: $font-weight-bold;
     margin: 1rem 0;
   }
 
   &__bees {
     font-size: 1.8rem;
     margin-top: 2rem;
+    font-weight: $font-weight-regular400;
     
   }
 
@@ -154,10 +156,10 @@
   }
 }
 .footer {
-  background-color: #333;
+  background-color: #323232;
   color: white;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
 
   &__title {
     font-size: 2rem;
@@ -179,7 +181,8 @@
   }
 
   .management__name, .group__name, .arc__name {
-    font-weight: bold;
+    font-weight: $font-weight-bold;
     margin-bottom: 0.5rem;
+    
   }
 }
