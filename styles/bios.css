@@ -58,6 +58,39 @@ img {
   font-weight: 400;
   font-style: normal;
 }
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #323232;
+  align-items: center;
+  padding: 1rem;
+}
+.header__title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 2rem;
+  text-align: center;
+}
+.header__nav {
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 8em;
+}
+.header__link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  position: relative;
+}
+.header__link--active {
+  font-weight: 600;
+}
+
 .hero {
   position: relative;
   text-align: center;
