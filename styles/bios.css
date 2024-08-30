@@ -102,6 +102,31 @@ img {
     font-size: 4rem;
     font-weight: 600;
   }
+  .about {
+    text-align: left;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+  }
+  .about__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .about__say {
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+  .about__bees {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 400;
+  }
+  .about__bees-paragraph {
+    text-align: left;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+  }
 }
 @media only screen and (min-width: 1280px) {
   .header {
@@ -167,123 +192,4 @@ img {
     bottom: -1rem;
     width: 200%;
     height: 0.25rem;
-    background-color: #ffffff;
-    transform: translateX(-30%);
-  }
-  .hero {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  .hero__image {
-    position: relative;
-    width: 100%;
-    height: 40vh;
-    overflow: hidden;
-  }
-  .hero__background {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .hero__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .hero__name {
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-  }
-  .hero__title {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  .about {
-    text-align: left;
-    padding: 1rem;
-  }
-  .about__title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-  }
-  .about__say {
-    font-weight: 600;
-    margin: 0.5rem 0;
-  }
-  .about__bees {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    font-weight: 400;
-  }
-  .about__bees-paragraph {
-    text-align: left;
-    line-height: 1.6;
-    padding-bottom: 1rem;
-  }
-  .photo-gallery {
-    flex-direction: column;
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  .photo-gallery img {
-    width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .footer {
-    background-color: #323232;
-    color: white;
-    padding: 1rem;
-    text-align: left;
-  }
-  .footer__title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .footer__socials {
-    margin: 1rem 0;
-  }
-  .footer__socials img {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin: 0 0.3125rem;
-  }
-  .footer .management,
-  .footer .group,
-  .footer .arc {
-    margin-bottom: 1rem;
-  }
-  .footer .management__name,
-  .footer .group__name,
-  .footer .arc__name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer .management__city {
-    margin-bottom: 1rem;
-  }
-  .footer .group__booking-client {
-    margin-bottom: 1rem;
-  }
-  .footer .arc__booking-client {
-    margin-bottom: 1rem;
-  }
-  .footer__logo {
-    width: 7.125rem;
-    height: 1.1875rem;
-  }
-  .footer .copyright {
-    padding-top: 2rem;
-    font-size: x-small;
-  }
-}/*# sourceMappingURL=bios.css.map */
+    back
