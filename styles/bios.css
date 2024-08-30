@@ -58,145 +58,148 @@ img {
   font-weight: 400;
   font-style: normal;
 }
-.header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: #323232;
-  align-items: center;
-  padding: 1rem;
-}
-.header__title {
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: "Avenir Next", sans-serif;
-  line-height: 2rem;
-  text-align: center;
-}
-.header__nav {
-  text-align: center;
-  display: inline-flex;
-  justify-content: center;
-  margin: 0 auto;
-  gap: 8em;
-}
-.header__link {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1rem;
-  position: relative;
-}
-.header__link--active {
-  font-weight: 600;
-}
-
-.hero {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.hero__image {
-  position: relative;
-  width: 100%;
-  height: 50vh;
-  overflow: hidden;
-}
-.hero__background {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.hero__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.hero__name {
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-.hero__title {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.about {
-  text-align: left;
-  padding: 2rem;
-}
-.about__title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-.about__say {
-  font-weight: 600;
-  margin: 1rem 0;
-}
-.about__bees {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  font-weight: 400;
-}
-.about__bees-paragraph {
-  text-align: left;
-  line-height: 1.8;
-  padding-bottom: 1rem;
-}
-
-.photo-gallery {
-  flex-direction: column;
-  display: flex;
-  gap: 1rem;
-  padding: 2rem;
-}
-.photo-gallery img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.footer {
-  background-color: #323232;
-  color: white;
-  padding: 2rem;
-  text-align: left;
-}
-.footer__title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.footer__socials {
-  margin: 1rem 0;
-}
-.footer__socials img {
-  width: 30px;
-  height: 30px;
-  margin: 0 10px;
-}
-.footer .management,
-.footer .group,
-.footer .arc {
-  margin-bottom: 2rem;
-}
-.footer .management__name,
-.footer .group__name,
-.footer .arc__name {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.footer .management__email a,
-.footer .group__email a,
-.footer .arc__email a {
-  color: #ffffff;
-  text-decoration: none;
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #323232;
+    align-items: center;
+    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+  }
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+  }
+  .header__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 200;
+    position: relative;
+  }
+  .header__link--active {
+    font-weight: 600;
+  }
+  .header__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 200%;
+    height: 0.25rem;
+    background-color: #ffffff;
+    transform: translateX(-30%);
+  }
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .hero__image {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+  }
+  .hero__background {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .hero__name {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+  .hero__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .about {
+    text-align: left;
+    padding: 1rem;
+  }
+  .about__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .about__say {
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+  .about__bees {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 400;
+  }
+  .about__bees-paragraph {
+    text-align: left;
+    line-height: 1.6;
+    padding-bottom: 0.5rem;
+  }
+  .photo-gallery {
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .photo-gallery img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .footer {
+    background-color: #323232;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+  }
+  .footer__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .footer__socials {
+    margin: 1rem 0;
+  }
+  .footer__socials img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+  .footer .management,
+  .footer .group,
+  .footer .arc {
+    margin-bottom: 1rem;
+  }
+  .footer .management__name,
+  .footer .group__name,
+  .footer .arc__name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .footer .management__email a,
+  .footer .group__email a,
+  .footer .arc__email a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .footer__logo {
+    width: 114px;
+    height: 19px;
+  }
 }/*# sourceMappingURL=bios.css.map */
