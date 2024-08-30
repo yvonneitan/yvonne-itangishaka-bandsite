@@ -140,6 +140,28 @@ img {
   .about__right {
     padding-top: 4rem;
   }
+  .photos {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .photos__name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    padding: 2rem;
+  }
+  .photos__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: space-around;
+  }
+  .photos .gallery-items {
+    width: calc(33.33% - 1rem);
+    margin-bottom: 0.5rem;
+  }
 }
 @media only screen and (min-width: 1280px) {
   .header {
