@@ -60,7 +60,7 @@ $font-weight-regular700: 700;
 
     &__image {
       position: relative;
-      width: 110%;
+      width: 100%;
       height: 60vh;
       overflow: hidden;
     }
@@ -75,7 +75,7 @@ $font-weight-regular700: 700;
       position: absolute;
       top: 0;
       left: 0;
-      width: 110%;
+      width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
     }
@@ -103,25 +103,41 @@ $font-weight-regular700: 700;
       margin-bottom: 0.5rem;
       font-weight: $font-weight-bold;
     }
-
+    &__us{
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+    }
+    
     &__say {
       font-weight: $font-weight-bold;
       margin: 0.5rem 0;
+      font-size: 1.5rem;
+    }
+    &__container{
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
     }
 
     &__bees {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-top: 1rem;
-      font-weight: $font-weight-regular400;
+      margin-bottom: 1rem;
+      font-weight: $font-weight-bold;
     }
-
+  
     &__bees-paragraph {
       text-align: left;
       line-height: 1.6;
       padding-bottom: 1rem;
     }
+    &__right{
+      padding-top: 4rem;
+    }
   }
 }
+
 // Desktop
 @media only screen and (min-width: 1280px) {
   .header {
