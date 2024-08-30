@@ -1,4 +1,8 @@
-body, h1, h2, h3, p {
+body,
+h1,
+h2,
+h3,
+p {
   margin: 0;
   padding: 0;
   font-family: "Avenir Next", sans-serif;
@@ -22,16 +26,81 @@ img {
 
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
   .header {
-    flex-direction: row;
+    display: inline-flex;
     justify-content: left;
     align-items: center;
+    background-color: #323232;
+    width: 100%;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+    height: 6rem;
   }
-  .header__title {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
+  .header__logo {
+    width: 8rem;
+    height: 1.5rem;
   }
   .header__nav {
     font-size: 1rem;
+    display: flex;
+    margin-left: 4rem;
+    padding: 0;
+    list-style: none;
+  }
+  .header__nav__link {
+    padding-left: 4rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+  }
+  .header__nav__link--active {
+    font-weight: 600;
+  }
+  .header__nav__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 200%;
+    height: 0.25rem;
+    background-color: #ffffff;
+    transform: translateX(-30%);
+  }
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .hero__image {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+  }
+  .hero__background {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .hero__name {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+  .hero__title {
+    font-size: 4rem;
+    font-weight: 600;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -192,4 +261,29 @@ img {
   .footer .management,
   .footer .group,
   .footer .arc {
-    margin-bott
+    margin-bottom: 1rem;
+  }
+  .footer .management__name,
+  .footer .group__name,
+  .footer .arc__name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer .management__city {
+    margin-bottom: 1rem;
+  }
+  .footer .group__booking-client {
+    margin-bottom: 1rem;
+  }
+  .footer .arc__booking-client {
+    margin-bottom: 1rem;
+  }
+  .footer__logo {
+    width: 7.125rem;
+    height: 1.1875rem;
+  }
+  .footer .copyright {
+    padding-top: 2rem;
+    font-size: x-small;
+  }
+}/*# sourceMappingURL=bios.css.map */
