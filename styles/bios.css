@@ -144,6 +144,7 @@ img {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    background-color: #f9f9f9;
   }
   .photos__name {
     font-size: 2rem;
@@ -288,17 +289,21 @@ img {
     line-height: 1.6;
     padding-bottom: 1rem;
   }
-  .photo-gallery {
-    flex-direction: column;
+  .photos {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
     padding: 1rem;
+    background-color: #f9f9f9;
   }
-  .photo-gallery img {
-    width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .photos__name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .photos__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
   .footer {
     background-color: #323232;
