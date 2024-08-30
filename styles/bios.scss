@@ -132,7 +132,7 @@ $font-weight-regular700: 700;
       &__bees-paragraph {
         text-align: left;
         line-height: 1.6;
-        padding-bottom: 0.5rem;
+        padding-bottom: 1rem;
       }
     }
   
@@ -164,12 +164,13 @@ $font-weight-regular700: 700;
         margin: 1rem 0;
   
         img {
-          width: 20px;
-          height: 20px;
-          margin: 0 5px;
+          width: 1.25rem;
+          height: 1.25rem;
+          margin: 0 0.3125rem;
         }
       }
   
+      
       .management,
       .group,
       .arc {
@@ -180,188 +181,28 @@ $font-weight-regular700: 700;
       .group__name,
       .arc__name {
         font-weight: $font-weight-bold;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .management__city{
+        margin-bottom: 1rem;
+      }
+      .group__booking-client{
+        margin-bottom: 1rem;
+      }
+      .arc__booking-client{
+        margin-bottom: 1rem;
       }
       
-      .management__email a,
-      .group__email a,
-      .arc__email a {
-        color: #ffffff;
-        text-decoration: none;
-      }
       &__logo{
-        width:114px;
-        height: 19px;
+        width:7.125rem;
+        height: 1.1875rem;
 
       }
+      .copyright{
+        padding-top: 2rem;
+        font-size:x-small;
+      }
+      
     }
   }
   
-// @media only screen and (min-width: 320px) and (max-width: 767px) {
-   
-// .header {
-//     display: flex;
-//     flex-direction: column;
-//     width: 100%;
-//     background-color: #323232;
-//     align-items:center;
-//     padding-bottom: 1rem;
-//     padding-top: 1.5rem;
-
-//     &__nav {
-//       display: inline-flex;
-//       margin: 0 auto;
-//       gap: 8em;
-//     }
-//     &__link {
-//         text-decoration: none;
-//         color: #ffffff;
-//         font-size:200;
-//         position: relative;
-//         font-weight: 200;
-//         position: relative;
-       
-     
-   
-//         &--active{
-//             font-weight:$font-weight-bold;
-//             &::after {
-//                 content: '';
-//                 position: absolute;
-//                 left: 0;
-//                 bottom: -2rem; // Position the border at the bottom of the black background
-//                 width: 50%; // Make the border longer than the text
-//                 height: 2px;
-//                 background-color: #e10909;
-//                 transform: translateX(-25%);
-                    
-//                 }
-
-//             }
-//     }
-// }
-  
-// .hero {
-//   position: relative;
-//   text-align: center;
-//   color: white;
-
-//   &__image {
-//     position: relative;
-//     width: 100%;
-//     height: 25vh;
-//     overflow: hidden;
-//   }
-
-//   &__background {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-
-//   &__overlay {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(0, 0, 0, 0.5);
-//   }
-
-//   &__name {
-//     position: absolute;
-//     top: 50%;
-//     left: 35%;
-//     transform: translate(-50%, -50%);
-//   }
-//   &__title {
-//     font-size: 1.5rem;
-//     font-weight: $font-weight-bold;
-//   }
-
-  
-// }
-
-// .about {
-//   text-align: left;
-//   padding: 2rem;
-
-//   &__title {
-//     font-size: 2rem;
-//     margin-bottom: 1rem;
-//     font-weight: $font-weight-bold;
-//   }
-
-//   &__say {
-//     font-weight: $font-weight-bold;
-//     margin: 1rem 0;
-//   }
-
-//   &__bees {
-//     font-size: 1.8rem;
-//     margin-top: 2rem;
-//     font-weight: $font-weight-regular400;
-//   }
-
-//   &__bees-paragraph {
-//     text-align: left;
-//     line-height: 1.8;
-//     padding-bottom: 1rem;
-//   }
-// }
-
-// .photo-gallery {
-//   flex-direction: column;
-//   display: flex;
-//   gap: 1rem;
-//   padding: 2rem;
-
-//   img {
-//     width: 100%;
-//     height: auto;
-//     object-fit: cover;
-//   }
-// }
-
-// .footer {
-//   background-color: #323232;
-//   color: white;
-//   padding: 2rem;
-//   text-align: left;
-
-//   &__title {
-//     font-size: 2rem;
-//     margin-bottom: 1rem;
-//   }
-
-//   &__socials {
-//     margin: 1rem 0;
-
-//     img {
-//       width: 30px;
-//       height: 30px;
-//       margin: 0 10px;
-//     }
-//   }
-
-//   .management,
-//   .group,
-//   .arc {
-//     margin-bottom: 2rem;
-//   }
-
-//   .management__name,
-//   .group__name,
-//   .arc__name {
-//     font-weight: $font-weight-bold;
-//     margin-bottom: 0.5rem;
-//   }
-//   .management__email a,
-//   .group__email a,
-//   .arc__email a {
-//     color: #ffffff;
-//     text-decoration: none;
-//   }
-// }
-
-// }

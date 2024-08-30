@@ -1,7 +1,15 @@
-body, h1, h2, h3, p, a {
+body, h1, h2, h3, p {
   margin: 0;
   padding: 0;
   font-family: "Avenir Next", sans-serif;
+}
+
+a {
+  margin: 0;
+  padding-top: 1rem;
+  font-family: "Avenir Next", sans-serif;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 body {
@@ -149,7 +157,7 @@ img {
   .about__bees-paragraph {
     text-align: left;
     line-height: 1.6;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
   }
   .photo-gallery {
     flex-direction: column;
@@ -177,9 +185,9 @@ img {
     margin: 1rem 0;
   }
   .footer__socials img {
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0 0.3125rem;
   }
   .footer .management,
   .footer .group,
@@ -190,16 +198,23 @@ img {
   .footer .group__name,
   .footer .arc__name {
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
-  .footer .management__email a,
-  .footer .group__email a,
-  .footer .arc__email a {
-    color: #ffffff;
-    text-decoration: none;
+  .footer .management__city {
+    margin-bottom: 1rem;
+  }
+  .footer .group__booking-client {
+    margin-bottom: 1rem;
+  }
+  .footer .arc__booking-client {
+    margin-bottom: 1rem;
   }
   .footer__logo {
-    width: 114px;
-    height: 19px;
+    width: 7.125rem;
+    height: 1.1875rem;
+  }
+  .footer .copyright {
+    padding-top: 2rem;
+    font-size: x-small;
   }
 }/*# sourceMappingURL=bios.css.map */
