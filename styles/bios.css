@@ -181,29 +181,49 @@ img {
     height: 1.25rem;
     margin: 0 0.3125rem;
   }
-  .footer .management,
-  .footer .group,
+  .footer .management {
+    margin-bottom: 1rem;
+  }
+  .footer .management__name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer .management__location {
+    margin-bottom: 1rem;
+  }
+  .footer .management__email:hover {
+    color: #afafaf;
+  }
+  .footer .group {
+    margin-bottom: 1rem;
+  }
+  .footer .group__name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer .group__booking-agent {
+    margin-bottom: 1rem;
+  }
+  .footer .group__email:hover {
+    color: #afafaf;
+  }
   .footer .arc {
     margin-bottom: 1rem;
   }
-  .footer .management__name,
-  .footer .group__name,
   .footer .arc__name {
     font-weight: 600;
     margin-bottom: 1rem;
   }
-  .footer .management__city {
+  .footer .arc__booking-agent {
     margin-bottom: 1rem;
   }
-  .footer .group__booking-client {
-    margin-bottom: 1rem;
-  }
-  .footer .arc__booking-client {
-    margin-bottom: 1rem;
+  .footer .arc__email:hover {
+    color: #afafaf;
   }
   .footer__logo {
     width: 7.125rem;
     height: 1.1875rem;
+    padding-bottom: 1rem;
   }
   .footer .copyright {
     padding-top: 2rem;
@@ -421,7 +441,6 @@ img {
   .footer__logo {
     width: 7.125rem;
     height: 1.1875rem;
-    padding-bottom: 1rem;
   }
   .footer .copyright {
     padding-top: 2rem;
