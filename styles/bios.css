@@ -118,12 +118,13 @@ img {
   .about__us {
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    font-size: 1.5rem;
+    padding-left: 3rem;
   }
   .about__us__say {
     font-weight: 600;
     margin: 0.5rem 0;
-    font-size: 1.5rem;
+    padding-left: 3rem;
   }
   .about__container {
     display: flex;
@@ -172,7 +173,14 @@ img {
     background-color: #323232;
     color: white;
     padding: 1rem;
-    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .footer__contacts {
+    display: flex;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .footer__title {
     font-size: 1.5rem;
