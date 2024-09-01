@@ -16,11 +16,14 @@ $font-weight-regular700: 700;
     &__logo {
       height: 1.25rem;
       width: auto;
+      padding-bottom: 0.5rem;
     }
+    
   
     &__nav {
     display: flex;
     flex-direction: row;
+    padding-left: 4rem;
     
     }
   
@@ -34,6 +37,7 @@ $font-weight-regular700: 700;
     }
   
     &__link {
+      position: relative;
       a {
         text-decoration: none;
         color: #ffffff;
@@ -47,11 +51,12 @@ $font-weight-regular700: 700;
           content: "";
           position: absolute;
           left: 0;
-          bottom: -1rem;
-          width: 200%;
+          bottom: -2rem;
+          width: 100%;
           height: 0.25rem;
           background-color: #ffffff;
-          transform: translateX(-30%);
+          
+         
         }
       }
   }
@@ -249,8 +254,6 @@ $font-weight-regular700: 700;
   }
 }
 
-   
- 
 
 // Desktop
 @media only screen and (min-width: 1280px) {
