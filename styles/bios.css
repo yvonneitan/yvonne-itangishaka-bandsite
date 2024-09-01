@@ -118,9 +118,9 @@ img {
   .about__us {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 3rem;
   }
-  .about__say {
+  .about__us__say {
     font-weight: 600;
     margin: 0.5rem 0;
     font-size: 1.5rem;
@@ -129,6 +129,7 @@ img {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    padding-left: 3rem;
   }
   .about__bees {
     font-size: 1.5rem;
