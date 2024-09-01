@@ -30,41 +30,53 @@ $font-weight-regular700: 700;
   .header {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    background-color: #323232;
     align-items: center;
-    padding-bottom: 1rem;
-    padding-top: 1.5rem;
-
-    &__nav {
-      display: flex;
-      flex-direction: row;
-      gap: 8rem;
+    background-color: #323232;
+  
+    &__logo {
+      height: 1.25rem;
+      width: auto;
     }
+  
+    &__nav {
+    display: flex;
+    flex-direction: row;
+    
+    }
+  
+    &__menu {
+      display: flex;
+      list-style: none;
+      margin-top: 1rem;
+      padding: 0;
+      gap: 6rem;
 
+    }
+  
     &__link {
-      text-decoration: none;
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: 200;
       position: relative;
-
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        font-family:$primary-font;
+      }
+   
       &--active {
         font-weight: $font-weight-bold;
 
         &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -1rem;
-          width: 200%;
-          height: 0.25rem;
-          background-color: #ffffff;
-          transform: translateX(-30%);
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -1em;
+        width: 250%;
+        height: 0.25rem;
+        background-color: #ffffff;
+        transform: translateX(-53%);
         }
       }
-    }
   }
+}
 
   .hero {
     position: relative;

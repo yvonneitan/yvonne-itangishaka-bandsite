@@ -7,52 +7,55 @@ $font-weight-regular700: 700;
 // Tablet
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
   .header {
-    display: inline-flex;
-    justify-content: left;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    padding: 1rem;
     background-color: #323232;
-    width: 100%;
-    padding-left: 2rem;
-    padding-top: 1.5rem;
-    height: 6rem;
-
+  
     &__logo {
-      width: 8rem;
-      height: 1.5rem;
-      margin-right: 4rem;
+      height: 1.25rem;
+      width: auto;
     }
-      &__nav {
-        display: flex;
-        gap:4rem;
-        
-      
-      &__link {
+  
+    &__nav {
+    display: flex;
+    flex-direction: row;
+    
+    }
+  
+    &__menu {
+      display: flex;
+      list-style: none;
+      margin-top: 1rem;
+      padding: 0;
+      gap: 6rem;
+
+    }
+  
+    &__link {
+      a {
         text-decoration: none;
         color: #ffffff;
-        font-size: 2rem;
-        font-weight: $font-weight-regular700;
-        position: relative;
-        margin-left: 2rem;
-  
-        &--active {
-          font-weight: $font-weight-bold;
-  
-          &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -1rem;
-            width: 200%;
-            height: 4rem;
-            background-color: #ffffff;
-            transform: translateX(-40%);
-          }
+        font-family:$primary-font;
+      }
+   
+      &--active {
+        font-weight: $font-weight-bold;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -1rem;
+          width: 200%;
+          height: 0.25rem;
+          background-color: #ffffff;
+          transform: translateX(-30%);
         }
       }
-
-    }
-
   }
+}
   .hero {
     position: relative;
     text-align: center;

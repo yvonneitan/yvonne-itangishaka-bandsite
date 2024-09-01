@@ -26,44 +26,44 @@ img {
 
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
   .header {
-    display: inline-flex;
-    justify-content: left;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    padding: 1rem;
     background-color: #323232;
-    width: 100%;
-    padding-left: 2rem;
-    padding-top: 1.5rem;
-    height: 6rem;
   }
   .header__logo {
-    width: 8rem;
-    height: 1.5rem;
-    margin-right: 4rem;
+    height: 1.25rem;
+    width: auto;
   }
   .header__nav {
     display: flex;
-    gap: 4rem;
+    flex-direction: row;
   }
-  .header__nav__link {
+  .header__menu {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+    gap: 6rem;
+  }
+  .header__link a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 2rem;
-    font-weight: 700;
-    position: relative;
-    margin-left: 2rem;
+    font-family: "Avenir Next", sans-serif;
   }
-  .header__nav__link--active {
+  .header__link--active {
     font-weight: 600;
   }
-  .header__nav__link--active::after {
+  .header__link--active::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -1rem;
     width: 200%;
-    height: 4rem;
+    height: 0.25rem;
     background-color: #ffffff;
-    transform: translateX(-40%);
+    transform: translateX(-30%);
   }
   .hero {
     position: relative;
@@ -246,23 +246,31 @@ img {
   .header {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    background-color: #323232;
     align-items: center;
-    padding-bottom: 1rem;
-    padding-top: 1.5rem;
+    background-color: #323232;
+  }
+  .header__logo {
+    height: 1.25rem;
+    width: auto;
   }
   .header__nav {
     display: flex;
     flex-direction: row;
-    gap: 8rem;
+  }
+  .header__menu {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+    gap: 6rem;
   }
   .header__link {
+    position: relative;
+  }
+  .header__link a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1rem;
-    font-weight: 200;
-    position: relative;
+    font-family: "Avenir Next", sans-serif;
   }
   .header__link--active {
     font-weight: 600;
@@ -270,12 +278,12 @@ img {
   .header__link--active::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -1rem;
-    width: 200%;
+    left: 50%;
+    bottom: -1em;
+    width: 250%;
     height: 0.25rem;
     background-color: #ffffff;
-    transform: translateX(-30%);
+    transform: translateX(-53%);
   }
   .hero {
     position: relative;
