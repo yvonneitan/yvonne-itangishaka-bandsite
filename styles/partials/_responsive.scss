@@ -179,17 +179,19 @@ $font-weight-regular700: 700;
   .footer {
     background-color: #323232;
     color: white;
-    padding: 1rem;
+    padding: 3rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    
     &__contacts{
       display: flex;
       height: fit-content;
+      width: 80%;
     }
     &__title {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
+      padding-right: 6.5rem;
     }
 
     &__socials {
@@ -204,6 +206,8 @@ $font-weight-regular700: 700;
 
     .management{
       margin-bottom: 1rem;
+      margin-right: 1.5rem;
+
       &__name{
         font-weight: $font-weight-bold;
         margin-bottom: 1rem;
@@ -220,6 +224,8 @@ $font-weight-regular700: 700;
 
     .group{
       margin-bottom: 1rem;
+      margin-right: 1.5rem;
+
       &__name{
         font-weight: $font-weight-bold;
         margin-bottom: 1rem;
@@ -247,13 +253,23 @@ $font-weight-regular700: 700;
 
       }
     }
+    &__logo-container{
+      position: absolute;
+      right: 50px;
+      flex: 1;
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
 
-    &__logo {
-      width: 7.125rem;
-      height: 1.1875rem;
-      padding-bottom: 1rem;
-
+      &__logo {
+        width: 7.125rem;
+        height: 1.1875rem;
+        padding-bottom: 1rem;
+  
+      }
     }
+
+    
     .copyright {
       padding-top: 2rem;
       font-size: x-small;
