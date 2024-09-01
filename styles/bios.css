@@ -313,7 +313,7 @@ img {
   .hero__name {
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 25%;
     transform: translate(-50%, -50%);
   }
   .hero__title {
@@ -336,6 +336,7 @@ img {
   .about__bees {
     font-size: 1.2rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     font-weight: 400;
   }
   .about__bees-paragraph {
@@ -350,7 +351,7 @@ img {
     background-color: #f9f9f9;
   }
   .photos__name {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
   }

@@ -108,7 +108,7 @@ $font-weight-regular700: 700;
     &__name {
       position: absolute;
       top: 50%;
-      left: 35%;
+      left: 25%;
       transform: translate(-50%, -50%);
     }
 
@@ -137,6 +137,7 @@ $font-weight-regular700: 700;
     &__bees {
       font-size: 1.2rem;
       margin-top: 1rem;
+      margin-bottom: 1rem;
       font-weight: $font-weight-regular400;
     }
 
@@ -154,7 +155,7 @@ $font-weight-regular700: 700;
     background-color: #f9f9f9;
 
     &__name{
-      font-size:2rem;
+      font-size:1.5rem;
       margin-bottom: 0.5rem;
       font-weight: $font-weight-bold;
     }
