@@ -1,0 +1,260 @@
+@use "./partials/global" as *;
+@use "./partials/responsive" as *;
+
+$primary-font: "Avenir Next", sans-serif;
+$font-weight-regular400: 400;
+$font-weight-bold: 600;
+$font-weight-regular700: 700;
+
+@font-face {
+  font-family: $primary-font;
+
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: $font-weight-regular700;
+  font-style: normal;
+}
+@font-face {
+  font-family: $primary-font;
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: $font-weight-bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: $font-weight-regular400;
+  font-style: normal;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #323232;
+  
+    &__logo {
+      height: 1.25rem;
+      width: auto;
+    }
+  
+    &__nav {
+    display: flex;
+    flex-direction: row;
+    
+    }
+  
+    &__menu {
+      display: flex;
+      list-style: none;
+      margin-top: 1rem;
+      padding: 0;
+      gap: 6rem;
+
+    }
+  
+    &__link {
+      position: relative;
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        font-family:$primary-font;
+      }
+   
+      &--active {
+        font-weight: $font-weight-bold;
+
+        &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -1em;
+        width: 250%;
+        height: 0.25rem;
+        background-color: #ffffff;
+        transform: translateX(-53%);
+        }
+      }
+  }
+}
+
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+
+    &__image {
+      position: relative;
+      width: 100%;
+      height: 40vh;
+      overflow: hidden;
+    }
+
+    &__background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__name {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__title {
+      font-size: 2rem;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  
+  .about {
+    text-align: left;
+    padding: 1rem;
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-bold;
+    }
+
+    &__say {
+      font-weight: $font-weight-bold;
+      margin: 0.5rem 0;
+    }
+    &__name{
+      font-weight: $font-weight-bold;
+
+    }
+
+    &__bees {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: $font-weight-regular400;
+    }
+
+    &__bees-paragraph {
+      text-align: left;
+      line-height: 1.6;
+      padding-bottom: 1rem;
+    }
+  }
+  
+  .photos{
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+    background-color: #f9f9f9;
+
+    &__name{
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-bold;
+    }
+
+    &__gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+  }
+
+  .footer {
+    background-color: #323232;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: $primary-font;
+    }
+
+    &__socials {
+      margin: 1rem 0;
+
+      img {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin: 0 0.3125rem;
+      }
+    }
+
+    .management{
+      margin-bottom: 1rem;
+      &__name{
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &__location{
+        margin-bottom: 1rem;
+      }
+      &__email:hover{
+        color: #afafaf;
+
+      }
+    }
+
+
+    .group{
+      margin-bottom: 1rem;
+      &__name{
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &__booking-agent{
+        margin-bottom: 1rem;
+      }
+      &__email:hover{
+        color: #afafaf;
+
+      }
+    }
+
+    .arc{
+      margin-bottom: 1rem;
+      &__name{
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &__booking-agent{
+        margin-bottom: 1rem;
+      }
+      &__email:hover{
+        color: #afafaf;
+      }
+    }
+
+    &__logo {
+      width: 7.125rem;
+      height: 1.1875rem;
+     
+
+    }
+  
+    .copyright {
+      padding-top: 2rem;
+      font-size:x-small;
+      
+    }
+
+
+  }
+}
+
