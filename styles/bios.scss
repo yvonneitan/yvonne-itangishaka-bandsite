@@ -196,58 +196,50 @@ $font-weight-regular700: 700;
       }
     }
 
-    .management{
+    &__categories {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__management {
       margin-bottom: 1rem;
-      &__name{
+      &-name{
         font-weight: $font-weight-bold;
         margin-bottom: 1rem;
       }
-      &__location{
+      &-location{
         margin-bottom: 1rem;
       }
-      &__email:hover{
+      &-email:hover{
         color: #afafaf;
 
       }
     }
 
 
-    .group{
+    &__group,
+    &__arc{
       margin-bottom: 1rem;
-      &__name{
+      &-name{
         font-weight: $font-weight-bold;
         margin-bottom: 1rem;
       }
-      &__booking-agent{
+      &-agent{
         margin-bottom: 1rem;
       }
-      &__email:hover{
+      &-email:hover{
         color: #afafaf;
 
       }
     }
-
-    .arc{
-      margin-bottom: 1rem;
-      &__name{
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &__booking-agent{
-        margin-bottom: 1rem;
-      }
-      &__email:hover{
-        color: #afafaf;
-      }
+    &__logo-container {
+      padding-top: 2rem;
     }
-
     &__logo {
       width: 7.125rem;
       height: 1.1875rem;
-     
-
-    }
-  
+  }
     .copyright {
       padding-top: 2rem;
       font-size:x-small;

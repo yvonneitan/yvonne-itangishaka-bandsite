@@ -666,44 +666,39 @@ img {
     height: 1.25rem;
     margin: 0 0.3125rem;
   }
-  .footer .management {
+  .footer__categories {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer__management {
     margin-bottom: 1rem;
   }
-  .footer .management__name {
+  .footer__management-name {
     font-weight: 600;
     margin-bottom: 1rem;
   }
-  .footer .management__location {
+  .footer__management-location {
     margin-bottom: 1rem;
   }
-  .footer .management__email:hover {
+  .footer__management-email:hover {
     color: #afafaf;
   }
-  .footer .group {
+  .footer__group, .footer__arc {
     margin-bottom: 1rem;
   }
-  .footer .group__name {
+  .footer__group-name, .footer__arc-name {
     font-weight: 600;
     margin-bottom: 1rem;
   }
-  .footer .group__booking-agent {
+  .footer__group-agent, .footer__arc-agent {
     margin-bottom: 1rem;
   }
-  .footer .group__email:hover {
+  .footer__group-email:hover, .footer__arc-email:hover {
     color: #afafaf;
   }
-  .footer .arc {
-    margin-bottom: 1rem;
-  }
-  .footer .arc__name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer .arc__booking-agent {
-    margin-bottom: 1rem;
-  }
-  .footer .arc__email:hover {
-    color: #afafaf;
+  .footer__logo-container {
+    padding-top: 2rem;
   }
   .footer__logo {
     width: 7.125rem;
