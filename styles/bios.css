@@ -131,7 +131,7 @@ img {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    padding-left: 3rem;
+    padding-left: 5rem;
   }
   .about__bees {
     font-size: 1.5rem;
@@ -202,47 +202,46 @@ img {
     flex-wrap: nowrap;
     width: 100%;
   }
-  .footer__categories__management {
-    width: calc(33.33% - 9rem);
-    padding-right: 2rem;
-  }
-  .footer__categories__management__name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__categories__management__location {
-    margin-bottom: 1rem;
-  }
-  .footer__categories__management__email:hover {
-    color: #afafaf;
-  }
-  .footer__categories__group {
-    width: calc(33.33% - 9rem);
-    padding-right: 2rem;
-  }
-  .footer__categories__group__name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__categories__group__booking-agent {
-    margin-bottom: 1rem;
-  }
-  .footer__categories__group__email:hover {
-    color: #afafaf;
-  }
-  .footer__categories__arc {
-    display: inline-block;
+  .footer__management {
     padding-right: 2rem;
     display: inline-block;
   }
-  .footer__categories__arc__name {
+  .footer__management-name {
     font-weight: 600;
     margin-bottom: 1rem;
   }
-  .footer__categories__arc__booking-agent {
+  .footer__management-location {
     margin-bottom: 1rem;
   }
-  .footer__categories__arc__email:hover {
+  .footer__management-email:hover {
+    color: #afafaf;
+  }
+  .footer__group {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__group-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__group-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__group-email:hover {
+    color: #afafaf;
+  }
+  .footer__arc {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__arc-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__arc-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__arc-email:hover {
     color: #afafaf;
   }
   .footer__logo-container {
@@ -363,6 +362,11 @@ img {
     padding-right: 5rem;
     font-weight: 700;
   }
+  .about__name {
+    font-size: smaller;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
   .about__say {
     font-weight: 600;
     margin: 0.5rem 0;
@@ -442,47 +446,46 @@ img {
     flex-wrap: nowrap;
     width: 100%;
   }
-  .footer__categories__management {
+  .footer__management {
     padding-right: 2rem;
     display: inline-block;
   }
-  .footer__categories__management__name {
+  .footer__management-name {
     font-weight: 600;
     margin-bottom: 1rem;
   }
-  .footer__categories__management__location {
+  .footer__management-location {
     margin-bottom: 1rem;
   }
-  .footer__categories__management__email:hover {
+  .footer__management-email:hover {
     color: #afafaf;
   }
-  .footer__categories__group {
+  .footer__group {
     padding-right: 2rem;
     display: inline-block;
   }
-  .footer__categories__group__name {
+  .footer__group-name {
     font-weight: 600;
     margin-bottom: 1rem;
   }
-  .footer__categories__group__booking-agent {
+  .footer__group-agent {
     margin-bottom: 1rem;
   }
-  .footer__categories__group__email:hover {
+  .footer__group-email:hover {
     color: #afafaf;
   }
-  .footer__categories__arc {
-    display: inline-block;
+  .footer__arc {
     padding-right: 2rem;
     display: inline-block;
   }
-  .footer__categories__arc__name {
-    font-weight: 700;
+  .footer__arc-name {
+    font-weight: 600;
     margin-bottom: 1rem;
   }
-  .footer__categories__arc__booking-agent {
+  .footer__arc-agent {
     margin-bottom: 1rem;
   }
-  .footer__categories__arc__email:hover {
+  .footer__arc-email:hover {
     color: #afafaf;
   }
   .footer__logo-container {

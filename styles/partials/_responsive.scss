@@ -122,7 +122,7 @@ $font-weight-regular700: 700;
       display: flex;
       justify-content: space-between;
       gap: 2rem;
-      padding-left: 3rem;
+      padding-left: 5rem;
     }
 
     &__bees {
@@ -198,51 +198,49 @@ $font-weight-regular700: 700;
       display: flex;
       flex-wrap: nowrap;
       width: 100%;
-
-      &__management {
-        width: calc(33.33% - 9rem);
-        padding-right: 2rem;
-        &__name {
-          font-weight: $font-weight-bold;
-          margin-bottom: 1rem;
-        }
-        &__location {
-          margin-bottom: 1rem;
-        }
-        &__email:hover {
-          color: #afafaf;
-        }
+    }
+    &__management {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
       }
+      &-location {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: #afafaf;
+      }
+    }
       &__group {
-        width: calc(33.33% - 9rem);
         padding-right: 2rem;
-        &__name {
+        display: inline-block;
+        &-name {
           font-weight: $font-weight-bold;
           margin-bottom: 1rem;
         }
-        &__booking-agent {
+        &-agent {
           margin-bottom: 1rem;
         }
-        &__email:hover {
+        &-email:hover {
           color: #afafaf;
         }
       }
       &__arc {
-        display: inline-block;
         padding-right: 2rem;
         display: inline-block;
-        &__name {
+        &-name {
           font-weight: $font-weight-bold;
           margin-bottom: 1rem;
         }
-        &__booking-agent {
+        &-agent {
           margin-bottom: 1rem;
         }
-        &__email:hover {
+        &-email:hover {
           color: #afafaf;
         }
       }
-    }
 
     &__logo-container {
       position: absolute;
@@ -376,6 +374,12 @@ $font-weight-regular700: 700;
       padding-right: 5rem;
       font-weight: $font-weight-regular700;
     }
+    &__name{
+      font-size: smaller;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+
+    }
 
     &__say {
       font-weight: $font-weight-bold;
@@ -462,49 +466,49 @@ $font-weight-regular700: 700;
       display: flex;
       flex-wrap: nowrap;
       width: 100%;
-      &__management {
-        padding-right: 2rem;
-        display: inline-block;
-        &__name {
-          font-weight: $font-weight-bold;
-          margin-bottom: 1rem;
-        }
-        &__location {
-          margin-bottom: 1rem;
-        }
-        &__email:hover {
-          color: #afafaf;
-        }
+    }
+    &__management {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
       }
+      &-location {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: #afafaf;
+      }
+    }
       &__group {
         padding-right: 2rem;
         display: inline-block;
-        &__name {
+        &-name {
           font-weight: $font-weight-bold;
           margin-bottom: 1rem;
         }
-        &__booking-agent {
+        &-agent {
           margin-bottom: 1rem;
         }
-        &__email:hover {
+        &-email:hover {
           color: #afafaf;
         }
       }
       &__arc {
-        display: inline-block;
         padding-right: 2rem;
         display: inline-block;
-        &__name {
-          font-weight: $font-weight-regular700;
+        &-name {
+          font-weight: $font-weight-bold;
           margin-bottom: 1rem;
         }
-        &__booking-agent {
+        &-agent {
           margin-bottom: 1rem;
         }
-        &__email:hover {
+        &-email:hover {
           color: #afafaf;
         }
-      }
+      
     }
 
     &__logo-container {
