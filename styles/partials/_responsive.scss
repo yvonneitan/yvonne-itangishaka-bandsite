@@ -3,7 +3,6 @@ $font-weight-regular400: 400;
 $font-weight-bold: 600;
 $font-weight-regular700: 700;
 
-
 // Tablet
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
   .header {
@@ -12,38 +11,35 @@ $font-weight-regular700: 700;
     align-items: center;
     padding: 1rem;
     background-color: #323232;
-  
+
     &__logo {
       height: 1.25rem;
       width: auto;
       padding-bottom: 0.5rem;
     }
-    
-  
+
     &__nav {
-    display: flex;
-    flex-direction: row;
-    padding-left: 4rem;
-    
+      display: flex;
+      flex-direction: row;
+      padding-left: 4rem;
     }
-  
+
     &__menu {
       display: flex;
       list-style: none;
       margin-top: 1rem;
       padding: 0;
       gap: 6rem;
-
     }
-  
+
     &__link {
       position: relative;
       a {
         text-decoration: none;
         color: #ffffff;
-        font-family:$primary-font;
+        font-family: $primary-font;
       }
-   
+
       &--active {
         font-weight: $font-weight-bold;
 
@@ -55,12 +51,10 @@ $font-weight-regular700: 700;
           width: 100%;
           height: 0.25rem;
           background-color: #ffffff;
-          
-         
         }
       }
+    }
   }
-}
   .hero {
     position: relative;
     text-align: center;
@@ -107,30 +101,27 @@ $font-weight-regular700: 700;
     padding-top: 2rem;
 
     &__title {
-      font-size:2rem;
+      font-size: 2rem;
       margin-bottom: 0.5rem;
       font-weight: $font-weight-bold;
     }
-    &__us{
+    &__us {
       display: flex;
       flex-direction: column;
       font-size: 1.5rem;
       padding-left: 3rem;
       &__say {
         font-weight: $font-weight-bold;
-        margin: 0.5rem 0; 
-        padding-left: 3rem;  
+        margin: 0.5rem 0;
+        padding-left: 3rem;
       }
     }
-      
-    
-    
-    &__container{
+
+    &__container {
       display: flex;
       justify-content: space-between;
       gap: 2rem;
       padding-left: 3rem;
-
     }
 
     &__bees {
@@ -139,28 +130,27 @@ $font-weight-regular700: 700;
       margin-bottom: 1rem;
       font-weight: $font-weight-bold;
     }
-  
+
     &__bees-paragraph {
       text-align: left;
       line-height: 1.6;
       padding-bottom: 1rem;
     }
-    &__right{
+    &__right {
       padding-top: 4rem;
     }
   }
-  .photos{
+  .photos {
     display: flex;
     flex-direction: column;
-    padding:1rem;
+    padding: 1rem;
     background-color: #f9f9f9;
 
-    &__name{
-      font-size:2rem;
+    &__name {
+      font-size: 2rem;
       margin-bottom: 0.5rem;
       font-weight: $font-weight-bold;
       padding: 2rem;
-      
     }
 
     &__gallery {
@@ -170,10 +160,9 @@ $font-weight-regular700: 700;
       padding: 2rem;
       justify-content: space-around;
     }
-    .gallery-items{
+    .gallery-items {
       width: calc(33.33% - 1rem);
-      margin-bottom:0.5rem;
-      
+      margin-bottom: 0.5rem;
     }
   }
   .footer {
@@ -181,9 +170,9 @@ $font-weight-regular700: 700;
     color: white;
     padding: 3rem;
     display: flex;
-    flex-wrap: wrap;
-    
-    &__contacts{
+    flex-direction: column;
+
+    &__contacts {
       display: flex;
       height: fit-content;
       width: 80%;
@@ -203,57 +192,56 @@ $font-weight-regular700: 700;
         margin: 0 0.3125rem;
       }
     }
-
-    .management{
-      margin-bottom: 1rem;
-      margin-right: 1.5rem;
-
-      &__name{
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
+    &__categories {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      &__management {
+        padding-right: 2rem;
+        display: inline-block;
+        &__name {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+        &__location {
+          margin-bottom: 1rem;
+        }
+        &__email:hover {
+          color: #afafaf;
+        }
       }
-      &__location{
-        margin-bottom: 1rem;
+      &__group {
+        padding-right: 2rem;
+        display: inline-block;
+        &__name {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+        &__booking-agent {
+          margin-bottom: 1rem;
+        }
+        &__email:hover {
+          color: #afafaf;
+        }
       }
-      &__email:hover{
-        color: #afafaf;
-
-      }
-    }
-
-
-    .group{
-      margin-bottom: 1rem;
-      margin-right: 1.5rem;
-
-      &__name{
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &__booking-agent{
-        margin-bottom: 1rem;
-      }
-      &__email:hover{
-        color: #afafaf;
-
-      }
-    }
-
-    .arc{
-      margin-bottom: 1rem;
-      &__name{
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &__booking-agent{
-        margin-bottom: 1rem;
-      }
-      &__email:hover{
-        color: #afafaf;
-
+      &__arc {
+        display: inline-block;
+        padding-right: 2rem;
+        display: inline-block;
+        &__name {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+        &__booking-agent {
+          margin-bottom: 1rem;
+        }
+        &__email:hover {
+          color: #afafaf;
+        }
       }
     }
-    &__logo-container{
+
+    &__logo-container {
       position: absolute;
       right: 50px;
       flex: 1;
@@ -265,21 +253,14 @@ $font-weight-regular700: 700;
         width: 7.125rem;
         height: 1.1875rem;
         padding-bottom: 1rem;
-  
       }
     }
-
-    
     .copyright {
       padding-top: 2rem;
       font-size: x-small;
-      
     }
-
-
   }
 }
-
 
 // Desktop
 @media only screen and (min-width: 1280px) {
@@ -289,38 +270,35 @@ $font-weight-regular700: 700;
     align-items: center;
     padding: 1rem;
     background-color: #323232;
-  
+
     &__logo {
       height: 1.25rem;
       width: auto;
       padding-bottom: 0.5rem;
     }
-    
-  
+
     &__nav {
-    display: flex;
-    flex-direction: row;
-    padding-left: 4rem;
-    
+      display: flex;
+      flex-direction: row;
+      padding-left: 4rem;
     }
-  
+
     &__menu {
       display: flex;
       list-style: none;
       margin-top: 1rem;
       padding: 0;
       gap: 6rem;
-
     }
-  
+
     &__link {
       position: relative;
       a {
         text-decoration: none;
         color: #ffffff;
-        font-family:$primary-font;
+        font-family: $primary-font;
       }
-   
+
       &--active {
         font-weight: $font-weight-bold;
 
@@ -332,12 +310,10 @@ $font-weight-regular700: 700;
           width: 100%;
           height: 0.25rem;
           background-color: #ffffff;
-          
-         
         }
       }
+    }
   }
-}
   .hero {
     position: relative;
     text-align: center;
@@ -384,33 +360,29 @@ $font-weight-regular700: 700;
     padding-top: 2rem;
 
     &__title {
-      font-size:2rem;
+      font-size: 2rem;
       margin-bottom: 0.5rem;
       font-weight: $font-weight-bold;
     }
-    &__us{
+    &__us {
       display: flex;
       flex-direction: column;
       font-size: 1.5rem;
       padding-left: 3rem;
       font-weight: $font-weight-regular700;
-
-      
     }
-      
+
     &__say {
       font-weight: $font-weight-bold;
-      margin: 0.5rem 0; 
-      padding-left: 3rem;  
+      margin: 0.5rem 0;
+      padding-left: 3rem;
     }
-    
-    
-    &__container{
+
+    &__container {
       display: flex;
       justify-content: space-between;
       gap: 2rem;
       padding-left: 3rem;
-
     }
 
     &__bees {
@@ -419,28 +391,27 @@ $font-weight-regular700: 700;
       margin-bottom: 1rem;
       font-weight: $font-weight-bold;
     }
-  
+
     &__bees-paragraph {
       text-align: left;
       line-height: 1.6;
       padding-bottom: 1rem;
     }
-    &__right{
+    &__right {
       padding-top: 4rem;
     }
   }
-  .photos{
+  .photos {
     display: flex;
     flex-direction: column;
-    padding:1rem;
+    padding: 1rem;
     background-color: #f9f9f9;
 
-    &__name{
-      font-size:2rem;
+    &__name {
+      font-size: 2rem;
       margin-bottom: 0.5rem;
       font-weight: $font-weight-bold;
       padding: 2rem;
-      
     }
 
     &__gallery {
@@ -450,21 +421,24 @@ $font-weight-regular700: 700;
       padding: 2rem;
       justify-content: space-around;
     }
-    .gallery-items{
+    .gallery-items {
       width: calc(33.33% - 1rem);
-      margin-bottom:0.5rem;
-      
+      margin-bottom: 0.5rem;
     }
   }
   .footer {
+    // background-color: #323232;
+    // color: white;
+    // padding: 3rem;
+    // display: flex;
+    // flex-wrap: wrap;
     background-color: #323232;
     color: white;
     padding: 3rem;
     display: flex;
-    flex-wrap: wrap;
-   
-    
-    &__contacts{
+    flex-direction: column;
+
+    &__contacts {
       display: flex;
       height: fit-content;
       width: 80%;
@@ -484,57 +458,56 @@ $font-weight-regular700: 700;
         margin: 0 0.3125rem;
       }
     }
-
-    .management{
-      margin-bottom: 1rem;
-      margin-right: 1.5rem;
-
-      &__name{
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
+    &__categories {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      &__management {
+        padding-right: 2rem;
+        display: inline-block;
+        &__name {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+        &__location {
+          margin-bottom: 1rem;
+        }
+        &__email:hover {
+          color: #afafaf;
+        }
       }
-      &__location{
-        margin-bottom: 1rem;
+      &__group {
+        padding-right: 2rem;
+        display: inline-block;
+        &__name {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+        &__booking-agent {
+          margin-bottom: 1rem;
+        }
+        &__email:hover {
+          color: #afafaf;
+        }
       }
-      &__email:hover{
-        color: #afafaf;
-
-      }
-    }
-
-
-    .group{
-      margin-bottom: 1rem;
-      margin-right: 1.5rem;
-
-      &__name{
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &__booking-agent{
-        margin-bottom: 1rem;
-      }
-      &__email:hover{
-        color: #afafaf;
-
-      }
-    }
-
-    .arc{
-      margin-bottom: 1rem;
-      &__name{
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &__booking-agent{
-        margin-bottom: 1rem;
-      }
-      &__email:hover{
-        color: #afafaf;
-
+      &__arc {
+        display: inline-block;
+        padding-right: 2rem;
+        display: inline-block;
+        &__name {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+        &__booking-agent {
+          margin-bottom: 1rem;
+        }
+        &__email:hover {
+          color: #afafaf;
+        }
       }
     }
-    &__logo-container{
+
+    &__logo-container {
       position: absolute;
       right: 50px;
       flex: 1;
@@ -546,17 +519,11 @@ $font-weight-regular700: 700;
         width: 7.125rem;
         height: 1.1875rem;
         padding-bottom: 1rem;
-  
       }
     }
-
-    
     .copyright {
       padding-top: 2rem;
       font-size: x-small;
-      
     }
-
-
   }
 }
