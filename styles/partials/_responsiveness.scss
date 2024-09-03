@@ -140,15 +140,13 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
-      img{
-        width:100%;
+      img {
+        width: 100%;
         transition: transform 2s ease, filter 2s ease;
-
       }
       img:hover {
         filter: brightness(80%);
-        transform: scale(1.2); 
-        
+        transform: scale(1.2);
       }
     }
   }
@@ -385,17 +383,14 @@
     .gallery-items {
       width: calc(33.33% - 1rem);
       margin-bottom: 0.5rem;
-      
     }
-    img{
-      width:100%;
+    img {
+      width: 100%;
       transition: transform 2s ease, filter 2s ease;
-
     }
     img:hover {
       filter: brightness(80%);
-      transform: scale(1.2); 
-      
+      transform: scale(1.2);
     }
   }
   .footer {
@@ -662,6 +657,14 @@
     .gallery-items {
       width: calc(33.33% - 1rem);
       margin-bottom: 0.5rem;
+    }
+    img {
+      width: 100%;
+      transition: transform 2s ease, filter 2s ease;
+    }
+    img:hover {
+      filter: brightness(80%);
+      transform: scale(1.2);
     }
   }
   .footer {

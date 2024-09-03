@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use "./variables" as *;
 @use "./colors" as *;
 
 body,
@@ -15,7 +15,7 @@ a {
   padding-top: 1rem;
   font-family: $primary-font;
   text-decoration: none;
-  color:$white;
+  color: $white;
 }
 
 body {
