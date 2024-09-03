@@ -50,7 +50,7 @@ img {
     background-color: #323232;
   }
   .header__logo {
-    height: 1.25rem;
+    height: 2rem;
     width: auto;
   }
   .header__nav {
@@ -62,7 +62,7 @@ img {
     list-style: none;
     margin-top: 1rem;
     padding: 0;
-    gap: 6rem;
+    gap: 12rem;
   }
   .header__link {
     position: relative;
@@ -93,7 +93,7 @@ img {
   .hero__image {
     position: relative;
     width: 100%;
-    height: 40vh;
+    height: 60vh;
     overflow: hidden;
   }
   .hero__background {
@@ -162,6 +162,14 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+  .photos__gallery img {
+    width: 100%;
+    transition: transform 2s ease, filter 2s ease;
+  }
+  .photos__gallery img:hover {
+    filter: brightness(80%);
+    transform: scale(1.2);
   }
   .footer {
     background-color: #323232;
@@ -373,6 +381,14 @@ img {
   .photos .gallery-items {
     width: calc(33.33% - 1rem);
     margin-bottom: 0.5rem;
+  }
+  .photos img {
+    width: 100%;
+    transition: transform 2s ease, filter 2s ease;
+  }
+  .photos img:hover {
+    filter: brightness(80%);
+    transform: scale(1.2);
   }
   .footer {
     background-color: #323232;
