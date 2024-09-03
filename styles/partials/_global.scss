@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use "./colors" as *;
+
 body,
 h1,
 h2,
@@ -5,14 +8,14 @@ h3,
 p {
   margin: 0;
   padding: 0;
-  font-family: "Avenir Next", sans-serif;
+  font-family: $primary-font;
 }
 a {
   margin: 0;
   padding-top: 1rem;
-  font-family: "Avenir Next", sans-serif;
+  font-family: $primary-font;
   text-decoration: none;
-  color: #ffffff;
+  color:$white;
 }
 
 body {
