@@ -59,7 +59,6 @@ function displayComments() {
     return parseDate(b.date) - parseDate(a.date);
   });
   for (let i = 0; i < commentsArray.length; i++) {
-    console.log(commentsArray[i]);
 
     const detailsEl = document.createElement("li");
     detailsEl.classList.add("comments__details", "comments__details--border");
