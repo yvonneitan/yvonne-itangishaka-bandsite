@@ -25,24 +25,191 @@ img {
 }
 
 @font-face {
-  font-family: "Avenir Next", sans-serif;
+  font-family: "Avenir Next";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next", sans-serif;
+  font-family: "Avenir Next";
   src: url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next", sans-serif;
+  font-family: "Avenir Next";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+.comments__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 600;
+}
+.comments__user {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments__user {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__user {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+.comments__pic {
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  background-color: #e1e1e1;
+  background-image: url("../../assets/images/Mohan-muruge.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin-top: 2.6rem;
+}
+.comments__items {
+  width: 100%;
+}
+.comments__form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 1rem;
+}
+.comments__label {
+  font-family: "Avenir Next", sans-serif;
+  color: #afafaf;
+  font-weight: 400;
+}
+.comments__input {
+  font-family: inherit;
+  height: 1rem;
+  padding: 0.75rem;
+  border: 0.0625rem solid #e1e1e1;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  color: #000000;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments__input {
+    height: 3rem;
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__input {
+    height: 3rem;
+    padding: 1rem;
+  }
+}
+.comments__input:focus {
+  border-color: #323232;
+  outline: none;
+}
+.comments__input:user-invalid {
+  outline: 0.0625rem solid #D22D2D;
+}
+.comments__input--large {
+  height: 6.75rem;
+}
+.comments__input--error {
+  border-color: #D22D2D;
+}
+.comments__submit {
+  background-color: #000000;
+  color: #ffffff;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.25rem;
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments__submit {
+    width: 10rem;
+    align-self: end;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__submit {
+    width: 10rem;
+    align-self: end;
+  }
+}
+.comments__list {
+  list-style-type: none;
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments__list {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__list {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+.comments__details {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 0.125rem solid #e1e1e1;
+}
+.comments__details--border {
+  border-top: 0.125rem solid #e1e1e1;
+}
+.comments__details .comments__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+.comments__container {
+  width: 100%;
+}
+.comments__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.comments__name {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+.comments__date {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #afafaf;
+  text-align: right;
+}
+.comments__comment {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 20rem) and (max-width: 47.9375rem) {
   .header {
     display: flex;
     flex-direction: column;
@@ -235,7 +402,7 @@ img {
     font-size: x-small;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .header {
     display: flex;
     flex-direction: row;
@@ -481,7 +648,7 @@ img {
     font-size: x-small;
   }
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 80rem) {
   .header {
     display: flex;
     flex-direction: row;

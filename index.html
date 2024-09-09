@@ -8,16 +8,16 @@
 </head>
 <body>
     <header class="header">
-        <a href="./index.html">
+        <a href="index.html">
             <img class="header__logo" src="./assets/logos/Logo-bandsite.svg" alt="BandSite logo">
         </a>
         <div class="header__nav">
             <ul class="header__menu">
                 <li class="header__link">
-                    <a class="header__link--active" href="#biography">Biography</a>
+                    <a class="header__link--active" href="./index.html">Biography</a>
                 </li>
                 <li class="header__link">
-                    <a href="#shows">Shows</a>
+                    <a href="./pages/shows.html">Shows</a>
                 </li>
             </ul>
         </div>
@@ -101,6 +101,28 @@
             </div>
         
         </section>
+        <section class="comments">
+            <h2 class="comments__title">Join the Conversation</h2>
+            <div class="comments__user">
+                <div class="comments__pic"></div>
+                <div class="comments__items">
+                <form id="comments-form" class="comments__form">
+                    <label for="name" class="comments__label">NAME</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" class="comments__input" required>
+
+                    <label for="comment" class="comments__label">COMMENT</label>
+                    <textarea id="comment" name="comment" placeholder="Add a new comment" class="comments__input comments__input--large" required></textarea>
+
+                    <button type="submit" class="comments__submit">COMMENT</button>
+
+                </form>
+            </div>
+            </div>
+
+            <ul class="comments__list" id="comments-list"> </ul>
+        </section>
+
+       
     </main>
 
 <footer class="footer">
@@ -135,7 +157,7 @@
         </div>
     </div>
     <div class="footer__logo-container">
-        <a href="./index.html">
+        <a href="index.html">
             <img class="footer__logo" src="./assets/logos/Logo-bandsite.svg" alt="BandSite logo">
         </a>
     </div>
@@ -145,5 +167,6 @@
 
 
 </footer>
+<script src="./scripts/index-page.js"></script>
 </body>
 </html>
