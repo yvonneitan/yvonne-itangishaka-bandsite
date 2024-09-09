@@ -122,11 +122,9 @@
     overflow: hidden;
     @include tablet {
       height: 100vh;
-     
     }
     @include desktop {
       height: 90vh;
-    
     }
   }
 
@@ -157,8 +155,6 @@
     color: white;
     @include tablet {
       max-height: 450px;
-
-    
     }
     @include desktop {
       display: flex;
@@ -166,15 +162,15 @@
       max-height: 450px;
       align-content: space-around;
       width: 80%;
-      padding-left: 15rem;    
+      padding-left: 15rem;
     }
   }
-  &__words{
+  &__words {
     display: inline-block;
-    width: 100rem;
+    height: 5rem;
   }
-  &__album{
-    @include tablet{
+  &__album {
+    @include tablet {
       font-weight: $font-weight-bold;
     }
   }
@@ -183,20 +179,27 @@
     font-size: 2rem;
     font-weight: $font-weight-bold;
     @include tablet {
-      font-size: 2rem;
-    
+      font-size: 4rem;
     }
     @include desktop {
-      font-size: 4rem;
-      
+      font-size: 3rem;
     }
   }
-  &__song{
+  &__song {
     width: 130%;
     max-width: 37.5rem;
-    height: 6.25rem;
+    height: 7rem;
     margin-top: 1rem;
     border-radius: 0.25rem;
+    @include tablet {
+      width: 90%;
+      height: 10rem;
+    }
+    @include desktop {
+      margin-top: 3rem;
+      width: 50%;
+      height: 10rem;
+    }
   }
 }
 
@@ -205,141 +208,129 @@
   flex-direction: column;
   background-color: $white;
   border: 0.125rem solid $silver;
- 
 
-
-
-&__title {
-  font-size: 3rem;
-  margin-top: 2rem;
-  font-weight: 600;
-  padding-left: 1rem;
-  font-family:$primary-font;
-}
-
-&__list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  @include desktop{
-    padding-left: 10rem;
-    padding-right: 10rem;
+  &__title {
+    font-size: 3rem;
+    margin-top: 2rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    font-family: $primary-font;
   }
-}
 
-
-&__item {
-  background-color: $white;
-  padding: 1rem;
-  border-bottom: 0.125rem solid $silver;
-  font-family:$primary-font;
-  transition: background-color 0.3s, transform 0.3s;
-  @include tablet{
+  &__list {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-   
-  }
-  @include desktop{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.1rem;
+    @include desktop {
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
   }
 
-  &:hover {
-    background-color: $mercury;
-    transform: scale(1.02);
-  }
+  &__item {
+    background-color: $white;
+    padding: 1rem;
+    border-bottom: 0.125rem solid $silver;
+    font-family: $primary-font;
+    transition: background-color 0.3s, transform 0.3s;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-  &--selected {
-    background-color: $alabaster; 
-    border: 0.25rem solid $white;
-  }
+    &:hover {
+      background-color: $mercury;
+      transform: scale(1.02);
+      border-radius: 0.25rem;
+    }
 
-}
-&__category {
-  font-size: 1.5rem;
-  margin: 0;
-  color: $silver;
-  margin-bottom: 1rem;
-  font-weight:$font-weight-bold;
-  @include tablet{
-    margin-top: 1rem;
-    height: min-content;
+    &--selected {
+      background-color: $alabaster;
+      border: 0.25rem solid $silver;
+    }
   }
-  @include desktop{
-    margin-top: 1rem;
-    height: min-content;
-  }
-}
-&__date{
-  margin-bottom: 1rem;
-  font-weight:$font-weight-bold;
-  font-size: 1.5rem;
-  @include tablet{
-    margin-top: 4rem;
-    margin-left: -8.5rem;
-  }
-  @include desktop{
-    margin-top: 4rem;
-    margin-left: -8.5rem;
-  }
-
-}
-&__venue,
-&__location{
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  @include tablet{
-    margin-top: 4rem;
-    margin-left: -4rem;
-  }
-  @include desktop{
-    margin-top: 4rem;
-    margin-left: -4rem;
-  }
-
-  
-}
-
-&__button{
-  width: 100%;
-  padding: 1rem;
-  background-color: $site-black;
-  color: $white;
-  border-radius: 0.25rem;
-  font-weight: 600;
-  font-size: 2rem;
-  font-family:$primary-font;
-  &:hover {
-    background-color: $mercury;
-    transform: scale(1.02);
-    color: $site-black;
-  }
-  @include tablet{
-    width: fit-content;
+  &__category {
     font-size: 1.5rem;
-    width: 16rem;
-    margin-top: auto;
-    height: min-content;
+    margin: 0;
+    color: $silver;
+    margin-bottom: 1rem;
+    font-weight: $font-weight-bold;
+    @include tablet {
+      margin-top: 1rem;
+      height: min-content;
+    }
+    @include desktop {
+      margin-top: 1rem;
+      height: min-content;
+    }
   }
-  @include desktop{
-    width: fit-content;
+  &__date {
+    margin-bottom: 1rem;
+    font-weight: $font-weight-bold;
     font-size: 1.5rem;
-    width: 16rem;
-    margin-top: auto;
-    height: min-content;
+    @include tablet {
+      margin-top: 4rem;
+      margin-left: -4.5rem;
+    }
+    @include desktop {
+      margin-top: 4rem;
+      margin-left: -4.5rem;
+    }
   }
-  
+  &__venue,
+  &__location {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    @include tablet {
+      margin-top: 4rem;
+      margin-left: -4rem;
+    }
+    @include desktop {
+      margin-top: 4rem;
+      margin-left: -4rem;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: 1rem;
+    background-color: $site-black;
+    color: $white;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: $primary-font;
+    &:hover {
+      background-color: $silver;
+      transform: scale(1.02);
+      color: $site-black;
+      border-radius: 0.25rem;
+      border-color: $site-black;
+    }
+    @include tablet {
+      width: fit-content;
+      font-size: 1.5rem;
+      width: 16rem;
+      margin-top: auto;
+      height: min-content;
+    }
+    @include desktop {
+      width: fit-content;
+      font-size: 1.5rem;
+      width: 16rem;
+      margin-top: auto;
+      height: min-content;
+    }
+  }
 }
-
-}
-
-
-
 
 @include mobile {
-  
   .footer {
     background-color: $site-black;
     color: white;
@@ -413,7 +404,6 @@
 }
 
 @include tablet {
-
   .footer {
     background-color: $site-black;
     color: white;

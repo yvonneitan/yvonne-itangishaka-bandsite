@@ -221,7 +221,7 @@ img {
 }
 .hero__words {
   display: inline-block;
-  width: 100rem;
+  height: 5rem;
 }
 @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .hero__album {
@@ -234,20 +234,33 @@ img {
 }
 @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .hero__title {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 }
 @media only screen and (min-width: 80rem) {
   .hero__title {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 .hero__song {
   width: 130%;
   max-width: 37.5rem;
-  height: 6.25rem;
+  height: 7rem;
   margin-top: 1rem;
   border-radius: 0.25rem;
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .hero__song {
+    width: 90%;
+    height: 10rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .hero__song {
+    margin-top: 3rem;
+    width: 50%;
+    height: 10rem;
+  }
 }
 
 .shows {
@@ -298,10 +311,11 @@ img {
 .shows__item:hover {
   background-color: #e1e1e1;
   transform: scale(1.02);
+  border-radius: 0.25rem;
 }
 .shows__item--selected {
   background-color: #fafafa;
-  border: 0.25rem solid #ffffff;
+  border: 0.25rem solid #afafaf;
 }
 .shows__category {
   font-size: 1.5rem;
@@ -332,13 +346,13 @@ img {
 @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .shows__date {
     margin-top: 4rem;
-    margin-left: -8.5rem;
+    margin-left: -4.5rem;
   }
 }
 @media only screen and (min-width: 80rem) {
   .shows__date {
     margin-top: 4rem;
-    margin-left: -8.5rem;
+    margin-left: -4.5rem;
   }
 }
 .shows__venue, .shows__location {
@@ -368,9 +382,11 @@ img {
   font-family: "Avenir Next", sans-serif;
 }
 .shows__button:hover {
-  background-color: #e1e1e1;
+  background-color: #afafaf;
   transform: scale(1.02);
   color: #323232;
+  border-radius: 0.25rem;
+  border-color: #323232;
 }
 @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .shows__button {
