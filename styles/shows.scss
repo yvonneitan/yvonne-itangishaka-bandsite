@@ -189,6 +189,8 @@
   flex-direction: column;
   background-color: $white;
   border: 0.125rem solid $silver;
+ 
+
 
 
 &__title {
@@ -205,23 +207,79 @@
   gap: 0.1rem;
 }
 
+
 &__item {
   background-color: $white;
   padding: 1rem;
   border-bottom: 0.125rem solid $silver;
   font-family:$primary-font;
-}
+  transition: background-color 0.3s, transform 0.3s;
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+  }
+  @include desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
+  &:hover {
+    background-color: $mercury;
+    transform: scale(1.02);
+  }
+
+  &--selected {
+    background-color: $alabaster; 
+    border: 0.25rem solid $white;
+  }
+
+}
+&__category {
+  font-size: 1.5rem;
+  margin: 0;
+  color: $silver;
+  margin-bottom: 1rem;
+  font-weight:$font-weight-bold;
+  @include tablet{
+    margin-top: 1rem;
+    height: min-content;
+  }
+  @include desktop{
+    margin-top: 1rem;
+    height: min-content;
+  }
+}
 &__date{
   margin-bottom: 1rem;
   font-weight:$font-weight-bold;
   font-size: 1.5rem;
+  @include tablet{
+    margin-top: 4rem;
+    margin-left: -8.5rem;
+  }
+  @include desktop{
+    margin-top: 4rem;
+    margin-left: -8.5rem;
+  }
 
 }
 &__venue,
 &__location{
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  @include tablet{
+    margin-top: 4rem;
+    margin-left: -4rem;
+  }
+  @include desktop{
+    margin-top: 4rem;
+    margin-left: -4rem;
+  }
+
+  
 }
 
 &__button{
@@ -233,15 +291,23 @@
   font-weight: 600;
   font-size: 2rem;
   font-family:$primary-font;
+  @include tablet{
+    width: fit-content;
+    font-size: 1.5rem;
+    width: 16rem;
+    margin-top: auto;
+    height: min-content;
+  }
+  @include desktop{
+    width: fit-content;
+    font-size: 1.5rem;
+    width: 16rem;
+    margin-top: auto;
+    height: min-content;
+  }
   
 }
-&__category {
-  font-size: 1.5rem;
-  margin: 0;
-  color: $silver;
-  margin-bottom: 1rem;
-  font-weight:$font-weight-bold;
-}
+
 }
 
 
