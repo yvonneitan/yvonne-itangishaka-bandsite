@@ -196,6 +196,7 @@ img {
 .hero__name {
   width: 70%;
   height: 100%;
+  max-height: 220px;
   position: absolute;
   text-align: left;
   top: 50%;
@@ -205,12 +206,26 @@ img {
 }
 @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .hero__name {
-    left: 35%;
+    max-height: 450px;
   }
 }
 @media only screen and (min-width: 80rem) {
   .hero__name {
-    left: 35%;
+    display: flex;
+    flex-direction: row;
+    max-height: 450px;
+    align-content: space-around;
+    width: 80%;
+    padding-left: 15rem;
+  }
+}
+.hero__words {
+  display: inline-block;
+  width: 100rem;
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .hero__album {
+    font-weight: 600;
   }
 }
 .hero__title {
@@ -219,7 +234,7 @@ img {
 }
 @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .hero__title {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 }
 @media only screen and (min-width: 80rem) {
@@ -229,8 +244,8 @@ img {
 }
 .hero__song {
   width: 130%;
-  max-width: 600px;
-  height: 100px;
+  max-width: 37.5rem;
+  height: 6.25rem;
   margin-top: 1rem;
   border-radius: 0.25rem;
 }
@@ -252,6 +267,12 @@ img {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
+}
+@media only screen and (min-width: 80rem) {
+  .shows__list {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
 }
 .shows__item {
   background-color: #ffffff;
@@ -345,6 +366,11 @@ img {
   font-weight: 600;
   font-size: 2rem;
   font-family: "Avenir Next", sans-serif;
+}
+.shows__button:hover {
+  background-color: #e1e1e1;
+  transform: scale(1.02);
+  color: #323232;
 }
 @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .shows__button {

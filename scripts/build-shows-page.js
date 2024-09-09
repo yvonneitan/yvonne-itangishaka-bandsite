@@ -31,22 +31,7 @@ const showsData = [
     }
   ];
 
-//   <section class="shows">
-//             <h2 class="shows__title">Shows</h2>
-//             <div class="shows__list">
-//                 <div class="shows__item">
-//                     <!-- <h2 class="shows__category">DATE</h2>
-//                     <h3 class="shows__date">Mon Sept 09 2024</h3>
 
-//                     <h2 class="shows__category">VENUE</h2>
-//                     <p class="shows__venue">Ronald Lane </p>
-//                     <h2 class="shows__category">LOCATION</h2>
-//                     <p class="shows__location">San Francisco, CA</p>
-//                     <button class="shows__button">BUY TICKETS</button> -->
-//                 </div>
-//             </div>
-//         </section>
-  
 
 function generateShows(shows) {
   const showsList = document.querySelector('.shows__list');
