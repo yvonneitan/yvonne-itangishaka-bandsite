@@ -21,4 +21,25 @@ async function getComment(){
         
     }
 }
-getComment();
+// getComment();
+
+
+
+async function postComment(comment){
+    try {
+        const response= await axios.post("https://unit-2-project-api-25c1595833b2.herokuapp.com/comments?api_key=0117c33a-1c32-421a-8289-0eb243cee4ea",comment);
+
+        console.log(response.data);
+        return response.data;
+            
+    } catch (error) {
+        console.error("Error posting comments",error);
+        
+    }
+}
+
+const newComment={
+    "name":"Yvonne",
+    "comment":"I think I like this band more"
+};
+// postComment(newComment);
