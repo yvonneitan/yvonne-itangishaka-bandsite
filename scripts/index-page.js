@@ -1,22 +1,4 @@
-/* 
 
-<li class="comments__details comments__details--border">
-<div class="comments__icon"></div>
-<div class="comments__container">
-<div class="comments__header">
-    <p class="comments__name">Victor Pinto</p>
-    <p class="comments__date">11/02/2023</p>
-  </div>
-    <p class="comments__comment">
-        This is art. This is inexplicable magic expressed in the purest way,
-        everything that makes up this majestic work deserves reverence. 
-        Let us appreciate this for what it is and what it contains.
-    </p>
-</div>
-
-</li>  
-
-*/
 
 const commentsArray = [
   {
@@ -119,3 +101,63 @@ formEl.addEventListener("submit", function (event) {
   displayComments();
 });
 
+
+//SingleComment
+const  newCommentsArray=[
+  {
+    
+    author: "Yvonne Itan",
+    date: "12/12/2024",
+    comment:
+      "This is an amazing song. The beats are well co-ordinated. Good job guys!",
+
+  }
+]
+
+
+  function displaySingleComment(comment) {
+    listEl.innerText = "";
+    newCommentsArray.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+    newCommentsArray.sort((a, b) => {
+    return parseDate(b.date) - parseDate(a.date);
+  });
+  for (let i = 0; i < newCommentsArray.length; i++) {
+
+    const detailsEl = document.createElement("li");
+    detailsEl.classList.add("comments__details", "comments__details--border");
+
+    const iconEl = document.createElement("div");
+    iconEl.classList.add("comments__icon");
+
+    const commentsdivEl = document.createElement("div");
+    commentsdivEl.classList.add("comments__container");
+
+    const headerEl = document.createElement("div");
+    headerEl.classList.add("comments__header");
+
+    const authorEl = document.createElement("p");
+    authorEl.classList.add("comments__name");
+    authorEl.innerText = newCommentsArray[i].author;
+
+    const dateEl = document.createElement("p");
+    dateEl.classList.add("comments__date");
+    dateEl.innerText = newCommentsArray[i].date;
+
+    headerEl.appendChild(authorEl);
+    headerEl.appendChild(dateEl);
+
+    commentsdivEl.appendChild(headerEl);
+
+    const commentEl = document.createElement("p");
+    commentEl.classList.add("comments__comment");
+    commentEl.innerText = newCommentsArray[i].comment;
+    commentsdivEl.appendChild(commentEl);
+
+    detailsEl.appendChild(iconEl);
+    detailsEl.appendChild(commentsdivEl);
+
+    listEl.appendChild(detailsEl);
+  }
+}
+displaySingleComment()
