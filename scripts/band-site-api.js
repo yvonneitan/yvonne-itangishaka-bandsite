@@ -1,45 +1,35 @@
-// class BandSiteApi{
-//     constructor(apiKey){
-//         this.apiKey=apiKey;
-//         this.baseUrl="https://unit-2-project-api-25c1595833b2.herokuapp.com/";
-//     } 
-    
-// }
-
-// api_key= "0117c33a-1c32-421a-8289-0eb243cee4ea"
-
-async function getComment(){
-    try {
-        const response= await axios.get("https://unit-2-project-api-25c1595833b2.herokuapp.com/comments");
-        // const response= await axios.get("https://unit-2-project-api-25c1595833b2.herokuapp.com/comments?api_key=0117c33a-1c32-421a-8289-0eb243cee4ea");
-
-        console.log(response.data);
-        return response.data;
-            
-    } catch (error) {
-        console.error("Error getting comments",error);
-        
+class BandSiteApi {
+    constructor(apiKey) {
+      this.apiKey = apiKey;
+      this.baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com/";
     }
-}
-// getComment();
-
-
-
-async function postComment(comment){
-    try {
-        const response= await axios.post("https://unit-2-project-api-25c1595833b2.herokuapp.com/comments?api_key=0117c33a-1c32-421a-8289-0eb243cee4ea",comment);
-
-        console.log(response.data);
+  
+    // Get comments
+    async getComments() {
+      try {
+        const response = await axios.get(`${this.baseUrl}comments?api_key=${this.apiKey}`);
         return response.data;
-            
-    } catch (error) {
-        console.error("Error posting comments",error);
-        
+      } catch (error) {
+        console.error("Error getting comments", error);
+        return [];
+      }
     }
-}
-
-const newComment={
-    "name":"Yvonne",
-    "comment":"I think I like this band more"
-};
-// postComment(newComment);
+  
+    // Post a new comment
+    async postComment(comment) {
+      try {
+        const response = await axios.post(`${this.baseUrl}comments?api_key=${this.apiKey}`, comment);
+        return response.data;
+      } catch (error) {
+        console.error("Error posting comment", error);
+        return null;
+      }
+    }
+  }
+  
+  // Initialize your API class with the API key
+  const api = new BandSiteApi("0117c33a-1c32-421a-8289-0eb243cee4ea");
+  
+  // Export the instance for use in other files
+  export default api;
+  
