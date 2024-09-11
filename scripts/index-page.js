@@ -103,61 +103,61 @@ formEl.addEventListener("submit", function (event) {
 
 
 //SingleComment
-const  newCommentsArray=[
-  {
+// const  newCommentsArray=[
+//   {
     
-    author: "Yvonne Itan",
-    date: "12/12/2024",
-    comment:
-      "This is an amazing song. The beats are well co-ordinated. Good job guys!",
+//     author: "Yvonne Itan",
+//     date: "12/12/2024",
+//     comment:
+//       "This is an amazing song. The beats are well co-ordinated. Good job guys!",
 
-  }
-]
+//   }
+// ]
 
 
-  function displaySingleComment(comment) {
-    listEl.innerText = "";
-    newCommentsArray.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+//   function displaySingleComment(comment) {
+//     listEl.innerText = "";
+//     newCommentsArray.sort((a, b) => parseDate(b.date) - parseDate(a.date));
 
-    newCommentsArray.sort((a, b) => {
-    return parseDate(b.date) - parseDate(a.date);
-  });
-  for (let i = 0; i < newCommentsArray.length; i++) {
+//     newCommentsArray.sort((a, b) => {
+//     return parseDate(b.date) - parseDate(a.date);
+//   });
+//   for (let i = 0; i < newCommentsArray.length; i++) {
 
-    const detailsEl = document.createElement("li");
-    detailsEl.classList.add("comments__details", "comments__details--border");
+//     const detailsEl = document.createElement("li");
+//     detailsEl.classList.add("comments__details", "comments__details--border");
 
-    const iconEl = document.createElement("div");
-    iconEl.classList.add("comments__icon");
+//     const iconEl = document.createElement("div");
+//     iconEl.classList.add("comments__icon");
 
-    const commentsdivEl = document.createElement("div");
-    commentsdivEl.classList.add("comments__container");
+//     const commentsdivEl = document.createElement("div");
+//     commentsdivEl.classList.add("comments__container");
 
-    const headerEl = document.createElement("div");
-    headerEl.classList.add("comments__header");
+//     const headerEl = document.createElement("div");
+//     headerEl.classList.add("comments__header");
 
-    const authorEl = document.createElement("p");
-    authorEl.classList.add("comments__name");
-    authorEl.innerText = newCommentsArray[i].author;
+//     const authorEl = document.createElement("p");
+//     authorEl.classList.add("comments__name");
+//     authorEl.innerText = newCommentsArray[i].author;
 
-    const dateEl = document.createElement("p");
-    dateEl.classList.add("comments__date");
-    dateEl.innerText = newCommentsArray[i].date;
+//     const dateEl = document.createElement("p");
+//     dateEl.classList.add("comments__date");
+//     dateEl.innerText = newCommentsArray[i].date;
 
-    headerEl.appendChild(authorEl);
-    headerEl.appendChild(dateEl);
+//     headerEl.appendChild(authorEl);
+//     headerEl.appendChild(dateEl);
 
-    commentsdivEl.appendChild(headerEl);
+//     commentsdivEl.appendChild(headerEl);
 
-    const commentEl = document.createElement("p");
-    commentEl.classList.add("comments__comment");
-    commentEl.innerText = newCommentsArray[i].comment;
-    commentsdivEl.appendChild(commentEl);
+//     const commentEl = document.createElement("p");
+//     commentEl.classList.add("comments__comment");
+//     commentEl.innerText = newCommentsArray[i].comment;
+//     commentsdivEl.appendChild(commentEl);
 
-    detailsEl.appendChild(iconEl);
-    detailsEl.appendChild(commentsdivEl);
+//     detailsEl.appendChild(iconEl);
+//     detailsEl.appendChild(commentsdivEl);
 
-    listEl.appendChild(detailsEl);
-  }
-}
-displaySingleComment()
+//     listEl.appendChild(detailsEl);
+//   }
+// }
+// displaySingleComment()
