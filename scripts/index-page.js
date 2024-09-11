@@ -94,7 +94,8 @@ formEl.addEventListener("submit", function (event) {
     comment: comment,
   };
 
-  commentsArray.push(newComment);
+  // commentsArray.push(newComment);
+  commentsArray.unshift(newComment);
 
   formEl.reset();
 
