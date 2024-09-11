@@ -81,7 +81,7 @@
         bottom: -1rem;
         width: 450%;
         height: 0.25rem;
-        background-color: #ffffff;
+        background-color: $white;
 
         @include tablet {
           bottom: -2rem;
@@ -146,7 +146,7 @@
   &__name {
     width: 70%;
     height: 100%;
-    max-height: 220px;
+    max-height: 13.75rem;
     position: absolute;
     text-align: left;
     top: 50%;
@@ -154,12 +154,12 @@
     transform: translate(-50%, -50%);
     color: white;
     @include tablet {
-      max-height: 450px;
+      max-height:28.125rem;
     }
     @include desktop {
       display: flex;
       flex-direction: row;
-      max-height: 450px;
+      max-height: 28.125rem;
       align-content: space-around;
       width: 80%;
       padding-left: 15rem;
@@ -204,166 +204,189 @@
 }
 
 .shows {
-  padding: 2rem 1rem;
-
-  @include tablet{
-    padding: 2rem 1.5rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  font-family: $primary-font;
+  width: 100%;
+  @include tablet {
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
+    font-family: $primary-font;
   }
-  @include desktop{
-    padding: 2.5rem 11.25rem;
+  @include desktop {
+    font-size: 1rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+    flex-direction: column;
+    font-family: $primary-font;
   }
   &__container {
-    @include tablet{
-    width: 50.25rem;
+    @include tablet {
+      width: 100%;
+    }
+    @include desktop {
+      padding-top: 6rem;
+      width: 60%;
+      padding-left: 22rem;
+    }
   }
-}
-  &__top{
-      display: none;
-      @include tablet{
-     
-          display: flex;
-          justify-content: space-between;
-          font-family: $primary-font;
-          color: $silver;
-          &-venue,
-          &-date,
-          &-location {
-              width: 8.375rem;
-              font-size: 12px;
-          }
-          &-venue {
-              padding-left: 2rem;
-          }
+  &__top {
+    display: none;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      font-family: $primary-font;
+      color: $silver;
+      &-venue,
+      &-date,
+      &-location {
+        width: 8.375rem;
+        font-size: 1rem;
+        font-weight: $font-weight-bold;
+        font-family: $primary-font;
       }
-      @include desktop{
-
-        padding-bottom: 0.75rem;
+      &-venue {
+        padding-left: 2rem;
       }
+    }
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      font-family: $primary-font;
+      color: $silver;
+      &-venue,
+      &-date,
+      &-location {
+        width: 8.375rem;
+        font-size: 1rem;
+        font-weight: $font-weight-bold;
+        font-family: $primary-font;
+      }
+      &-venue {
+        padding-left: 2rem;
+      }
+    }
   }
   &__title {
-      color: $site-black;
-      padding-bottom: 1rem;
-      font-family: $primary-font;
-      font-size: 2rem;
-      font-weight: $font-weight-bold;
+    color: $site-black;
+    padding-bottom: 1rem;
+    font-family: $primary-font;
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
 
-      @include tablet{
-        font-size: 2.25rem;
-        line-height: 2.75rem;
-        padding-bottom: 1.5rem;
-      }
+    @include tablet {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      padding-bottom: 1.5rem;
+    }
+    @include desktop {
+      position: absolute;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      padding-bottom: 1.5rem;
+      padding-top: 5rem;
+      padding-left: 10rem;
+    }
   }
 
-  @include tablet{
+  @include tablet {
     &__hidden {
       visibility: hidden;
       width: 10rem;
+    }
   }
+  @include desktop {
+    &__hidden {
+      visibility: hidden;
+      width: 10rem;
+    }
   }
-  &__new {
-      padding: 1.5rem 0 1rem 0;
-      border-bottom: 1px solid $mercury;
-      display: flex;
-      flex-direction: column;
-      @include tablet{
 
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-      @include desktop{
-        padding: 1rem 0;
-      }
+  &__new {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.0625rem solid $mercury;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
   &__date,
   &__venue,
   &__location {
-      color: $silver;
-      padding-bottom: 1rem;
-      font-family: $primary-font;
-      font-size: 0.8125rem;
-      line-height: 1.125rem;
+    color: $silver;
+    padding-bottom: 1rem;
+    font-family: $primary-font;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    font-weight: $font-weight-bold;
+    &-actual {
+      padding-bottom: 1.5rem;
+      color: $site-black;
+    }
+    @include tablet {
+      display: none;
       &-actual {
-          padding-bottom: 1.5rem;
-          color: $site-black;
+        padding-bottom: 0;
+        width: 8.375rem;
       }
-      @include tablet{
-          display: none;
-          &-actual {
-              padding-bottom: 0;
-              width: 8.375rem;
-          }
-        }
+    }
+    @include desktop {
+      display: none;
+      &-actual {
+        padding-bottom: 0;
+        width: 8.375rem;
       }
+    }
+  }
   &__date-actual {
-      font-family:$primary-font;
-      font-size: 0.875rem;
-      line-height: 1.375rem;
-      font-weight: $font-weight-bold;
+    font-family: $primary-font;
+    font-size: 1rem;
+    font-weight: $font-weight-bold;
   }
   &__venue-actual {
-      font-family: $primary-font;
-      font-size: 0.8125rem;
-      line-height: 1.125rem;
+    font-family: $primary-font;
+    font-size: 1rem;
   }
   &__location-actual {
-      font-family: $primary-font;
-      font-size: 0.8125rem;
-      line-height: 1.125rem;
-      padding-bottom: 2rem;
-  }  
+    font-family: $primary-font;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+  
   &__button {
-      background-color: $site-black;
-      color: $white;
-      font-family:$primary-font;
-      width: 18.5rem;
-      height: 3rem;
-      border: none;
-      border-radius: 4px;
-      font-size: 0.875rem;
-      line-height: 1.375rem;
-      &:focus {
-          outline-width: 0;
-      }
-      &:hover {
-          background-color: $black-dark;
-      }
+    background-color: $site-black;
+    color: $white;
+    font-family:$primary-font;
+    width: 100%;
+    font-weight: 600;
+    height: 4rem;
+    border: none;
+    border-radius:0.25rem;
+    font-size: 1.5rem;
+    &:focus {
+      outline-width: 0;
+    }
+    &:hover {
+      background-color: $black-dark;
+    }
+    @include tablet{
+      width: 14rem;
+
+    }
+    @include desktop{
+      width: 10rem;
+      font-size: 1rem;
+
+    }
   }
 }
-
-@include tablet {
-  .shows {
-      
-      &__date-actual {
-          font-size: 1rem;
-          line-height: 1.5rem;
-      }
-      &__location-actual {
-          font-size: 0.875rem;
-          line-height: 1.375rem;
-      }
-      &__venue-actual {
-          font-size: 0.875rem;  
-          line-height: 1.375rem;  
-      }
-      &__button {
-          width: 10rem;
-          height: 3rem;
-      }
-      &__venue-actual {
-          padding-left: 2rem;
-          }
-  }
-}
-
 
 
 @include mobile {
@@ -517,7 +540,7 @@
 
     &__logo-container {
       position: absolute;
-      right: 50px;
+      right: 3.125rem;
       flex: 1;
       justify-content: flex-end;
       display: flex;
@@ -614,7 +637,7 @@
 
     &__logo-container {
       position: absolute;
-      right: 50px;
+      right: 3.125rem;
       flex: 1;
       justify-content: flex-end;
       display: flex;
