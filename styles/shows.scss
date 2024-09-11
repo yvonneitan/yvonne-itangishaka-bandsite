@@ -220,12 +220,13 @@
   }
   &__container {
     @include tablet {
-      width: 100%;
+      padding:1rem;
+      width: 97%;
     }
     @include desktop {
       padding-top: 6rem;
       width: 60%;
-      padding-left: 22rem;
+      padding-left: 18rem;
     }
   }
   &__top {
@@ -381,8 +382,9 @@
 
     }
     @include desktop{
-      width: 10rem;
-      font-size: 1rem;
+      height: 3rem;
+      width: 8rem;
+      font-size: 1rem
 
     }
   }

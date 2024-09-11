@@ -285,14 +285,15 @@ img {
 }
 @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .shows__container {
-    width: 100%;
+    padding: 1rem;
+    width: 97%;
   }
 }
 @media only screen and (min-width: 80rem) {
   .shows__container {
     padding-top: 6rem;
     width: 60%;
-    padding-left: 22rem;
+    padding-left: 18rem;
   }
 }
 .shows__top {
@@ -457,7 +458,8 @@ img {
 }
 @media only screen and (min-width: 80rem) {
   .shows__button {
-    width: 10rem;
+    height: 3rem;
+    width: 8rem;
     font-size: 1rem;
   }
 }
