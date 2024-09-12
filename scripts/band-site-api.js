@@ -8,7 +8,10 @@ class BandSiteApi {
       const response = await axios.get(
         `${this.baseUrl}comments?api_key=${this.apiKey}`
       );
-      return response.data;
+      // return response.data;
+      const comments= response.data
+      return comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
     } catch (error) {
       console.error("Error getting comments", error);
       return [];
@@ -17,7 +20,6 @@ class BandSiteApi {
   // Post a new comment
    async postComment(comment) {
     try {
-      console.log("I am posting comments");
       const response = await axios.post(
         `${this.baseUrl}comments?api_key=${this.apiKey}`,
         comment,
