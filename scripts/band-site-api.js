@@ -19,11 +19,10 @@ class BandSiteApi {
     try {
       const response = await axios.post(
         `${this.baseUrl}comments?api_key=${this.apiKey}`,
-        comment
+        comment,
       );
       return response.data;
     } catch (error) {
-      console.error("xxxxxxxxxError posting comment", error);
       return null;
     }
   }

@@ -11,12 +11,6 @@ function parseDate(timestamp) {
   return new Date(Number(timestamp));
 }
 
-function getCurrentFormattedDate() {
-  const date = new Date();
-  const options = { year: "numeric", month: "2-digit", day: "2-digit" };
-  return date.toLocaleDateString("en-US", options);
-}
-
 export async function displayComments() {
   listEl.innerText = "";
   try {
@@ -71,45 +65,28 @@ export async function displayComments() {
 
 displayComments();
 
-
-console.log("Author Input Element:1");
 const formEl = document.querySelector("#comments-form");
-console.log("Author Input Element:2");
 
-formEl.addEventListener("submit", function (event) {
-  console.log("Author Input Element:3");
+formEl.addEventListener("submit", async function (event) {
   event.preventDefault();
 
 
   const author = document.getElementById("name").value;
   const comment = document.getElementById("comment").value;
 
-  // Test 
-  console.log("Author Input Elementwww:", author);
-  console.log("Comment Input Elementxxx:", comment);
- 
   const newComment = {
     name: author,
-    // date: Date.now(),
     comment: comment,
   };
-  console.log(newComment)
-
-  // commentsArray.push(newComment);
-  // commentsArray.unshift(newComment);
-
-  api.postComment("New comment is hererwrwrwre:",newComment);
-
-  api.postComment(newComment).then(() => {
+  try {
+   
+    await api.postComment(newComment);
+    formEl.reset();
     displayComments();
-  }).catch((error) => {
-    console.error("--------Error posting comment:", error);
-  });
+  } catch (error) {
+    console.error("Error posting comment", error);
+  }
   
-
-  formEl.reset();
-
-  displayComments();
 });
 
 // const commentsArray = [
