@@ -32,6 +32,8 @@ import api from "./band-site-api.js";
 //   },
 // ];
 
+
+
 function displayShows(arr) {
   const shows = document.querySelector(".shows");
 
@@ -52,17 +54,17 @@ function displayShows(arr) {
   showsContainer.appendChild(titleEl);
 
   const datesEl = document.createElement("h3");
-  datesEl.classList.add("shows__top-date");
+  datesEl.classList.add("shows__top--date");
   datesEl.innerText = "DATES";
   titleEl.appendChild(datesEl);
 
   const venueEl = document.createElement("h3");
-  venueEl.classList.add("shows__top-venue");
+  venueEl.classList.add("shows__top--venue");
   venueEl.innerText = "VENUE";
   titleEl.appendChild(venueEl);
 
   const locationsEl = document.createElement("h3");
-  locationsEl.classList.add("shows__top-location");
+  locationsEl.classList.add("shows__top--location");
   locationsEl.innerText = "LOCATION";
   titleEl.appendChild(locationsEl);
 
@@ -88,7 +90,7 @@ function displayShows(arr) {
 
     // Actual Date
     const dateShow = document.createElement("h3");
-    dateShow.classList.add("shows__date-actual");
+    dateShow.classList.add("shows__date--actual");
     dateShow.innerText = show.date;
     showsParent.appendChild(dateShow);
 
@@ -100,7 +102,7 @@ function displayShows(arr) {
 
     // Actual Venue
     const venueShow = document.createElement("h3");
-    venueShow.classList.add("shows__venue-actual");
+    venueShow.classList.add("shows__venue--actual");
     venueShow.innerText = show.venue;
     showsParent.appendChild(venueShow);
 
@@ -112,7 +114,7 @@ function displayShows(arr) {
 
     // Actual Location
     const locationShow = document.createElement("h3");
-    locationShow.classList.add("shows__location-actual");
+    locationShow.classList.add("shows__location--actual");
     locationShow.innerText = show.location;
     showsParent.appendChild(locationShow);
 

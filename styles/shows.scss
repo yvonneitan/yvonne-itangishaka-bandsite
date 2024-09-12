@@ -236,15 +236,15 @@
       justify-content: space-between;
       font-family: $primary-font;
       color: $silver;
-      &-venue,
-      &-date,
-      &-location {
+      &--venue,
+      &--date,
+      &--location {
         width: 8.375rem;
         font-size: 1rem;
         font-weight: $font-weight-bold;
         font-family: $primary-font;
       }
-      &-venue {
+      &--venue {
         padding-left: 2rem;
       }
     }
@@ -253,15 +253,15 @@
       justify-content: space-between;
       font-family: $primary-font;
       color: $silver;
-      &-venue,
-      &-date,
-      &-location {
+      &--venue,
+      &--date,
+      &--location {
         width: 8.375rem;
         font-size: 1rem;
         font-weight: $font-weight-bold;
         font-family: $primary-font;
       }
-      &-venue {
+      &--venue {
         padding-left: 2rem;
       }
     }
@@ -327,35 +327,35 @@
     font-size: 1rem;
     line-height: 1.125rem;
     font-weight: $font-weight-bold;
-    &-actual {
+    &--actual {
       padding-bottom: 1.5rem;
       color: $site-black;
     }
     @include tablet {
       display: none;
-      &-actual {
+      &--actual {
         padding-bottom: 0;
         width: 8.375rem;
       }
     }
     @include desktop {
       display: none;
-      &-actual {
+      &--actual {
         padding-bottom: 0;
         width: 8.375rem;
       }
     }
   }
-  &__date-actual {
+  &__date--actual {
     font-family: $primary-font;
     font-size: 1rem;
     font-weight: $font-weight-bold;
   }
-  &__venue-actual {
+  &__venue--actual {
     font-family: $primary-font;
     font-size: 1rem;
   }
-  &__location-actual {
+  &__location--actual {
     font-family: $primary-font;
     font-size: 1rem;
     padding-bottom: 2rem;

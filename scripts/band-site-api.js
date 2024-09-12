@@ -29,10 +29,24 @@ class BandSiteApi {
       return null;
     }
   }
+  async getShows() {
+    try {
+      const response = await axios.get(
+        `${this.baseUrl}shows?api_key=${this.apiKey}`
+      );
+      console.log("These are the shows:", response.data);
+      return response.data; 
+      
+    } catch (error) {
+      console.error("Error getting shows", error);
+      return [];
+    }
+  }
+
 }
 // Initialize your API class with the API key
 // const api = new BandSiteApi("0117c33a-1c32-421a-8289-0eb243cee4ea");
-const api = new BandSiteApi("e68fd006-9576-4e2d-a276-c5512d8f99a5");
+const api = new BandSiteApi("923988cd-70d2-49cc-895c-8eb95ae8edf0");
 
 // Export the instance for use in other files
 export default api;

@@ -306,13 +306,13 @@ img {
     font-family: "Avenir Next", sans-serif;
     color: #afafaf;
   }
-  .shows__top-venue, .shows__top-date, .shows__top-location {
+  .shows__top--venue, .shows__top--date, .shows__top--location {
     width: 8.375rem;
     font-size: 1rem;
     font-weight: 600;
     font-family: "Avenir Next", sans-serif;
   }
-  .shows__top-venue {
+  .shows__top--venue {
     padding-left: 2rem;
   }
 }
@@ -323,13 +323,13 @@ img {
     font-family: "Avenir Next", sans-serif;
     color: #afafaf;
   }
-  .shows__top-venue, .shows__top-date, .shows__top-location {
+  .shows__top--venue, .shows__top--date, .shows__top--location {
     width: 8.375rem;
     font-size: 1rem;
     font-weight: 600;
     font-family: "Avenir Next", sans-serif;
   }
-  .shows__top-venue {
+  .shows__top--venue {
     padding-left: 2rem;
   }
 }
@@ -398,7 +398,7 @@ img {
   line-height: 1.125rem;
   font-weight: 600;
 }
-.shows__date-actual, .shows__venue-actual, .shows__location-actual {
+.shows__date--actual, .shows__venue--actual, .shows__location--actual {
   padding-bottom: 1.5rem;
   color: #323232;
 }
@@ -406,7 +406,7 @@ img {
   .shows__date, .shows__venue, .shows__location {
     display: none;
   }
-  .shows__date-actual, .shows__venue-actual, .shows__location-actual {
+  .shows__date--actual, .shows__venue--actual, .shows__location--actual {
     padding-bottom: 0;
     width: 8.375rem;
   }
@@ -415,21 +415,21 @@ img {
   .shows__date, .shows__venue, .shows__location {
     display: none;
   }
-  .shows__date-actual, .shows__venue-actual, .shows__location-actual {
+  .shows__date--actual, .shows__venue--actual, .shows__location--actual {
     padding-bottom: 0;
     width: 8.375rem;
   }
 }
-.shows__date-actual {
+.shows__date--actual {
   font-family: "Avenir Next", sans-serif;
   font-size: 1rem;
   font-weight: 600;
 }
-.shows__venue-actual {
+.shows__venue--actual {
   font-family: "Avenir Next", sans-serif;
   font-size: 1rem;
 }
-.shows__location-actual {
+.shows__location--actual {
   font-family: "Avenir Next", sans-serif;
   font-size: 1rem;
   padding-bottom: 2rem;
