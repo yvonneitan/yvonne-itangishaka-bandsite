@@ -17,6 +17,7 @@ class BandSiteApi {
   // Post a new comment
    async postComment(comment) {
     try {
+      console.log("I am posting comments");
       const response = await axios.post(
         `${this.baseUrl}comments?api_key=${this.apiKey}`,
         comment,

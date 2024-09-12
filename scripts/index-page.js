@@ -79,8 +79,9 @@ formEl.addEventListener("submit", async function (event) {
     comment: comment,
   };
   try {
-   
+   console.log("I am posting");
     await api.postComment(newComment);
+    console.log("Done posting");
     formEl.reset();
     displayComments();
   } catch (error) {
