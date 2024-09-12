@@ -15,7 +15,7 @@ class BandSiteApi {
     }
   }
   // Post a new comment
-  async postComment(comment) {
+   async postComment(comment) {
     try {
       const response = await axios.post(
         `${this.baseUrl}comments?api_key=${this.apiKey}`,
@@ -23,13 +23,14 @@ class BandSiteApi {
       );
       return response.data;
     } catch (error) {
-      console.error("Error posting comment", error);
+      console.error("xxxxxxxxxError posting comment", error);
       return null;
     }
   }
 }
 // Initialize your API class with the API key
-const api = new BandSiteApi("0117c33a-1c32-421a-8289-0eb243cee4ea");
+// const api = new BandSiteApi("0117c33a-1c32-421a-8289-0eb243cee4ea");
+const api = new BandSiteApi("e68fd006-9576-4e2d-a276-c5512d8f99a5");
 
 // Export the instance for use in other files
 export default api;

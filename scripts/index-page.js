@@ -21,13 +21,13 @@ export async function displayComments() {
   listEl.innerText = "";
   try {
     const commentsArray = await api.getComments();
-    console.log(commentsArray);
 
     commentsArray.sort((a, b) => {
       return parseDate(b.timestamp) - parseDate(a.timestamp);
     });
 
     for (let i = 0; i < commentsArray.length; i++) {
+
       const detailsEl = document.createElement("li");
       detailsEl.classList.add("comments__details", "comments__details--border");
 
@@ -42,11 +42,12 @@ export async function displayComments() {
 
       const authorEl = document.createElement("p");
       authorEl.classList.add("comments__name");
-      authorEl.innerText = commentsArray[i].author;
+      authorEl.innerText = commentsArray[i].name;
 
       const dateEl = document.createElement("p");
       dateEl.classList.add("comments__date");
-      dateEl.innerText = commentsArray[i].date;
+      dateEl.innerText = parseDate(commentsArray[i].timestamp) .toLocaleDateString("en-US");
+
 
       headerEl.appendChild(authorEl);
       headerEl.appendChild(dateEl);
@@ -70,21 +71,41 @@ export async function displayComments() {
 
 displayComments();
 
+
+console.log("Author Input Element:1");
 const formEl = document.querySelector("#comments-form");
+console.log("Author Input Element:2");
+
 formEl.addEventListener("submit", function (event) {
+  console.log("Author Input Element:3");
   event.preventDefault();
+
 
   const author = document.getElementById("name").value;
   const comment = document.getElementById("comment").value;
 
+  // Test 
+  console.log("Author Input Elementwww:", author);
+  console.log("Comment Input Elementxxx:", comment);
+ 
   const newComment = {
-    author: author,
-    date: getCurrentFormattedDate(),
+    name: author,
+    // date: Date.now(),
     comment: comment,
   };
+  console.log(newComment)
 
   // commentsArray.push(newComment);
-  commentsArray.unshift(newComment);
+  // commentsArray.unshift(newComment);
+
+  api.postComment("New comment is hererwrwrwre:",newComment);
+
+  api.postComment(newComment).then(() => {
+    displayComments();
+  }).catch((error) => {
+    console.error("--------Error posting comment:", error);
+  });
+  
 
   formEl.reset();
 
