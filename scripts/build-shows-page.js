@@ -53,8 +53,6 @@ function displayShows(arr) {
   // Loop through the array using a traditional for loop
   for (let i = 0; i < arr.length; i++) {
     const show = arr[i];
-
-    console.log (arr[i]);
     // Create a container for each show
     const showsParent = document.createElement("div");
     showsParent.classList.add("shows__new");

@@ -11,13 +11,12 @@ function parseDate(timestamp) {
   return new Date(Number(timestamp));
 }
 
- async function displayComments() {
+async function displayComments() {
   listEl.innerText = "";
   try {
     const commentsArray = await api.getComments();
 
     for (let i = 0; i < commentsArray.length; i++) {
-
       const detailsEl = document.createElement("li");
       detailsEl.classList.add("comments__details", "comments__details--border");
 
@@ -36,8 +35,9 @@ function parseDate(timestamp) {
 
       const dateEl = document.createElement("p");
       dateEl.classList.add("comments__date");
-      dateEl.innerText = parseDate(commentsArray[i].timestamp) .toLocaleDateString("en-US");
-
+      dateEl.innerText = parseDate(
+        commentsArray[i].timestamp
+      ).toLocaleDateString("en-US");
 
       headerEl.appendChild(authorEl);
       headerEl.appendChild(dateEl);
@@ -63,10 +63,9 @@ displayComments();
 
 const formEl = document.querySelector("#comments-form");
 
-console.log(formEl); 
+// console.log(formEl);
 formEl.addEventListener("submit", async function (event) {
   event.preventDefault();
-
 
   const author = document.getElementById("name").value;
   const comment = document.getElementById("comment").value;
@@ -82,6 +81,4 @@ formEl.addEventListener("submit", async function (event) {
   } catch (error) {
     console.error("Error posting comment", error);
   }
-  
 });
-
