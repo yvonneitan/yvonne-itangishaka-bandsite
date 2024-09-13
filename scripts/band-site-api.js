@@ -31,13 +31,10 @@ class BandSiteApi {
   }
   async getShows() {
     try {
-      console.log("I am here in getshow");
       const response = await axios.get(
-        `${this.baseUrl}showdates?api_key=${this.apiKey}`,
+        `${this.baseUrl}shows?api_key=${this.apiKey}`
       );
-      console.log("I am here in getshow after the url");
       console.log("These are the shows:", response.data);
-      console.log("I am here in getshow I am getting the data now");
       return response.data; 
       
     } catch (error) {
