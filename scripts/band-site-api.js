@@ -8,20 +8,21 @@ class BandSiteApi {
       const response = await axios.get(
         `${this.baseUrl}comments?api_key=${this.apiKey}`
       );
-      const comments= response.data
-      return comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-
+      const comments = response.data;
+      return comments.sort(
+        (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
+      );
     } catch (error) {
       console.error("Error getting comments", error);
       return [];
     }
   }
   // Post a new comment
-   async postComment(comment) {
+  async postComment(comment) {
     try {
       const response = await axios.post(
         `${this.baseUrl}comments?api_key=${this.apiKey}`,
-        comment,
+        comment
       );
       return response.data;
     } catch (error) {
@@ -34,21 +35,15 @@ class BandSiteApi {
         `${this.baseUrl}shows?api_key=${this.apiKey}`
       );
       console.log("These are the shows:", response.data);
-      return response.data; 
-      
+      return response.data;
     } catch (error) {
       console.error("Error getting shows", error);
       return [];
     }
   }
-
 }
-
-
-
-
 // Initialize your API class with the API key
-// const api = new BandSiteApi("0117c33a-1c32-421a-8289-0eb243cee4ea");
+
 const api = new BandSiteApi("5aff78d3-787e-4a59-866d-a60127fe6cd5");
 api.getShows();
 
