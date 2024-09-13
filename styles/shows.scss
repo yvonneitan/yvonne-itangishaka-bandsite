@@ -205,7 +205,8 @@
 
 .shows {
   font-family: $primary-font;
-  width: 100%;
+  width: 98%;
+  padding:1rem;
   @include tablet {
     font-size: 1rem;
     display: flex;

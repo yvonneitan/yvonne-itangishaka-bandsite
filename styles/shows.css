@@ -265,7 +265,8 @@ img {
 
 .shows {
   font-family: "Avenir Next", sans-serif;
-  width: 100%;
+  width: 98%;
+  padding: 1rem;
 }
 @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .shows {

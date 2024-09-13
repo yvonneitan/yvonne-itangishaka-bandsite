@@ -47,7 +47,6 @@ class BandSiteApi {
 // Initialize your API class with the API key
 
 const api = new BandSiteApi("5aff78d3-787e-4a59-866d-a60127fe6cd5");
-api.getShows();
 
 // Export the instance for use in other files
 export default api;
