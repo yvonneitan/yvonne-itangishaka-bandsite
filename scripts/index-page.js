@@ -63,6 +63,7 @@ displayComments();
 
 const formEl = document.querySelector("#comments-form");
 
+console.log(formEl); 
 formEl.addEventListener("submit", async function (event) {
   event.preventDefault();
 

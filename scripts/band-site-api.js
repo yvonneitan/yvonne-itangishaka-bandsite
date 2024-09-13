@@ -3,6 +3,8 @@ class BandSiteApi {
     this.apiKey = apiKey;
     this.baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com/";
   }
+
+  // get comments from api
   async getComments() {
     try {
       const response = await axios.get(
@@ -17,7 +19,7 @@ class BandSiteApi {
       return [];
     }
   }
-  // Post a new comment
+  // Post a new comment to api
   async postComment(comment) {
     try {
       const response = await axios.post(
@@ -29,10 +31,11 @@ class BandSiteApi {
       return null;
     }
   }
+   // Get shows from api
   async getShows() {
     try {
       const response = await axios.get(
-        `${this.baseUrl}shows?api_key=${this.apiKey}`
+        `${this.baseUrl}showdates?api_key=${this.apiKey}`
       );
       console.log("These are the shows:", response.data);
       return response.data;

@@ -1,3 +1,4 @@
+
 import api from "./band-site-api.js";
 
 function parseDate(timestamp) {
@@ -10,6 +11,7 @@ function parseDate(timestamp) {
 }
 
 function displayShows(arr) {
+  
   const shows = document.querySelector(".shows");
 
   // Add the main title
@@ -52,7 +54,7 @@ function displayShows(arr) {
   for (let i = 0; i < arr.length; i++) {
     const show = arr[i];
 
-    console.log(arr[i]);
+    console.log (arr[i]);
     // Create a container for each show
     const showsParent = document.createElement("div");
     showsParent.classList.add("shows__new");
@@ -104,8 +106,8 @@ function displayShows(arr) {
 // get shows and display shows
 async function getShowsAndDisplayShows() {
   try {
-    const showsData = await api.getShows();
-    displayShows(showsData);
+    const showsData = await api.getShows(); 
+    displayShows(showsData); 
   } catch (error) {
     console.error("Error getting and displaying shows:", error);
   }
