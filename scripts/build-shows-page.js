@@ -83,6 +83,7 @@ function displayShows(arr) {
   hiddenEl.innerText = ".";
   titleEl.appendChild(hiddenEl);
 
+  
   // Loop through the array using a traditional for loop
   for (let i = 0; i < arr.length; i++) {
     const show = arr[i];
