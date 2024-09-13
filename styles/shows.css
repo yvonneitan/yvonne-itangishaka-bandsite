@@ -265,8 +265,7 @@ img {
 
 .shows {
   font-family: "Avenir Next", sans-serif;
-  width: 98%;
-  padding: 1rem;
+  width: 100%;
 }
 @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .shows {
@@ -282,12 +281,6 @@ img {
     display: flex;
     flex-direction: column;
     font-family: "Avenir Next", sans-serif;
-  }
-}
-@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
-  .shows__container {
-    padding: 1rem;
-    width: 97%;
   }
 }
 @media only screen and (min-width: 80rem) {
@@ -306,6 +299,7 @@ img {
     justify-content: space-between;
     font-family: "Avenir Next", sans-serif;
     color: #afafaf;
+    padding: 1rem;
   }
   .shows__top--venue, .shows__top--date, .shows__top--location {
     width: 8.375rem;
@@ -323,6 +317,7 @@ img {
     justify-content: space-between;
     font-family: "Avenir Next", sans-serif;
     color: #afafaf;
+    padding: 1rem;
   }
   .shows__top--venue, .shows__top--date, .shows__top--location {
     width: 8.375rem;
@@ -371,8 +366,7 @@ img {
   }
 }
 .shows__new {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   border-bottom: 0.0625rem solid #e1e1e1;
   display: flex;
   flex-direction: column;
@@ -382,6 +376,7 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
   }
 }
 @media only screen and (min-width: 80rem) {
@@ -389,6 +384,7 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
   }
 }
 .shows__date, .shows__venue, .shows__location {

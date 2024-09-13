@@ -205,13 +205,15 @@
 
 .shows {
   font-family: $primary-font;
-  width: 98%;
-  padding:1rem;
+  width:100%;
+  
   @include tablet {
     font-size: 1rem;
     display: flex;
     flex-direction: column;
     font-family: $primary-font;
+    // width: 98%;
+    // padding:1rem;
   }
   @include desktop {
     font-size: 1rem;
@@ -221,8 +223,8 @@
   }
   &__container {
     @include tablet {
-      padding:1rem;
-      width: 97%;
+      // padding:1rem;
+      // width: 120%;
     }
     @include desktop {
       padding-top: 6rem;
@@ -237,6 +239,7 @@
       justify-content: space-between;
       font-family: $primary-font;
       color: $silver;
+      padding:1rem;
       &--venue,
       &--date,
       &--location {
@@ -254,6 +257,7 @@
       justify-content: space-between;
       font-family: $primary-font;
       color: $silver;
+      padding:1rem;
       &--venue,
       &--date,
       &--location {
@@ -303,8 +307,7 @@
   }
 
   &__new {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding:1rem;
     border-bottom: 0.0625rem solid $mercury;
     display: flex;
     flex-direction: column;
@@ -312,11 +315,13 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      padding:1rem;
     }
     @include desktop {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      padding:1rem;
     }
   }
   &__date,
