@@ -1,0 +1,925 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./fonts" as *;
+@use "./global" as *;
+@use "./colors" as *;
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: $white;
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: $primary-font;
+    font-weight: $font-weight-bold;
+  }
+  &__user {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    @include tablet {
+      padding-left: 4rem;
+      padding-right:4rem;
+    }
+    @include desktop {
+      padding-left: 10rem;
+      padding-right:10rem;
+
+    }
+  }
+  &__pic {
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    background-color: $mercury;
+    background-image: url("../../assets/images/Mohan-muruge.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-top: 2.6rem;
+  }
+  &__items {
+    width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 1rem;
+  }
+  &__label {
+    font-family: $primary-font;
+    color: $silver;
+    font-weight: $font-weight-regular400;
+  }
+  &__input {
+    font-family: inherit;
+    height: 1rem;
+    padding: 0.75rem;
+    border: 0.0625rem solid $mercury;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: $black-dark;
+    transition: border-color 0.3s ease;
+    background-color: $alabaster;
+    @include tablet {
+      height: 3rem;
+      padding: 1rem;
+    }
+    @include desktop {
+      height: 3rem;
+      padding: 1rem;
+    }
+
+    &:focus {
+      border-color: $site-black;
+      outline: none;
+    }
+    &:user-invalid {
+      outline: 0.0625rem solid $error;
+    }
+
+    &--large {
+      resize: none;
+      height: 6.75rem;
+    }
+
+    &--error {
+      border-color: $error;
+    }
+  }
+  &__submit {
+    background-color: $black-dark;
+    color: $white;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    @include tablet {
+      width: 10rem;
+      align-self: end;
+    }
+    @include desktop {
+      width: 10rem;
+      align-self: end;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    @include tablet {
+      padding-left: 4rem;
+      padding-right:4rem;
+    }
+    @include desktop {
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 0.125rem solid $mercury;
+
+    &--border {
+      border-top: 0.125rem solid $mercury;
+    }
+    .comments__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      min-width: 2.5rem;
+      background-color: $mercury;
+      border-radius: 50%;
+      margin: 0.5rem;
+    }
+  }
+  &__container {
+    width: 100%;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__name {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: $font-weight-bold;
+  }
+  &__date {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: $silver;
+    text-align: right;
+  }
+  &__comment {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@include mobile {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $site-black;
+
+    &__logo {
+      height: 2rem;
+      width: auto;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__menu {
+      display: flex;
+      list-style: none;
+      margin-top: 1rem;
+      padding: 0;
+      gap: 12rem;
+    }
+
+    &__link {
+      position: relative;
+      a {
+        text-decoration: none;
+        color: $white;
+        font-family: $primary-font;
+      }
+      &--active {
+        font-weight: $font-weight-bold;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -1em;
+          width: 250%;
+          height: 0.25rem;
+          background-color: $white;
+          transform: translateX(-53%);
+        }
+      }
+    }
+  }
+
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+
+    &__image {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    &__background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__name {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__title {
+      font-size: 2rem;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .about {
+    text-align: left;
+    padding: 1rem;
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-bold;
+    }
+
+    &__say {
+      font-weight: $font-weight-bold;
+      margin: 0.5rem 0;
+    }
+    &__name {
+      font-weight: $font-weight-bold;
+    }
+
+    &__bees {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: $font-weight-regular400;
+    }
+
+    &__bees-paragraph {
+      text-align: left;
+      line-height: 1.6;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .photos {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: $alabaster;
+
+    &__name {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-bold;
+    }
+
+    &__gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      img {
+        width: 100%;
+        transition: transform 2s ease, filter 2s ease;
+      }
+      img:hover {
+        filter: brightness(80%);
+        transform: scale(1.2);
+      }
+    }
+  }
+  .footer {
+    background-color: $site-black;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: $primary-font;
+    }
+
+    &__socials {
+      margin: 1rem 0;
+
+      img {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin: 0 0.3125rem;
+      }
+    }
+
+    &__categories {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__management {
+      margin-bottom: 1rem;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-location {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
+      }
+    }
+
+    &__group,
+    &__arc {
+      margin-bottom: 1rem;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-agent {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
+      }
+    }
+    &__logo-container {
+      padding-top: 2rem;
+    }
+    &__logo {
+      width: 7.125rem;
+      height: 1.1875rem;
+    }
+    .copyright {
+      padding-top: 2rem;
+      font-size: x-small;
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    background-color: $site-black;
+
+    &__logo {
+      height: 1.25rem;
+      width: auto;
+      padding-bottom: 0.5rem;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      padding-left: 4rem;
+    }
+
+    &__menu {
+      display: flex;
+      list-style: none;
+      margin-top: 1rem;
+      padding: 0;
+      gap: 6rem;
+    }
+
+    &__link {
+      position: relative;
+      a {
+        text-decoration: none;
+        color: $white;
+        font-family: $primary-font;
+      }
+
+      &--active {
+        font-weight: $font-weight-bold;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2rem;
+          width: 100%;
+          height: 0.25rem;
+          background-color: $white;
+        }
+      }
+    }
+  }
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+
+    &__image {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    &__background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__name {
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__title {
+      font-size: 4rem;
+      font-weight: $font-weight-bold;
+    }
+  }
+  .about {
+    text-align: left;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+
+    &__title {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-bold;
+    }
+    &__us {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+      padding-left: 5rem;
+      font-weight: $font-weight-bold;
+    }
+    &__name {
+      font-size: smaller;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-left: 5rem;
+    }
+
+    &__bees {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: $font-weight-bold;
+      font-style: $font-weight-bold;
+    }
+
+    &__bees-paragraph {
+      text-align: left;
+      line-height: 1.6;
+      padding-bottom: 1rem;
+    }
+    &__right {
+      padding-top: 4rem;
+    }
+  }
+  .photos {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: $alabaster;
+
+    &__name {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-bold;
+      padding: 2rem;
+    }
+
+    &__gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 2rem;
+      justify-content: space-around;
+    }
+    .gallery-items {
+      width: calc(33.33% - 1rem);
+      margin-bottom: 0.5rem;
+    }
+    img {
+      width: 100%;
+      transition: transform 2s ease, filter 2s ease;
+    }
+    img:hover {
+      filter: brightness(80%);
+      transform: scale(1.2);
+    }
+  }
+  .footer {
+    background-color: $site-black;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    &__contacts {
+      display: flex;
+      height: fit-content;
+      width: 80%;
+    }
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      padding-right: 6.5rem;
+    }
+
+    &__socials {
+      margin: 1rem 0;
+
+      img {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin: 0 0.3125rem;
+      }
+    }
+    &__categories {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+    &__management {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-location {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
+      }
+    }
+    &__group {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-agent {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
+      }
+    }
+    &__arc {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-agent {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
+      }
+    }
+
+    &__logo-container {
+      position: absolute;
+      right: 50px;
+      flex: 1;
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+
+      &__logo {
+        width: 7.125rem;
+        height: 1.1875rem;
+        padding-bottom: 1rem;
+      }
+    }
+    .copyright {
+      padding-top: 2rem;
+      font-size: x-small;
+    }
+  }
+}
+
+@include desktop {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 8rem;
+    background-color: $site-black;
+
+    &__logo {
+      height: 1.25rem;
+      width: auto;
+      padding-bottom: 0.5rem;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      padding-left: 4rem;
+    }
+
+    &__menu {
+      display: flex;
+      list-style: none;
+      margin-top: 1rem;
+      padding: 0;
+      gap: 6rem;
+    }
+
+    &__link {
+      position: relative;
+      a {
+        text-decoration: none;
+        color: $white;
+        font-family: $primary-font;
+      }
+
+      &--active {
+        font-weight: $font-weight-bold;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2rem;
+          width: 100%;
+          height: 0.25rem;
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+
+  
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+
+    &__image {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    &__background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__name {
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__title {
+      font-size: 4rem;
+      font-weight: $font-weight-bold;
+    }
+  }
+  .about {
+    text-align: left;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-bold;
+    }
+    &__us {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      font-weight: $font-weight-regular700;
+    }
+    &__name {
+      font-size: smaller;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+
+    &__say {
+      font-weight: $font-weight-bold;
+      margin: 0.5rem 0;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    &__bees {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: $font-weight-bold;
+    }
+
+    &__bees-paragraph {
+      text-align: left;
+      line-height: 1.6;
+      padding-bottom: 1rem;
+    }
+    &__right {
+      padding-top: 4rem;
+    }
+  }
+  .photos {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: $alabaster;
+
+    &__name {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-bold;
+      padding: 2rem;
+    }
+
+    &__gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 2rem;
+      justify-content: space-around;
+    }
+    .gallery-items {
+      width: calc(33.33% - 1rem);
+      margin-bottom: 0.5rem;
+    }
+    img {
+      width: 100%;
+      transition: transform 2s ease, filter 2s ease;
+    }
+    img:hover {
+      filter: brightness(80%);
+      transform: scale(1.2);
+    }
+  }
+  .footer {
+    background-color: $site-black;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    &__contacts {
+      display: flex;
+      height: fit-content;
+      width: 80%;
+    }
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      padding-right: 6.5rem;
+    }
+
+    &__socials {
+      margin: 1rem 0;
+
+      img {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin: 0 0.3125rem;
+      }
+    }
+    &__categories {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+    &__management {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-location {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
+      }
+    }
+    &__group {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-agent {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
+      }
+    }
+    &__arc {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-agent {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
+      }
+    }
+
+    &__logo-container {
+      position: absolute;
+      right: 50px;
+      flex: 1;
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+
+      &__logo {
+        width: 7.125rem;
+        height: 1.1875rem;
+        padding-bottom: 1rem;
+      }
+    }
+    .copyright {
+      padding-top: 2rem;
+      font-size: x-small;
+    }
+  }
+}

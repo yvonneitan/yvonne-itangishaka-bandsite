@@ -1,0 +1,903 @@
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next", sans-serif;
+}
+
+a {
+  margin: 0;
+  padding-top: 1rem;
+  font-family: "Avenir Next", sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+body {
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+.comments__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 600;
+}
+.comments__user {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments__user {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__user {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+.comments__pic {
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  background-color: #e1e1e1;
+  background-image: url("../../assets/images/Mohan-muruge.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin-top: 2.6rem;
+}
+.comments__items {
+  width: 100%;
+}
+.comments__form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 1rem;
+}
+.comments__label {
+  font-family: "Avenir Next", sans-serif;
+  color: #afafaf;
+  font-weight: 400;
+}
+.comments__input {
+  font-family: inherit;
+  height: 1rem;
+  padding: 0.75rem;
+  border: 0.0625rem solid #e1e1e1;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  color: #000000;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments__input {
+    height: 3rem;
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__input {
+    height: 3rem;
+    padding: 1rem;
+  }
+}
+.comments__input:focus {
+  border-color: #323232;
+  outline: none;
+}
+.comments__input:user-invalid {
+  outline: 0.0625rem solid #D22D2D;
+}
+.comments__input--large {
+  resize: none;
+  height: 6.75rem;
+}
+.comments__input--error {
+  border-color: #D22D2D;
+}
+.comments__submit {
+  background-color: #000000;
+  color: #ffffff;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.25rem;
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments__submit {
+    width: 10rem;
+    align-self: end;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__submit {
+    width: 10rem;
+    align-self: end;
+  }
+}
+.comments__list {
+  list-style-type: none;
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments__list {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__list {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+.comments__details {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 0.125rem solid #e1e1e1;
+}
+.comments__details--border {
+  border-top: 0.125rem solid #e1e1e1;
+}
+.comments__details .comments__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+.comments__container {
+  width: 100%;
+}
+.comments__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.comments__name {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+.comments__date {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #afafaf;
+  text-align: right;
+}
+.comments__comment {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 20rem) and (max-width: 47.9375rem) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #323232;
+  }
+  .header__logo {
+    height: 2rem;
+    width: auto;
+  }
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .header__menu {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+    gap: 12rem;
+  }
+  .header__link {
+    position: relative;
+  }
+  .header__link a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Avenir Next", sans-serif;
+  }
+  .header__link--active {
+    font-weight: 600;
+  }
+  .header__link--active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1em;
+    width: 250%;
+    height: 0.25rem;
+    background-color: #ffffff;
+    transform: translateX(-53%);
+  }
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .hero__image {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+  }
+  .hero__background {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .hero__name {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
+  .hero__title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .about {
+    text-align: left;
+    padding: 1rem;
+  }
+  .about__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .about__say {
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+  .about__name {
+    font-weight: 600;
+  }
+  .about__bees {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+  .about__bees-paragraph {
+    text-align: left;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+  }
+  .photos {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #fafafa;
+  }
+  .photos__name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .photos__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .photos__gallery img {
+    width: 100%;
+    transition: transform 2s ease, filter 2s ease;
+  }
+  .photos__gallery img:hover {
+    filter: brightness(80%);
+    transform: scale(1.2);
+  }
+  .footer {
+    background-color: #323232;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: "Avenir Next", sans-serif;
+  }
+  .footer__socials {
+    margin: 1rem 0;
+  }
+  .footer__socials img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0 0.3125rem;
+  }
+  .footer__categories {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer__management {
+    margin-bottom: 1rem;
+  }
+  .footer__management-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__management-location {
+    margin-bottom: 1rem;
+  }
+  .footer__management-email:hover {
+    color: #afafaf;
+  }
+  .footer__group, .footer__arc {
+    margin-bottom: 1rem;
+  }
+  .footer__group-name, .footer__arc-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__group-agent, .footer__arc-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__group-email:hover, .footer__arc-email:hover {
+    color: #afafaf;
+  }
+  .footer__logo-container {
+    padding-top: 2rem;
+  }
+  .footer__logo {
+    width: 7.125rem;
+    height: 1.1875rem;
+  }
+  .footer .copyright {
+    padding-top: 2rem;
+    font-size: x-small;
+  }
+}
+@media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    background-color: #323232;
+  }
+  .header__logo {
+    height: 1.25rem;
+    width: auto;
+    padding-bottom: 0.5rem;
+  }
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    padding-left: 4rem;
+  }
+  .header__menu {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+    gap: 6rem;
+  }
+  .header__link {
+    position: relative;
+  }
+  .header__link a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Avenir Next", sans-serif;
+  }
+  .header__link--active {
+    font-weight: 600;
+  }
+  .header__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2rem;
+    width: 100%;
+    height: 0.25rem;
+    background-color: #ffffff;
+  }
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .hero__image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .hero__background {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .hero__name {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+  .hero__title {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  .about {
+    text-align: left;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+  }
+  .about__title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .about__us {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding-left: 5rem;
+    font-weight: 600;
+  }
+  .about__name {
+    font-size: smaller;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  .about__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-left: 5rem;
+  }
+  .about__bees {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-style: 600;
+  }
+  .about__bees-paragraph {
+    text-align: left;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+  }
+  .about__right {
+    padding-top: 4rem;
+  }
+  .photos {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #fafafa;
+  }
+  .photos__name {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    padding: 2rem;
+  }
+  .photos__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: space-around;
+  }
+  .photos .gallery-items {
+    width: calc(33.33% - 1rem);
+    margin-bottom: 0.5rem;
+  }
+  .photos img {
+    width: 100%;
+    transition: transform 2s ease, filter 2s ease;
+  }
+  .photos img:hover {
+    filter: brightness(80%);
+    transform: scale(1.2);
+  }
+  .footer {
+    background-color: #323232;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contacts {
+    display: flex;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
+  }
+  .footer__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-right: 6.5rem;
+  }
+  .footer__socials {
+    margin: 1rem 0;
+  }
+  .footer__socials img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0 0.3125rem;
+  }
+  .footer__categories {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .footer__management {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__management-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__management-location {
+    margin-bottom: 1rem;
+  }
+  .footer__management-email:hover {
+    color: #afafaf;
+  }
+  .footer__group {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__group-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__group-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__group-email:hover {
+    color: #afafaf;
+  }
+  .footer__arc {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__arc-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__arc-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__arc-email:hover {
+    color: #afafaf;
+  }
+  .footer__logo-container {
+    position: absolute;
+    right: 50px;
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+  }
+  .footer__logo-container__logo {
+    width: 7.125rem;
+    height: 1.1875rem;
+    padding-bottom: 1rem;
+  }
+  .footer .copyright {
+    padding-top: 2rem;
+    font-size: x-small;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 8rem;
+    background-color: #323232;
+  }
+  .header__logo {
+    height: 1.25rem;
+    width: auto;
+    padding-bottom: 0.5rem;
+  }
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    padding-left: 4rem;
+  }
+  .header__menu {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+    gap: 6rem;
+  }
+  .header__link {
+    position: relative;
+  }
+  .header__link a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Avenir Next", sans-serif;
+  }
+  .header__link--active {
+    font-weight: 600;
+  }
+  .header__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2rem;
+    width: 100%;
+    height: 0.25rem;
+    background-color: #ffffff;
+  }
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .hero__image {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+  }
+  .hero__background {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .hero__name {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+  .hero__title {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  .about {
+    text-align: left;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+  }
+  .about__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .about__us {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-weight: 700;
+  }
+  .about__name {
+    font-size: smaller;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  .about__say {
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+  .about__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .about__bees {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .about__bees-paragraph {
+    text-align: left;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+  }
+  .about__right {
+    padding-top: 4rem;
+  }
+  .photos {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #fafafa;
+  }
+  .photos__name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    padding: 2rem;
+  }
+  .photos__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: space-around;
+  }
+  .photos .gallery-items {
+    width: calc(33.33% - 1rem);
+    margin-bottom: 0.5rem;
+  }
+  .photos img {
+    width: 100%;
+    transition: transform 2s ease, filter 2s ease;
+  }
+  .photos img:hover {
+    filter: brightness(80%);
+    transform: scale(1.2);
+  }
+  .footer {
+    background-color: #323232;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contacts {
+    display: flex;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
+  }
+  .footer__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-right: 6.5rem;
+  }
+  .footer__socials {
+    margin: 1rem 0;
+  }
+  .footer__socials img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0 0.3125rem;
+  }
+  .footer__categories {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .footer__management {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__management-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__management-location {
+    margin-bottom: 1rem;
+  }
+  .footer__management-email:hover {
+    color: #afafaf;
+  }
+  .footer__group {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__group-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__group-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__group-email:hover {
+    color: #afafaf;
+  }
+  .footer__arc {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__arc-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__arc-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__arc-email:hover {
+    color: #afafaf;
+  }
+  .footer__logo-container {
+    position: absolute;
+    right: 50px;
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+  }
+  .footer__logo-container__logo {
+    width: 7.125rem;
+    height: 1.1875rem;
+    padding-bottom: 1rem;
+  }
+  .footer .copyright {
+    padding-top: 2rem;
+    font-size: x-small;
+  }
+}/*# sourceMappingURL=bio.css.map */
