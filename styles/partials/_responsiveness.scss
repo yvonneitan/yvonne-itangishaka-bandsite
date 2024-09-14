@@ -10,7 +10,7 @@
   padding: 1rem;
   background-color: $white;
   &__title {
-    font-size: 1.7rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
     font-family: $primary-font;
     font-weight: $font-weight-bold;
@@ -110,9 +110,10 @@
   }
   &__list {
     list-style-type: none;
-        display: flex;
+    display: flex;
     flex-direction: column;
     padding-left: 0rem;
+    
     @include tablet {
       padding-left: 4rem;
       padding-right:4rem;
@@ -127,7 +128,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    border-bottom: 0.125rem solid $mercury;
+    // border-top: 0.125rem solid $mercury;
 
     &--border {
       border-top: 0.125rem solid $mercury;
@@ -172,10 +173,12 @@
     flex-direction: column;
     align-items: center;
     background-color: $site-black;
+    padding:0;
 
     &__logo {
       height: 2rem;
       width: auto;
+      padding-top:2rem;
     }
 
     &__nav {
@@ -189,6 +192,7 @@
       margin-top: 1rem;
       padding: 0;
       gap: 12rem;
+      font-size: 1.5rem;
     }
 
     &__link {
@@ -204,9 +208,9 @@
           content: "";
           position: absolute;
           left: 50%;
-          bottom: -1em;
+          bottom: -1.5rem;
           width: 250%;
-          height: 0.25rem;
+          height: 0.3rem;
           background-color: $white;
           transform: translateX(-53%);
         }
@@ -242,14 +246,15 @@
     }
 
     &__name {
+      width:100%;
       position: absolute;
       top: 50%;
-      left: 35%;
+      left: 40%;
       transform: translate(-50%, -50%);
     }
 
     &__title {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: $font-weight-bold;
     }
   }
@@ -389,27 +394,29 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: $site-black;
 
     &__logo {
-      height: 1.25rem;
+      height: 2.5rem;
       width: auto;
       padding-bottom: 0.5rem;
+      padding-left: 2rem;
     }
 
     &__nav {
       display: flex;
       flex-direction: row;
-      padding-left: 4rem;
+      padding-left: 8rem;
     }
 
     &__menu {
       display: flex;
       list-style: none;
-      margin-top: 1rem;
+      margin-top: 4rem;
       padding: 0;
       gap: 6rem;
+      font-size: 2rem;
     }
 
     &__link {
@@ -427,9 +434,9 @@
           content: "";
           position: absolute;
           left: 50%;
-          bottom: -2rem;
+          bottom: -3.5rem;
           width: 100%;
-          height: 0.25rem;
+          height: 0.3rem;
           background-color: $white;
         }
       }
@@ -443,7 +450,7 @@
     &__image {
       position: relative;
       width: 100%;
-      height: 100vh;
+      height: 80vh;
       overflow: hidden;
     }
 
@@ -463,6 +470,7 @@
     }
 
     &__name {
+      width:100%;
       position: absolute;
       top: 50%;
       left: 35%;
@@ -733,6 +741,7 @@
     }
 
     &__name {
+      width:100%;
       position: absolute;
       top: 50%;
       left: 35%;
