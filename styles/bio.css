@@ -49,7 +49,7 @@ img {
   background-color: #ffffff;
 }
 .comments__title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 0.5rem;
   font-family: "Avenir Next", sans-serif;
   font-weight: 600;
@@ -156,6 +156,9 @@ img {
 }
 .comments__list {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0rem;
 }
 @media only screen and (min-width: 48rem) {
   .comments__list {
@@ -261,7 +264,7 @@ img {
   .hero__image {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 55vh;
     overflow: hidden;
   }
   .hero__background {
@@ -281,11 +284,11 @@ img {
   .hero__name {
     position: absolute;
     top: 50%;
-    left: 25%;
+    left: 35%;
     transform: translate(-50%, -50%);
   }
   .hero__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
   }
   .about {
@@ -293,7 +296,7 @@ img {
     padding: 1rem;
   }
   .about__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
   }
@@ -322,7 +325,7 @@ img {
     background-color: #fafafa;
   }
   .photos__name {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
   }
