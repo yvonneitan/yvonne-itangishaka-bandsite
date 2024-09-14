@@ -56,7 +56,7 @@ img {
 }
 .comments__user {
   display: flex;
-  gap: 0.5rem;
+  gap: 1.5rem;
   align-items: flex-start;
 }
 @media only screen and (min-width: 48rem) {
@@ -176,6 +176,7 @@ img {
   display: flex;
   flex-direction: row;
   width: 100%;
+  gap: 0.5rem;
 }
 .comments__details--border {
   border-top: 0.125rem solid #e1e1e1;
@@ -584,6 +585,7 @@ img {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     padding-right: 6.5rem;
+    font-weight: 600;
   }
   .footer__socials {
     margin: 1rem 0;
@@ -597,6 +599,7 @@ img {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
+    flex-direction: row;
   }
   .footer__management {
     padding-right: 2rem;
@@ -647,6 +650,7 @@ img {
     justify-content: flex-end;
     display: flex;
     align-items: center;
+    padding-top: 0;
   }
   .footer__logo-container__logo {
     width: 7.125rem;
