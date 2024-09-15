@@ -42,188 +42,6 @@ img {
   font-weight: 400;
   font-style: normal;
 }
-.comments {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: #ffffff;
-}
-.comments__title {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  font-family: "Avenir Next", sans-serif;
-  font-weight: 600;
-}
-@media only screen and (min-width: 80rem) {
-  .comments__title {
-    padding: 2rem;
-    font-size: 2rem;
-  }
-}
-.comments__user {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-}
-@media only screen and (min-width: 48rem) {
-  .comments__user {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  .comments__user {
-    padding-left: 18rem;
-    padding-right: 22rem;
-  }
-}
-.comments__pic {
-  width: 2.5rem;
-  height: 2.5rem;
-  min-width: 2.5rem;
-  background-color: #e1e1e1;
-  background-image: url("../../assets/images/Mohan-muruge.jpg");
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
-  margin-top: 2.6rem;
-}
-.comments__items {
-  width: 100%;
-}
-.comments__form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: 100%;
-  gap: 1rem;
-}
-.comments__label {
-  font-family: "Avenir Next", sans-serif;
-  color: #afafaf;
-  font-weight: 400;
-}
-.comments__input {
-  font-family: inherit;
-  height: 1rem;
-  padding: 0.75rem;
-  border: 0.0625rem solid #e1e1e1;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-  color: #000000;
-  transition: border-color 0.3s ease;
-  background-color: #fafafa;
-}
-@media only screen and (min-width: 48rem) {
-  .comments__input {
-    height: 3rem;
-    padding: 1rem;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  .comments__input {
-    height: 2rem;
-    padding: 1rem;
-  }
-}
-.comments__input:focus {
-  border-color: #323232;
-  outline: none;
-}
-.comments__input:user-invalid {
-  outline: 0.0625rem solid #D22D2D;
-}
-.comments__input--large {
-  resize: none;
-  height: 6.75rem;
-}
-@media only screen and (min-width: 80rem) {
-  .comments__input--large {
-    height: 5rem;
-  }
-}
-.comments__input--error {
-  border-color: #D22D2D;
-}
-.comments__submit {
-  background-color: #000000;
-  color: #ffffff;
-  align-items: center;
-  height: 4rem;
-  width: 100%;
-  border-radius: 0.25rem;
-}
-@media only screen and (min-width: 48rem) {
-  .comments__submit {
-    width: 10rem;
-    align-self: end;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  .comments__submit {
-    width: 10rem;
-    align-self: end;
-  }
-}
-.comments__list {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  padding-left: 0rem;
-}
-@media only screen and (min-width: 48rem) {
-  .comments__list {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  .comments__list {
-    padding-left: 18rem;
-    padding-right: 22rem;
-  }
-}
-.comments__details {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 0.5rem;
-}
-.comments__details--border {
-  border-top: 0.125rem solid #e1e1e1;
-}
-.comments__details .comments__icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  min-width: 2.5rem;
-  background-color: #e1e1e1;
-  border-radius: 50%;
-  margin: 0.5rem;
-}
-.comments__container {
-  width: 100%;
-}
-.comments__header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.comments__name {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 600;
-}
-.comments__date {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  color: #afafaf;
-  text-align: right;
-}
-.comments__comment {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -519,6 +337,188 @@ img {
   }
 }
 
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+.comments__title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 600;
+}
+@media only screen and (min-width: 80rem) {
+  .comments__title {
+    padding: 2rem;
+    font-size: 2rem;
+  }
+}
+.comments__user {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 48rem) {
+  .comments__user {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__user {
+    padding-left: 18rem;
+    padding-right: 22rem;
+  }
+}
+.comments__pic {
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  background-color: #e1e1e1;
+  background-image: url("../../assets/images/Mohan-muruge.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin-top: 2.6rem;
+}
+.comments__items {
+  width: 100%;
+}
+.comments__form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 1rem;
+}
+.comments__label {
+  font-family: "Avenir Next", sans-serif;
+  color: #afafaf;
+  font-weight: 400;
+}
+.comments__input {
+  font-family: inherit;
+  height: 1rem;
+  padding: 0.75rem;
+  border: 0.0625rem solid #e1e1e1;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  color: #000000;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+}
+@media only screen and (min-width: 48rem) {
+  .comments__input {
+    height: 3rem;
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__input {
+    height: 2rem;
+    padding: 1rem;
+  }
+}
+.comments__input:focus {
+  border-color: #323232;
+  outline: none;
+}
+.comments__input:user-invalid {
+  outline: 0.0625rem solid #D22D2D;
+}
+.comments__input--large {
+  resize: none;
+  height: 6.75rem;
+}
+@media only screen and (min-width: 80rem) {
+  .comments__input--large {
+    height: 5rem;
+  }
+}
+.comments__input--error {
+  border-color: #D22D2D;
+}
+.comments__submit {
+  background-color: #000000;
+  color: #ffffff;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.25rem;
+}
+@media only screen and (min-width: 48rem) {
+  .comments__submit {
+    width: 10rem;
+    align-self: end;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__submit {
+    width: 10rem;
+    align-self: end;
+  }
+}
+.comments__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0rem;
+}
+@media only screen and (min-width: 48rem) {
+  .comments__list {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .comments__list {
+    padding-left: 18rem;
+    padding-right: 22rem;
+  }
+}
+.comments__details {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 0.5rem;
+}
+.comments__details--border {
+  border-top: 0.125rem solid #e1e1e1;
+}
+.comments__details .comments__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+.comments__container {
+  width: 100%;
+}
+.comments__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.comments__name {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+.comments__date {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #afafaf;
+  text-align: right;
+}
+.comments__comment {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .photos {
   display: flex;
   flex-direction: column;
@@ -579,27 +579,25 @@ img {
   transform: scale(1.2);
 }
 
-@media only screen and (min-width: 20rem) {
-  .footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #323232;
-    color: white;
-    padding: 1rem;
-    text-align: left;
-  }
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: white;
+  padding: 1rem;
+  text-align: left;
 }
-@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+@media only screen and (min-width: 48rem) {
   .footer {
     padding: 3rem;
   }
 }
-@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+@media only screen and (min-width: 80rem) {
   .footer {
     padding-left: 8rem;
   }
 }
-@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+@media only screen and (min-width: 48rem) {
   .footer__contacts {
     display: flex;
     height: -moz-fit-content;
@@ -607,7 +605,7 @@ img {
     width: 80%;
   }
 }
-@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+@media only screen and (min-width: 80rem) {
   .footer__contacts {
     display: flex;
     height: -moz-fit-content;
@@ -615,103 +613,93 @@ img {
     width: 80%;
   }
 }
-@media only screen and (min-width: 20rem) {
-  .footer__title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: "Avenir Next", sans-serif;
-  }
+.footer__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: "Avenir Next", sans-serif;
 }
-@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+@media only screen and (min-width: 48rem) {
   .footer__title {
     font-size: 2rem;
     padding-right: 4.5rem;
     font-weight: 600;
   }
 }
-@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+@media only screen and (min-width: 80rem) {
   .footer__title {
     font-size: 2rem;
     padding-right: 4.5rem;
   }
 }
-@media only screen and (min-width: 20rem) {
-  .footer__socials {
-    margin: 1rem 0;
-  }
-  .footer__socials img {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin: 0 0.3125rem;
-  }
+.footer__socials {
+  margin: 1rem 0;
 }
-@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+.footer__socials img {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 0.3125rem;
+}
+@media only screen and (min-width: 48rem) {
   .footer__socials img {
     width: 2rem;
     height: 2rem;
   }
 }
-@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+@media only screen and (min-width: 80rem) {
   .footer__socials img {
     width: 1.5rem;
     height: 1.5rem;
   }
 }
-@media only screen and (min-width: 20rem) {
-  .footer__categories {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
+.footer__categories {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+@media only screen and (min-width: 48rem) {
   .footer__categories {
     flex-direction: row;
   }
 }
-@media only screen and (min-width: 20rem) {
-  .footer__management {
-    margin-bottom: 1rem;
-  }
+.footer__management {
+  margin-bottom: 1rem;
 }
-@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+@media only screen and (min-width: 48rem) {
   .footer__management {
     padding-right: 2rem;
     display: inline-block;
   }
 }
-@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+@media only screen and (min-width: 80rem) {
   .footer__management {
     padding-right: 2rem;
     display: inline-block;
   }
 }
-@media only screen and (min-width: 20rem) {
-  .footer__management-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__management-location {
-    margin-bottom: 1rem;
-  }
-  .footer__management-email:hover {
-    color: #afafaf;
-  }
-  .footer__group, .footer__arc {
-    margin-bottom: 1rem;
-  }
-  .footer__group-name, .footer__arc-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__group-agent, .footer__arc-agent {
-    margin-bottom: 1rem;
-  }
-  .footer__group-email:hover, .footer__arc-email:hover {
-    color: #afafaf;
-  }
+.footer__management-name {
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
-@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+.footer__management-location {
+  margin-bottom: 1rem;
+}
+.footer__management-email:hover {
+  color: #afafaf;
+}
+.footer__group, .footer__arc {
+  margin-bottom: 1rem;
+}
+.footer__group-name, .footer__arc-name {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.footer__group-agent, .footer__arc-agent {
+  margin-bottom: 1rem;
+}
+.footer__group-email:hover, .footer__arc-email:hover {
+  color: #afafaf;
+}
+@media only screen and (min-width: 48rem) {
   .footer__group {
     padding-right: 2rem;
     display: inline-block;
@@ -727,7 +715,7 @@ img {
     color: #afafaf;
   }
 }
-@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+@media only screen and (min-width: 80rem) {
   .footer__group {
     padding-right: 2rem;
     display: inline-block;
@@ -743,7 +731,7 @@ img {
     color: #afafaf;
   }
 }
-@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+@media only screen and (min-width: 48rem) {
   .footer__arc {
     padding-right: 2rem;
     display: inline-block;
@@ -759,7 +747,7 @@ img {
     color: #afafaf;
   }
 }
-@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+@media only screen and (min-width: 80rem) {
   .footer__arc {
     padding-right: 2rem;
     display: inline-block;
@@ -775,12 +763,10 @@ img {
     color: #afafaf;
   }
 }
-@media only screen and (min-width: 20rem) {
-  .footer__logo-container {
-    padding-top: 2rem;
-  }
+.footer__logo-container {
+  padding-top: 2rem;
 }
-@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+@media only screen and (min-width: 48rem) {
   .footer__logo-container {
     position: absolute;
     right: 50px;
@@ -796,7 +782,7 @@ img {
     padding-bottom: 1rem;
   }
 }
-@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+@media only screen and (min-width: 80rem) {
   .footer__logo-container {
     position: absolute;
     right: 50px;
@@ -811,13 +797,11 @@ img {
     padding-bottom: 1rem;
   }
 }
-@media only screen and (min-width: 20rem) {
-  .footer__logo {
-    width: 7.125rem;
-    height: 1.1875rem;
-  }
-  .footer .copyright {
-    padding-top: 2rem;
-    font-size: x-small;
-  }
+.footer__logo {
+  width: 7.125rem;
+  height: 1.1875rem;
+}
+.footer .copyright {
+  padding-top: 2rem;
+  font-size: x-small;
 }/*# sourceMappingURL=bio.css.map */

@@ -4,175 +4,6 @@
 @use "./global" as *;
 @use "./colors" as *;
 
-.comments {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: $white;
-  &__title {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    font-family: $primary-font;
-    font-weight: $font-weight-bold;
-    @include desktop {
-      padding: 2rem;
-      font-size: 2rem;
-    }
-  }
-  &__user {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-    @include tablet {
-      padding-left: 4rem;
-      padding-right: 4rem;
-    }
-    @include desktop {
-      padding-left: 18rem;
-      padding-right: 22rem;
-    }
-  }
-  &__pic {
-    width: 2.5rem;
-    height: 2.5rem;
-    min-width: 2.5rem;
-    background-color: $mercury;
-    background-image: url("../../assets/images/Mohan-muruge.jpg");
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
-    margin-top: 2.6rem;
-  }
-  &__items {
-    width: 100%;
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
-    gap: 1rem;
-  }
-  &__label {
-    font-family: $primary-font;
-    color: $silver;
-    font-weight: $font-weight-regular400;
-  }
-  &__input {
-    font-family: inherit;
-    height: 1rem;
-    padding: 0.75rem;
-    border: 0.0625rem solid $mercury;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    color: $black-dark;
-    transition: border-color 0.3s ease;
-    background-color: $alabaster;
-    @include tablet {
-      height: 3rem;
-      padding: 1rem;
-    }
-    @include desktop {
-      height: 2rem;
-      padding: 1rem;
-    }
-
-    &:focus {
-      border-color: $site-black;
-      outline: none;
-    }
-    &:user-invalid {
-      outline: 0.0625rem solid $error;
-    }
-
-    &--large {
-      resize: none;
-      height: 6.75rem;
-      @include desktop {
-        height: 5rem;
-      }
-    }
-
-    &--error {
-      border-color: $error;
-    }
-  }
-  &__submit {
-    background-color: $black-dark;
-    color: $white;
-    align-items: center;
-    height: 4rem;
-    width: 100%;
-    border-radius: 0.25rem;
-    @include tablet {
-      width: 10rem;
-      align-self: end;
-    }
-    @include desktop {
-      width: 10rem;
-      align-self: end;
-    }
-  }
-  &__list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    padding-left: 0rem;
-
-    @include tablet {
-      padding-left: 4rem;
-      padding-right: 4rem;
-    }
-    @include desktop {
-      padding-left: 18rem;
-      padding-right: 22rem;
-    }
-  }
-
-  &__details {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 0.5rem;
-    // border-top: 0.125rem solid $mercury;
-
-    &--border {
-      border-top: 0.125rem solid $mercury;
-    }
-    .comments__icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      min-width: 2.5rem;
-      background-color: $mercury;
-      border-radius: 50%;
-      margin: 0.5rem;
-    }
-  }
-  &__container {
-    width: 100%;
-  }
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  &__name {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    font-weight: $font-weight-bold;
-  }
-  &__date {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    color: $silver;
-    text-align: right;
-  }
-  &__comment {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-}
 
 .header {
   display: flex;
@@ -443,6 +274,174 @@
   }
 }
 
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: $white;
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-family: $primary-font;
+    font-weight: $font-weight-bold;
+    @include desktop {
+      padding: 2rem;
+      font-size: 2rem;
+    }
+  }
+  &__user {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    @include tablet {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    @include desktop {
+      padding-left: 18rem;
+      padding-right: 22rem;
+    }
+  }
+  &__pic {
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    background-color: $mercury;
+    background-image: url("../../assets/images/Mohan-muruge.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-top: 2.6rem;
+  }
+  &__items {
+    width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 1rem;
+  }
+  &__label {
+    font-family: $primary-font;
+    color: $silver;
+    font-weight: $font-weight-regular400;
+  }
+  &__input {
+    font-family: inherit;
+    height: 1rem;
+    padding: 0.75rem;
+    border: 0.0625rem solid $mercury;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: $black-dark;
+    transition: border-color 0.3s ease;
+    background-color: $alabaster;
+    @include tablet {
+      height: 3rem;
+      padding: 1rem;
+    }
+    @include desktop {
+      height: 2rem;
+      padding: 1rem;
+    }
+
+    &:focus {
+      border-color: $site-black;
+      outline: none;
+    }
+    &:user-invalid {
+      outline: 0.0625rem solid $error;
+    }
+
+    &--large {
+      resize: none;
+      height: 6.75rem;
+      @include desktop {
+        height: 5rem;
+      }
+    }
+
+    &--error {
+      border-color: $error;
+    }
+  }
+  &__submit {
+    background-color: $black-dark;
+    color: $white;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    @include tablet {
+      width: 10rem;
+      align-self: end;
+    }
+    @include desktop {
+      width: 10rem;
+      align-self: end;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0rem;
+
+    @include tablet {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    @include desktop {
+      padding-left: 18rem;
+      padding-right: 22rem;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 0.5rem;
+
+    &--border {
+      border-top: 0.125rem solid $mercury;
+    }
+    .comments__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      min-width: 2.5rem;
+      background-color: $mercury;
+      border-radius: 50%;
+      margin: 0.5rem;
+    }
+  }
+  &__container {
+    width: 100%;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__name {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: $font-weight-bold;
+  }
+  &__date {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: $silver;
+    text-align: right;
+  }
+  &__comment {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
 .photos {
   display: flex;
   flex-direction: column;
@@ -494,110 +493,153 @@
     }
   }
 }
-@include mobile {
-  .footer {
-    display: flex;
-    flex-direction: column;
-    background-color: $site-black;
-    color: white;
-    padding: 1rem;
-    text-align: left;
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $site-black;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+
+  @include tablet {
+    padding: 3rem;
+  }
+  @include desktop {
+    padding-left: 8rem;
+  }
+  &__contacts {
     @include tablet {
-      padding: 3rem;
+      display: flex;
+      height: fit-content;
+      width: 80%;
     }
     @include desktop {
-      padding-left: 8rem;
-    }
-    &__contacts {
-      @include tablet{
-        display: flex;
-        height: fit-content;
-        width: 80%;
-      }
-      @include desktop{
-        display: flex;
-        height: fit-content;
-        width: 80%;
-      }
-    }
-
-    &__title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      font-size: $primary-font;
-      @include tablet {
-        font-size: 2rem;
-        padding-right: 4.5rem;
-        font-weight: $font-weight-bold;
-      }
-      @include desktop {
-        font-size: 2rem;
-        padding-right: 4.5rem;
-      }
-    }
-
-    &__socials {
-      margin: 1rem 0;
-
-      img {
-        width: 1.25rem;
-        height: 1.25rem;
-        margin: 0 0.3125rem;
-      }
-      @include tablet {
-        img {
-          width: 2rem;
-          height: 2rem;
-        }
-      }
-      @include desktop {
-        img {
-          width: 1.5rem;
-          height: 1.5rem;
-        }
-      }
-    }
-
-    &__categories {
       display: flex;
-      flex-direction: column;
-      width: 100%;
-      @include tablet{
-        flex-direction: row;
-      }
-    
+      height: fit-content;
+      width: 80%;
     }
+  }
 
-    &__management {
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: $primary-font;
+    @include tablet {
+      font-size: 2rem;
+      padding-right: 4.5rem;
+      font-weight: $font-weight-bold;
+    }
+    @include desktop {
+      font-size: 2rem;
+      padding-right: 4.5rem;
+    }
+  }
+
+  &__socials {
+    margin: 1rem 0;
+
+    img {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin: 0 0.3125rem;
+    }
+    @include tablet {
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    @include desktop {
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__management {
+    margin-bottom: 1rem;
+    @include tablet {
+      padding-right: 2rem;
+      display: inline-block;
+    }
+    @include desktop {
+      padding-right: 2rem;
+      display: inline-block;
+    }
+    &-name {
+      font-weight: $font-weight-bold;
       margin-bottom: 1rem;
-      @include tablet{
-        padding-right: 2rem;
-        display: inline-block;
-      }
-      @include desktop{
-        padding-right: 2rem;
-        display: inline-block;
-       
-      }
+    }
+    &-location {
+      margin-bottom: 1rem;
+    }
+    &-email:hover {
+      color: $silver;
+    }
+  }
+
+  &__group,
+  &__arc {
+    margin-bottom: 1rem;
+    &-name {
+      font-weight: $font-weight-bold;
+      margin-bottom: 1rem;
+    }
+    &-agent {
+      margin-bottom: 1rem;
+    }
+    &-email:hover {
+      color: $silver;
+    }
+  }
+
+  @include tablet {
+    &__group {
+      padding-right: 2rem;
+      display: inline-block;
       &-name {
         font-weight: $font-weight-bold;
         margin-bottom: 1rem;
       }
-      &-location {
+      &-agent {
         margin-bottom: 1rem;
       }
       &-email:hover {
         color: $silver;
       }
-      
     }
-
-    
-
-    &__group,
-    &__arc {
-      margin-bottom: 1rem;
+  }
+  @include desktop {
+    &__group {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-agent {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
+      }
+    }
+  }
+  &__arc {
+    @include tablet {
+      padding-right: 2rem;
+      display: inline-block;
       &-name {
         font-weight: $font-weight-bold;
         margin-bottom: 1rem;
@@ -610,91 +652,40 @@
       }
     }
 
-      @include tablet{
-      &__group {
-        padding-right: 2rem;
-        display: inline-block;
-        &-name {
-          font-weight: $font-weight-bold;
-          margin-bottom: 1rem;
-        }
-        &-agent {
-          margin-bottom: 1rem;
-        }
-        &-email:hover {
-          color: $silver;
-        }
+    @include desktop {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-agent {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
       }
     }
-    @include desktop{
-      &__group {
-        padding-right: 2rem;
-        display: inline-block;
-        &-name {
-          font-weight: $font-weight-bold;
-          margin-bottom: 1rem;
-        }
-        &-agent {
-          margin-bottom: 1rem;
-        }
-        &-email:hover {
-          color: $silver;
-        }
+  }
+
+  &__logo-container {
+    padding-top: 2rem;
+    @include tablet {
+      position: absolute;
+      right: 50px;
+      flex: 1;
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+      padding-top: 0;
+      &__logo {
+        width: 7.125rem;
+        height: 1.1875rem;
+        padding-bottom: 1rem;
       }
     }
-    &__arc {
-      @include tablet{
-     
-        padding-right: 2rem;
-        display: inline-block;
-        &-name {
-          font-weight: $font-weight-bold;
-          margin-bottom: 1rem;
-        }
-        &-agent {
-          margin-bottom: 1rem;
-        }
-        &-email:hover {
-          color: $silver;
-        }
-      }
-
-      @include desktop{
-  
-        padding-right: 2rem;
-        display: inline-block;
-        &-name {
-          font-weight: $font-weight-bold;
-          margin-bottom: 1rem;
-        }
-        &-agent {
-          margin-bottom: 1rem;
-        }
-        &-email:hover {
-          color: $silver;
-        }
-      }
-    }
-
-
-    &__logo-container {
-      padding-top: 2rem;
-      @include tablet{
-        position: absolute;
-        right: 50px;
-        flex: 1;
-        justify-content: flex-end;
-        display: flex;
-        align-items: center;
-        padding-top: 0;
-        &__logo {
-          width: 7.125rem;
-          height: 1.1875rem;
-          padding-bottom: 1rem;
-        }
-      }
-      @include desktop{
-        position: absolute;
+    @include desktop {
+      position: absolute;
       right: 50px;
       flex: 1;
       justify-content: flex-end;
@@ -706,18 +697,14 @@
         height: 1.1875rem;
         padding-bottom: 1rem;
       }
-      }
     }
-    &__logo {
-      width: 7.125rem;
-      height: 1.1875rem;
-    }
-    .copyright {
-      padding-top: 2rem;
-      font-size: x-small;
-    }
-
+  }
+  &__logo {
+    width: 7.125rem;
+    height: 1.1875rem;
+  }
+  .copyright {
+    padding-top: 2rem;
+    font-size: x-small;
   }
 }
-
-
