@@ -9,42 +9,53 @@
   flex-direction: column;
   align-items: center;
   background-color: $site-black;
+  padding: 0;
 
-  @include tablet {
-    flex-direction: row;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  @include tablet{
+      flex-direction: row;
+      padding: 1.5rem;
   }
-  @include desktop {
+  @include desktop{
     flex-direction: row;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 8rem;
+    padding-bottom:0;
+    padding-top:0;
+   
   }
 
   &__logo {
     height: 2rem;
     width: auto;
+    padding-top: 2rem;
 
     @include tablet {
-      height: 1.25rem;
-      padding-bottom: 0.5rem;
+      padding-left: 2rem;
+      padding-top: 0;
     }
+
     @include desktop {
-      height: 1.25rem;
-      padding-bottom: 0.5rem;
+      height: 1.5rem;
+      width: auto;
+      padding-left: 2rem;
     }
   }
-
+  @include tablet{
+    &__home{
+          padding:0;
+        }
+  }
   &__nav {
     display: flex;
     flex-direction: row;
 
     @include tablet {
-      padding-left: 4rem;
+      align-items: center;
+      padding-left: 6rem;
+      background-color: $site-black;
     }
 
     @include desktop {
-      padding-left: 4rem;
+      padding-left: 6rem;
     }
   }
 
@@ -54,10 +65,15 @@
     margin-top: 1rem;
     padding: 0;
     gap: 12rem;
+    font-size: 1.5rem;
 
     @include tablet {
+      margin-top: 2rem;
       gap: 6rem;
+      font-size: 2rem;
+  
     }
+
     @include desktop {
       gap: 6rem;
     }
@@ -69,46 +85,34 @@
       text-decoration: none;
       color: $white;
       font-family: $primary-font;
-    }
+  }
 
     &--active {
-      font-weight: $font-weight-bold;
-
+      font-weight: $font-weight-bold;;
       &::after {
         content: "";
         position: absolute;
-        right: -150%;
-        bottom: -1rem;
-        width: 450%;
-        height: 0.25rem;
+        left: 50%;
+        bottom: -1.5rem;
+        width: 250%;
+        height: 0.3rem;
         background-color: $white;
+        transform: translateX(-53%);
 
         @include tablet {
-          bottom: -2rem;
-          left: 0;
+
+          bottom: -3.5rem;
           width: 100%;
-          height: 0.25rem;
-        }
+        
+      }
         @include desktop {
-          bottom: -1rem;
-          left: 0;
-          width: 100%;
-          height: 0.25rem;
+          bottom: -2rem;
         }
       }
     }
   }
-
-  @include tablet {
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  @include desktop {
-    padding-left: 8rem;
-  }
 }
+
 
 .hero {
   position: relative;
@@ -396,127 +400,117 @@
   }
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $site-black;
+  color: white;
+  padding: 1rem;
+  text-align: left;
 
-@include mobile {
-  .footer {
-    background-color: $site-black;
-    color: white;
-    padding: 1rem;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-
-    &__title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      font-size: $primary-font;
-    }
-
-    &__socials {
-      margin: 1rem 0;
-
-      img {
-        width: 1.25rem;
-        height: 1.25rem;
-        margin: 0 0.3125rem;
-      }
-    }
-
-    &__categories {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-
-    &__management {
-      margin-bottom: 1rem;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-location {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
-    }
-
-    &__group,
-    &__arc {
-      margin-bottom: 1rem;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-agent {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
-    }
-    &__logo-container {
-      padding-top: 2rem;
-    }
-    &__logo {
-      width: 7.125rem;
-      height: 1.1875rem;
-    }
-    .copyright {
-      padding-top: 2rem;
-      font-size: x-small;
-    }
-  }
-}
-
-@include tablet {
-  .footer {
-    background-color: $site-black;
-    color: white;
+  @include tablet {
     padding: 3rem;
-    display: flex;
-    flex-direction: column;
-
-    &__contacts {
+  }
+  @include desktop {
+    padding-left: 8rem;
+  }
+  &__contacts {
+    @include tablet {
       display: flex;
       height: fit-content;
       width: 80%;
     }
-    &__title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      padding-right: 6.5rem;
+    @include desktop {
+      display: flex;
+      height: fit-content;
+      width: 80%;
     }
+  }
 
-    &__socials {
-      margin: 1rem 0;
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: $primary-font;
+    @include tablet {
+      font-size: 2rem;
+      padding-right: 4.5rem;
+      font-weight: $font-weight-bold;
+    }
+    @include desktop {
+      font-size: 2rem;
+      padding-right: 4.5rem;
+    }
+  }
 
+  &__socials {
+    margin: 1rem 0;
+
+    img {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin: 0 0.3125rem;
+    }
+    @include tablet {
       img {
-        width: 1.25rem;
-        height: 1.25rem;
-        margin: 0 0.3125rem;
+        width: 2rem;
+        height: 2rem;
       }
     }
-    &__categories {
-      display: flex;
-      flex-wrap: nowrap;
-      width: 100%;
+    @include desktop {
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
-    &__management {
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__management {
+    margin-bottom: 1rem;
+    @include tablet {
       padding-right: 2rem;
       display: inline-block;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-location {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
     }
+    @include desktop {
+      padding-right: 2rem;
+      display: inline-block;
+    }
+    &-name {
+      font-weight: $font-weight-bold;
+      margin-bottom: 1rem;
+    }
+    &-location {
+      margin-bottom: 1rem;
+    }
+    &-email:hover {
+      color: $silver;
+    }
+  }
+
+  &__group,
+  &__arc {
+    margin-bottom: 1rem;
+    &-name {
+      font-weight: $font-weight-bold;
+      margin-bottom: 1rem;
+    }
+    &-agent {
+      margin-bottom: 1rem;
+    }
+    &-email:hover {
+      color: $silver;
+    }
+  }
+
+  @include tablet {
     &__group {
       padding-right: 2rem;
       display: inline-block;
@@ -531,89 +525,8 @@
         color: $silver;
       }
     }
-    &__arc {
-      padding-right: 2rem;
-      display: inline-block;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-agent {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
-    }
-
-    &__logo-container {
-      position: absolute;
-      right: 3.125rem;
-      flex: 1;
-      justify-content: flex-end;
-      display: flex;
-      align-items: center;
-
-      &__logo {
-        width: 7.125rem;
-        height: 1.1875rem;
-        padding-bottom: 1rem;
-      }
-    }
-    .copyright {
-      padding-top: 2rem;
-      font-size: x-small;
-    }
   }
-}
-
-@include desktop {
-  .footer {
-    background-color: $site-black;
-    color: white;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-
-    &__contacts {
-      display: flex;
-      height: fit-content;
-      width: 80%;
-    }
-    &__title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      padding-right: 6.5rem;
-    }
-
-    &__socials {
-      margin: 1rem 0;
-
-      img {
-        width: 1.25rem;
-        height: 1.25rem;
-        margin: 0 0.3125rem;
-      }
-    }
-    &__categories {
-      display: flex;
-      flex-wrap: nowrap;
-      width: 100%;
-    }
-    &__management {
-      padding-right: 2rem;
-      display: inline-block;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-location {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
-    }
+  @include desktop {
     &__group {
       padding-right: 2rem;
       display: inline-block;
@@ -628,7 +541,9 @@
         color: $silver;
       }
     }
-    &__arc {
+  }
+  &__arc {
+    @include tablet {
       padding-right: 2rem;
       display: inline-block;
       &-name {
@@ -643,9 +558,41 @@
       }
     }
 
-    &__logo-container {
+    @include desktop {
+      padding-right: 2rem;
+      display: inline-block;
+      &-name {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+      &-agent {
+        margin-bottom: 1rem;
+      }
+      &-email:hover {
+        color: $silver;
+      }
+    }
+  }
+
+  &__logo-container {
+    padding-top: 2rem;
+    @include tablet {
       position: absolute;
-      right: 3.125rem;
+      right: 50px;
+      flex: 1;
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+      padding-top: 0;
+      &__logo {
+        width: 7.125rem;
+        height: 1.1875rem;
+        padding-bottom: 1rem;
+      }
+    }
+    @include desktop {
+      position: absolute;
+      right: 50px;
       flex: 1;
       justify-content: flex-end;
       display: flex;
@@ -657,9 +604,13 @@
         padding-bottom: 1rem;
       }
     }
-    .copyright {
-      padding-top: 2rem;
-      font-size: x-small;
-    }
+  }
+  &__logo {
+    width: 7.125rem;
+    height: 1.1875rem;
+  }
+  .copyright {
+    padding-top: 2rem;
+    font-size: x-small;
   }
 }

@@ -47,35 +47,43 @@ img {
   flex-direction: column;
   align-items: center;
   background-color: #323232;
+  padding: 0;
 }
 @media only screen and (min-width: 48rem) {
   .header {
     flex-direction: row;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1.5rem;
   }
 }
 @media only screen and (min-width: 80rem) {
   .header {
     flex-direction: row;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 8rem;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 }
 .header__logo {
   height: 2rem;
   width: auto;
+  padding-top: 2rem;
 }
 @media only screen and (min-width: 48rem) {
   .header__logo {
-    height: 1.25rem;
-    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-top: 0;
   }
 }
 @media only screen and (min-width: 80rem) {
   .header__logo {
-    height: 1.25rem;
-    padding-bottom: 0.5rem;
+    height: 1.5rem;
+    width: auto;
+    padding-left: 2rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .header__home {
+    padding: 0;
   }
 }
 .header__nav {
@@ -84,12 +92,14 @@ img {
 }
 @media only screen and (min-width: 48rem) {
   .header__nav {
-    padding-left: 4rem;
+    align-items: center;
+    padding-left: 6rem;
+    background-color: #323232;
   }
 }
 @media only screen and (min-width: 80rem) {
   .header__nav {
-    padding-left: 4rem;
+    padding-left: 6rem;
   }
 }
 .header__menu {
@@ -98,10 +108,13 @@ img {
   margin-top: 1rem;
   padding: 0;
   gap: 12rem;
+  font-size: 1.5rem;
 }
 @media only screen and (min-width: 48rem) {
   .header__menu {
+    margin-top: 2rem;
     gap: 6rem;
+    font-size: 2rem;
   }
 }
 @media only screen and (min-width: 80rem) {
@@ -123,38 +136,22 @@ img {
 .header__link--active::after {
   content: "";
   position: absolute;
-  right: -150%;
-  bottom: -1rem;
-  width: 450%;
-  height: 0.25rem;
+  left: 50%;
+  bottom: -1.5rem;
+  width: 250%;
+  height: 0.3rem;
   background-color: #ffffff;
+  transform: translateX(-53%);
 }
 @media only screen and (min-width: 48rem) {
+  .header__link--active::after {
+    bottom: -3.5rem;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 80rem) {
   .header__link--active::after {
     bottom: -2rem;
-    left: 0;
-    width: 100%;
-    height: 0.25rem;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  .header__link--active::after {
-    bottom: -1rem;
-    left: 0;
-    width: 100%;
-    height: 0.25rem;
-  }
-}
-@media only screen and (min-width: 48rem) {
-  .header {
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  .header {
-    padding-left: 8rem;
   }
 }
 
@@ -461,209 +458,127 @@ img {
   }
 }
 
-@media only screen and (min-width: 20rem) {
-  .footer {
-    background-color: #323232;
-    color: white;
-    padding: 1rem;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-  .footer__title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: "Avenir Next", sans-serif;
-  }
-  .footer__socials {
-    margin: 1rem 0;
-  }
-  .footer__socials img {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin: 0 0.3125rem;
-  }
-  .footer__categories {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .footer__management {
-    margin-bottom: 1rem;
-  }
-  .footer__management-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__management-location {
-    margin-bottom: 1rem;
-  }
-  .footer__management-email:hover {
-    color: #afafaf;
-  }
-  .footer__group, .footer__arc {
-    margin-bottom: 1rem;
-  }
-  .footer__group-name, .footer__arc-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__group-agent, .footer__arc-agent {
-    margin-bottom: 1rem;
-  }
-  .footer__group-email:hover, .footer__arc-email:hover {
-    color: #afafaf;
-  }
-  .footer__logo-container {
-    padding-top: 2rem;
-  }
-  .footer__logo {
-    width: 7.125rem;
-    height: 1.1875rem;
-  }
-  .footer .copyright {
-    padding-top: 2rem;
-    font-size: x-small;
-  }
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: white;
+  padding: 1rem;
+  text-align: left;
 }
 @media only screen and (min-width: 48rem) {
   .footer {
-    background-color: #323232;
-    color: white;
     padding: 3rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .footer__contacts {
-    display: flex;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 80%;
-  }
-  .footer__title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    padding-right: 6.5rem;
-  }
-  .footer__socials {
-    margin: 1rem 0;
-  }
-  .footer__socials img {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin: 0 0.3125rem;
-  }
-  .footer__categories {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-  .footer__management {
-    padding-right: 2rem;
-    display: inline-block;
-  }
-  .footer__management-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__management-location {
-    margin-bottom: 1rem;
-  }
-  .footer__management-email:hover {
-    color: #afafaf;
-  }
-  .footer__group {
-    padding-right: 2rem;
-    display: inline-block;
-  }
-  .footer__group-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__group-agent {
-    margin-bottom: 1rem;
-  }
-  .footer__group-email:hover {
-    color: #afafaf;
-  }
-  .footer__arc {
-    padding-right: 2rem;
-    display: inline-block;
-  }
-  .footer__arc-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__arc-agent {
-    margin-bottom: 1rem;
-  }
-  .footer__arc-email:hover {
-    color: #afafaf;
-  }
-  .footer__logo-container {
-    position: absolute;
-    right: 3.125rem;
-    flex: 1;
-    justify-content: flex-end;
-    display: flex;
-    align-items: center;
-  }
-  .footer__logo-container__logo {
-    width: 7.125rem;
-    height: 1.1875rem;
-    padding-bottom: 1rem;
-  }
-  .footer .copyright {
-    padding-top: 2rem;
-    font-size: x-small;
   }
 }
 @media only screen and (min-width: 80rem) {
   .footer {
-    background-color: #323232;
-    color: white;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
+    padding-left: 8rem;
   }
+}
+@media only screen and (min-width: 48rem) {
   .footer__contacts {
     display: flex;
     height: -moz-fit-content;
     height: fit-content;
     width: 80%;
   }
-  .footer__title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    padding-right: 6.5rem;
-  }
-  .footer__socials {
-    margin: 1rem 0;
-  }
-  .footer__socials img {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin: 0 0.3125rem;
-  }
-  .footer__categories {
+}
+@media only screen and (min-width: 80rem) {
+  .footer__contacts {
     display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
   }
+}
+.footer__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: "Avenir Next", sans-serif;
+}
+@media only screen and (min-width: 48rem) {
+  .footer__title {
+    font-size: 2rem;
+    padding-right: 4.5rem;
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .footer__title {
+    font-size: 2rem;
+    padding-right: 4.5rem;
+  }
+}
+.footer__socials {
+  margin: 1rem 0;
+}
+.footer__socials img {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 0.3125rem;
+}
+@media only screen and (min-width: 48rem) {
+  .footer__socials img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .footer__socials img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+.footer__categories {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media only screen and (min-width: 48rem) {
+  .footer__categories {
+    flex-direction: row;
+  }
+}
+.footer__management {
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 48rem) {
   .footer__management {
     padding-right: 2rem;
     display: inline-block;
   }
-  .footer__management-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
+}
+@media only screen and (min-width: 80rem) {
+  .footer__management {
+    padding-right: 2rem;
+    display: inline-block;
   }
-  .footer__management-location {
-    margin-bottom: 1rem;
-  }
-  .footer__management-email:hover {
-    color: #afafaf;
-  }
+}
+.footer__management-name {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.footer__management-location {
+  margin-bottom: 1rem;
+}
+.footer__management-email:hover {
+  color: #afafaf;
+}
+.footer__group, .footer__arc {
+  margin-bottom: 1rem;
+}
+.footer__group-name, .footer__arc-name {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.footer__group-agent, .footer__arc-agent {
+  margin-bottom: 1rem;
+}
+.footer__group-email:hover, .footer__arc-email:hover {
+  color: #afafaf;
+}
+@media only screen and (min-width: 48rem) {
   .footer__group {
     padding-right: 2rem;
     display: inline-block;
@@ -678,6 +593,24 @@ img {
   .footer__group-email:hover {
     color: #afafaf;
   }
+}
+@media only screen and (min-width: 80rem) {
+  .footer__group {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__group-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__group-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__group-email:hover {
+    color: #afafaf;
+  }
+}
+@media only screen and (min-width: 48rem) {
   .footer__arc {
     padding-right: 2rem;
     display: inline-block;
@@ -692,9 +625,46 @@ img {
   .footer__arc-email:hover {
     color: #afafaf;
   }
+}
+@media only screen and (min-width: 80rem) {
+  .footer__arc {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__arc-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__arc-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__arc-email:hover {
+    color: #afafaf;
+  }
+}
+.footer__logo-container {
+  padding-top: 2rem;
+}
+@media only screen and (min-width: 48rem) {
   .footer__logo-container {
     position: absolute;
-    right: 3.125rem;
+    right: 50px;
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+  }
+  .footer__logo-container__logo {
+    width: 7.125rem;
+    height: 1.1875rem;
+    padding-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .footer__logo-container {
+    position: absolute;
+    right: 50px;
     flex: 1;
     justify-content: flex-end;
     display: flex;
@@ -705,8 +675,12 @@ img {
     height: 1.1875rem;
     padding-bottom: 1rem;
   }
-  .footer .copyright {
-    padding-top: 2rem;
-    font-size: x-small;
-  }
+}
+.footer__logo {
+  width: 7.125rem;
+  height: 1.1875rem;
+}
+.footer .copyright {
+  padding-top: 2rem;
+  font-size: x-small;
 }/*# sourceMappingURL=shows.css.map */
