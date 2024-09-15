@@ -20,6 +20,7 @@
     flex-direction: row;
     padding-left: 8rem;
     padding-bottom:0;
+    padding-top:0;
    
   }
 
@@ -106,7 +107,7 @@
         
       }
         @include desktop {
-          bottom: -1.5rem;
+          bottom: -2rem;
         }
       }
     }

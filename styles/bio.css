@@ -60,6 +60,7 @@ img {
     flex-direction: row;
     padding-left: 8rem;
     padding-bottom: 0;
+    padding-top: 0;
   }
 }
 .header__logo {
@@ -150,7 +151,7 @@ img {
 }
 @media only screen and (min-width: 80rem) {
   .header__link--active::after {
-    bottom: -1.5rem;
+    bottom: -2rem;
   }
 }
 
