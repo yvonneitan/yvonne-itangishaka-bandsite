@@ -12,93 +12,101 @@
   background-color: $site-black;
   padding: 0;
 
+  @include tablet{
+      flex-direction: row;
+      padding: 1.5rem;
+  }
+  @include desktop{
+    flex-direction: row;
+    padding-left: 8rem;
+    padding-bottom:0;
+   
+  }
+
   &__logo {
     height: 2rem;
     width: auto;
     padding-top: 2rem;
 
     @include tablet {
-      height: 2.5rem;
-      padding-top: 0;
-    }
-
-    @include desktop {
-      height: 3rem;
       padding-left: 2rem;
       padding-top: 0;
     }
-  }
 
+    @include desktop {
+      height: 1.5rem;
+      width: auto;
+      padding-left: 2rem;
+    }
+  }
+  @include tablet{
+    &__home{
+          padding:0;
+        }
+  }
   &__nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
+    flex-direction: row;
 
     @include tablet {
-      flex-direction: row;
       align-items: center;
-      margin-top: 0;
+      padding-left: 6rem;
+      background-color: $site-black;
     }
 
     @include desktop {
-      flex-direction: row;
-      align-items: center;
-      margin-top: 0;
+      padding-left: 6rem;
     }
   }
 
   &__menu {
     display: flex;
-    flex-direction: column;
     list-style: none;
+    margin-top: 1rem;
     padding: 0;
-    gap: 1rem;
+    gap: 12rem;
     font-size: 1.5rem;
 
     @include tablet {
-      flex-direction: row;
-      gap: 2rem;
-      font-size: 1.75rem;
+      margin-top: 2rem;
+      gap: 6rem;
+      font-size: 2rem;
+  
     }
 
     @include desktop {
-      flex-direction: row;
-      gap: 3rem;
-      font-size: 2rem;
+      gap: 6rem;
     }
   }
 
   &__link {
     position: relative;
-
     a {
       text-decoration: none;
       color: $white;
       font-family: $primary-font;
-    }
+  }
 
     &--active {
-      font-weight: $font-weight-bold;
-
+      font-weight: $font-weight-bold;;
       &::after {
         content: "";
         position: absolute;
         left: 50%;
-        bottom: -1rem;
-        width: 150%;
+        bottom: -1.5rem;
+        width: 250%;
         height: 0.3rem;
         background-color: $white;
-        transform: translateX(-50%);
+        transform: translateX(-53%);
 
         @include tablet {
-          bottom: -1.5rem;
-          width: 100%;
-        }
 
-        @include desktop {
-          bottom: -2rem;
+          bottom: -3.5rem;
           width: 100%;
+        
+      }
+        @include desktop {
+          bottom: -1.5rem;
         }
       }
     }

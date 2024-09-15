@@ -49,6 +49,19 @@ img {
   background-color: #323232;
   padding: 0;
 }
+@media only screen and (min-width: 48rem) {
+  .header {
+    flex-direction: row;
+    padding: 1.5rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .header {
+    flex-direction: row;
+    padding-left: 8rem;
+    padding-bottom: 0;
+  }
+}
 .header__logo {
   height: 2rem;
   width: auto;
@@ -56,57 +69,56 @@ img {
 }
 @media only screen and (min-width: 48rem) {
   .header__logo {
-    height: 2.5rem;
+    padding-left: 2rem;
     padding-top: 0;
   }
 }
 @media only screen and (min-width: 80rem) {
   .header__logo {
-    height: 3rem;
+    height: 1.5rem;
+    width: auto;
     padding-left: 2rem;
-    padding-top: 0;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .header__home {
+    padding: 0;
   }
 }
 .header__nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
+  flex-direction: row;
 }
 @media only screen and (min-width: 48rem) {
   .header__nav {
-    flex-direction: row;
     align-items: center;
-    margin-top: 0;
+    padding-left: 6rem;
+    background-color: #323232;
   }
 }
 @media only screen and (min-width: 80rem) {
   .header__nav {
-    flex-direction: row;
-    align-items: center;
-    margin-top: 0;
+    padding-left: 6rem;
   }
 }
 .header__menu {
   display: flex;
-  flex-direction: column;
   list-style: none;
+  margin-top: 1rem;
   padding: 0;
-  gap: 1rem;
+  gap: 12rem;
   font-size: 1.5rem;
 }
 @media only screen and (min-width: 48rem) {
   .header__menu {
-    flex-direction: row;
-    gap: 2rem;
-    font-size: 1.75rem;
+    margin-top: 2rem;
+    gap: 6rem;
+    font-size: 2rem;
   }
 }
 @media only screen and (min-width: 80rem) {
   .header__menu {
-    flex-direction: row;
-    gap: 3rem;
-    font-size: 2rem;
+    gap: 6rem;
   }
 }
 .header__link {
@@ -124,22 +136,21 @@ img {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -1rem;
-  width: 150%;
+  bottom: -1.5rem;
+  width: 250%;
   height: 0.3rem;
   background-color: #ffffff;
-  transform: translateX(-50%);
+  transform: translateX(-53%);
 }
 @media only screen and (min-width: 48rem) {
   .header__link--active::after {
-    bottom: -1.5rem;
+    bottom: -3.5rem;
     width: 100%;
   }
 }
 @media only screen and (min-width: 80rem) {
   .header__link--active::after {
-    bottom: -2rem;
-    width: 100%;
+    bottom: -1.5rem;
   }
 }
 
