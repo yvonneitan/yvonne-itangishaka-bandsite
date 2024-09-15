@@ -14,8 +14,8 @@
     margin-bottom: 0.5rem;
     font-family: $primary-font;
     font-weight: $font-weight-bold;
-    @include desktop{
-      padding:2rem;
+    @include desktop {
+      padding: 2rem;
       font-size: 2rem;
     }
   }
@@ -25,12 +25,11 @@
     align-items: flex-start;
     @include tablet {
       padding-left: 4rem;
-      padding-right:4rem;
+      padding-right: 4rem;
     }
     @include desktop {
       padding-left: 18rem;
       padding-right: 22rem;
-
     }
   }
   &__pic {
@@ -90,7 +89,7 @@
     &--large {
       resize: none;
       height: 6.75rem;
-      @include desktop{
+      @include desktop {
         height: 5rem;
       }
     }
@@ -120,10 +119,10 @@
     display: flex;
     flex-direction: column;
     padding-left: 0rem;
-    
+
     @include tablet {
       padding-left: 4rem;
-      padding-right:4rem;
+      padding-right: 4rem;
     }
     @include desktop {
       padding-left: 18rem;
@@ -175,168 +174,367 @@
   }
 }
 
-@include mobile {
-  .header {
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $site-black;
+  padding: 0;
+
+  &__logo {
+    height: 2rem;
+    width: auto;
+    padding-top: 2rem;
+
+    @include tablet {
+      height: 2.5rem;
+      padding-top: 0;
+    }
+
+    @include desktop {
+      height: 3rem;
+      padding-left: 2rem;
+      padding-top: 0;
+    }
+  }
+
+  &__nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $site-black;
-    padding:0;
+    margin-top: 1rem;
 
-    &__logo {
-      height: 2rem;
-      width: auto;
-      padding-top:2rem;
-    }
-
-    &__nav {
-      display: flex;
+    @include tablet {
       flex-direction: row;
+      align-items: center;
+      margin-top: 0;
     }
 
-    &__menu {
-      display: flex;
-      list-style: none;
-      margin-top: 1rem;
-      padding: 0;
-      gap: 12rem;
-      font-size: 1.5rem;
+    @include desktop {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 0;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+    font-size: 1.5rem;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 2rem;
+      font-size: 1.75rem;
     }
 
-    &__link {
-      position: relative;
-      a {
-        text-decoration: none;
-        color: $white;
-        font-family: $primary-font;
-      }
-      &--active {
-        font-weight: $font-weight-bold;
-        &::after {
-          content: "";
-          position: absolute;
-          left: 50%;
+    @include desktop {
+      flex-direction: row;
+      gap: 3rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      font-family: $primary-font;
+    }
+
+    &--active {
+      font-weight: $font-weight-bold;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -1rem;
+        width: 150%;
+        height: 0.3rem;
+        background-color: $white;
+        transform: translateX(-50%);
+
+        @include tablet {
           bottom: -1.5rem;
-          width: 250%;
-          height: 0.3rem;
-          background-color: $white;
-          transform: translateX(-53%);
+          width: 100%;
+        }
+
+        @include desktop {
+          bottom: -2rem;
+          width: 100%;
         }
       }
     }
   }
+}
 
-  .hero {
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+
+  &__image {
     position: relative;
-    text-align: center;
-    color: white;
-
-    &__image {
-      position: relative;
-      width: 100%;
-      height: 55vh;
-      overflow: hidden;
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+    @include tablet {
+      height: 80vh;
     }
-
-    &__background {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    @include desktop {
+      height: 90vh;
     }
+  }
 
-    &__overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+  &__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__name {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+
+    @include tablet {
+      left: 35%;
     }
-
-    &__name {
-      width:100%;
-      position: absolute;
-      top: 50%;
-      left: 40%;
-      transform: translate(-50%, -50%);
+    @include desktop {
+      left: 35%;
     }
+  }
 
-    &__title {
+  &__title {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    @include tablet {
+      font-size: 4rem;
+    }
+    @include desktop {
+      font-size: 4rem;
+    }
+  }
+}
+
+.about {
+  text-align: left;
+  padding: 1rem;
+  @include tablet {
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+  }
+  @include desktop {
+    text-align: left;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: $font-weight-bold;
+    @include tablet {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    @include desktop {
       font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__us {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+      padding-left: 5rem;
+      font-weight: $font-weight-bold;
+    }
+    @include desktop {
+      padding-right: 5rem;
+      font-weight: $font-weight-regular700;
+    }
+  }
+
+  &__say {
+    font-weight: $font-weight-bold;
+    margin: 0.5rem 0;
+  }
+  &__name {
+    font-weight: $font-weight-bold;
+    @include tablet {
+      font-size: smaller;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+    @include desktop {
+      font-size: smaller;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__bees {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: $font-weight-regular400;
+    @include tablet {
+      font-weight: $font-weight-bold;
+    }
+    @include desktop {
       font-weight: $font-weight-bold;
     }
   }
 
-  .about {
+  &__bees-paragraph {
     text-align: left;
-    padding: 1rem;
-
-    &__title {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-      font-weight: $font-weight-bold;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+  }
+  &__container {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-left: 5rem;
     }
-
-    &__say {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+  &__right {
+    @include tablet {
+      padding-top: 4rem;
+    }
+    @include desktop {
+      padding-top: 4rem;
+    }
+  }
+  &__say {
+    @include desktop {
       font-weight: $font-weight-bold;
       margin: 0.5rem 0;
     }
-    &__name {
-      font-weight: $font-weight-bold;
-    }
+  }
+}
 
-    &__bees {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      font-weight: $font-weight-regular400;
-    }
+.photos {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: $alabaster;
 
-    &__bees-paragraph {
-      text-align: left;
-      line-height: 1.6;
-      padding-bottom: 1rem;
+  &__name {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    @include tablet {
+      font-size: 3rem;
+      padding: 2rem;
+    }
+    @include desktop {
+      font-size: 2rem;
+      padding: 2rem;
     }
   }
 
-  .photos {
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    @include tablet {
+      padding: 2rem;
+      justify-content: space-around;
+    }
+    @include desktop {
+      padding: 2rem;
+      justify-content: space-around;
+    }
+    .gallery-items {
+      @include tablet {
+        width: calc(33.33% - 1rem);
+        margin-bottom: 0.5rem;
+      }
+      @include desktop {
+        width: calc(33.33% - 1rem);
+        margin-bottom: 0.5rem;
+      }
+    }
+    img {
+      width: 100%;
+      transition: transform 2s ease, filter 2s ease;
+    }
+    img:hover {
+      filter: brightness(80%);
+      transform: scale(1.2);
+    }
+  }
+}
+@include mobile {
+  .footer {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    background-color: $alabaster;
-
-    &__name {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-      font-weight: $font-weight-bold;
-    }
-
-    &__gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      img {
-        width: 100%;
-        transition: transform 2s ease, filter 2s ease;
-      }
-      img:hover {
-        filter: brightness(80%);
-        transform: scale(1.2);
-      }
-    }
-  }
-  .footer {
     background-color: $site-black;
     color: white;
     padding: 1rem;
     text-align: left;
-    display: flex;
-    flex-direction: column;
+
+    @include tablet {
+      padding: 3rem;
+    }
+    @include desktop {
+      padding-left: 8rem;
+    }
+    &__contacts {
+      @include tablet{
+        display: flex;
+        height: fit-content;
+        width: 80%;
+      }
+      @include desktop{
+        display: flex;
+        height: fit-content;
+        width: 80%;
+      }
+    }
 
     &__title {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
       font-size: $primary-font;
+      @include tablet {
+        font-size: 2rem;
+        padding-right: 4.5rem;
+        font-weight: $font-weight-bold;
+      }
+      @include desktop {
+        font-size: 2rem;
+        padding-right: 4.5rem;
+      }
     }
 
     &__socials {
@@ -347,16 +545,41 @@
         height: 1.25rem;
         margin: 0 0.3125rem;
       }
+      @include tablet {
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+      @include desktop {
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
     }
 
     &__categories {
       display: flex;
       flex-direction: column;
       width: 100%;
+      @include tablet{
+        flex-direction: row;
+      }
+    
     }
 
     &__management {
       margin-bottom: 1rem;
+      @include tablet{
+        padding-right: 2rem;
+        display: inline-block;
+      }
+      @include desktop{
+        padding-right: 2rem;
+        display: inline-block;
+       
+      }
       &-name {
         font-weight: $font-weight-bold;
         margin-bottom: 1rem;
@@ -367,7 +590,10 @@
       &-email:hover {
         color: $silver;
       }
+      
     }
+
+    
 
     &__group,
     &__arc {
@@ -383,8 +609,104 @@
         color: $silver;
       }
     }
+
+      @include tablet{
+      &__group {
+        padding-right: 2rem;
+        display: inline-block;
+        &-name {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+        &-agent {
+          margin-bottom: 1rem;
+        }
+        &-email:hover {
+          color: $silver;
+        }
+      }
+    }
+    @include desktop{
+      &__group {
+        padding-right: 2rem;
+        display: inline-block;
+        &-name {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+        &-agent {
+          margin-bottom: 1rem;
+        }
+        &-email:hover {
+          color: $silver;
+        }
+      }
+    }
+    &__arc {
+      @include tablet{
+     
+        padding-right: 2rem;
+        display: inline-block;
+        &-name {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+        &-agent {
+          margin-bottom: 1rem;
+        }
+        &-email:hover {
+          color: $silver;
+        }
+      }
+
+      @include desktop{
+  
+        padding-right: 2rem;
+        display: inline-block;
+        &-name {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+        &-agent {
+          margin-bottom: 1rem;
+        }
+        &-email:hover {
+          color: $silver;
+        }
+      }
+    }
+
+
     &__logo-container {
       padding-top: 2rem;
+      @include tablet{
+        position: absolute;
+        right: 50px;
+        flex: 1;
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        &__logo {
+          width: 7.125rem;
+          height: 1.1875rem;
+          padding-bottom: 1rem;
+        }
+      }
+      @include desktop{
+        position: absolute;
+      right: 50px;
+      flex: 1;
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+
+      &__logo {
+        width: 7.125rem;
+        height: 1.1875rem;
+        padding-bottom: 1rem;
+      }
+      }
     }
     &__logo {
       width: 7.125rem;
@@ -394,557 +716,8 @@
       padding-top: 2rem;
       font-size: x-small;
     }
+
   }
 }
 
-@include tablet {
-  .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: $site-black;
 
-    &__logo {
-      height: 2.5rem;
-      width: auto;
-      padding-left: 2rem;
-      padding-top: 0;
-    }
-    &__home{
-      padding:0;
-    }
-
-    &__nav {
-      display: flex;
-      flex-direction: row;
-      padding-left: 8rem;
-    }
-
-    &__menu {
-      display: flex;
-      list-style: none;
-      margin-top: 2rem;
-      padding: 0;
-      gap: 6rem;
-      font-size: 2rem;
-    }
-
-    &__link {
-      position: relative;
-      a {
-        text-decoration: none;
-        color: $white;
-        font-family: $primary-font;
-      }
-
-      &--active {
-        font-weight: $font-weight-bold;
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          bottom: -3.5rem;
-          width: 100%;
-          height: 0.3rem;
-          background-color: $white;
-        }
-      }
-    }
-  }
-  .hero {
-    position: relative;
-    text-align: center;
-    color: white;
-
-    &__image {
-      position: relative;
-      width: 100%;
-      height: 80vh;
-      overflow: hidden;
-    }
-
-    &__background {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    &__overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    &__name {
-      width:100%;
-      position: absolute;
-      top: 50%;
-      left: 35%;
-      transform: translate(-50%, -50%);
-    }
-
-    &__title {
-      font-size: 4rem;
-      font-weight: $font-weight-bold;
-    }
-  }
-  .about {
-    text-align: left;
-    padding-right: 4rem;
-    padding-left: 4rem;
-    padding-top: 2rem;
-
-    &__title {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      font-weight: $font-weight-bold;
-    }
-    &__us {
-      display: flex;
-      flex-direction: column;
-      font-size: 1.5rem;
-      padding-left: 5rem;
-      font-weight: $font-weight-bold;
-    }
-    &__name {
-      font-size: smaller;
-      padding-top: 1rem;
-      padding-bottom: 2rem;
-    }
-    &__container {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      padding-left: 5rem;
-    }
-
-    &__bees {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      font-weight: $font-weight-bold;
-      font-style: $font-weight-bold;
-    }
-
-    &__bees-paragraph {
-      text-align: left;
-      line-height: 1.6;
-      padding-bottom: 1rem;
-    }
-    &__right {
-      padding-top: 4rem;
-    }
-  }
-  .photos {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: $alabaster;
-
-    &__name {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      font-weight: $font-weight-bold;
-      padding: 2rem;
-    }
-
-    &__gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 2rem;
-      justify-content: space-around;
-    }
-    .gallery-items {
-      width: calc(33.33% - 1rem);
-      margin-bottom: 0.5rem;
-    }
-    img {
-      width: 100%;
-      transition: transform 2s ease, filter 2s ease;
-    }
-    img:hover {
-      filter: brightness(80%);
-      transform: scale(1.2);
-    }
-  }
-  .footer {
-    background-color: $site-black;
-    color: white;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-
-    &__contacts {
-      display: flex;
-      height: fit-content;
-      width: 80%;
-    }
-    &__title {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      padding-right: 4.5rem;
-      font-weight: $font-weight-bold;
-    }
-
-    &__socials {
-      margin: 1rem 0;
-
-      img {
-        width: 2rem;
-        height: 2rem;
-        margin: 0 0.3125rem;
-      }
-    }
-    &__categories {
-      display: flex;
-      flex-wrap: nowrap;
-      width: 100%;
-      flex-direction: row;
-    }
-    &__management {
-      padding-right: 2rem;
-      display: inline-block;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-location {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
-    }
-    &__group {
-      padding-right: 2rem;
-      display: inline-block;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-agent {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
-    }
-    &__arc {
-      padding-right: 2rem;
-      display: inline-block;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-agent {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
-    }
-
-    &__logo-container {
-      position: absolute;
-      right: 50px;
-      flex: 1;
-      justify-content: flex-end;
-      display: flex;
-      align-items: center;
-      padding-top: 0;
-
-
-      &__logo {
-        width: 7.125rem;
-        height: 1.1875rem;
-        padding-bottom: 1rem;
-      }
-    }
-    .copyright {
-      padding-top: 2rem;
-      font-size: x-small;
-    }
-  }
-}
-
-@include desktop {
-  .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 8rem;
-    background-color: $site-black;
-
-    &__logo {
-      height: 1.5rem;
-      width: auto;
-      padding-left: 2rem;
-    }
-
-    &__nav {
-      display: flex;
-      flex-direction: row;
-      padding-left: 8rem;
-    }
-
-    &__menu {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      gap: 6rem;
-      font-size: 1.5rem;
-    }
-
-    &__link {
-      position: relative;
-      a {
-        text-decoration: none;
-        color: $white;
-        font-family: $primary-font;
-      }
-
-      &--active {
-        font-weight: $font-weight-bold;
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          bottom: -3rem;
-          width: 100%;
-          height: 0.3rem;
-          background-color: $white;
-        }
-      }
-    }
-  }
-
-  
-  .hero {
-    position: relative;
-    text-align: center;
-    color: white;
-
-    &__image {
-      position: relative;
-      width: 100%;
-      height: 90vh;
-      overflow: hidden;
-    }
-
-    &__background {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    &__overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    &__name {
-      width:100%;
-      position: absolute;
-      top: 50%;
-      left: 35%;
-      transform: translate(-50%, -50%);
-    }
-
-    &__title {
-      font-size: 4rem;
-      font-weight: $font-weight-bold;
-    }
-  }
-  .about {
-    text-align: left;
-    padding-right: 4rem;
-    padding-left: 4rem;
-    padding-top: 2rem;
-
-    &__title {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      font-weight: $font-weight-bold;
-    }
-    &__us {
-      display: flex;
-      flex-direction: column;
-      font-size: 1.5rem;
-      padding-left: 5rem;
-      padding-right: 5rem;
-      font-weight: $font-weight-regular700;
-    }
-    &__name {
-      font-size: smaller;
-      padding-top: 1rem;
-      padding-bottom: 2rem;
-    }
-
-    &__say {
-      font-weight: $font-weight-bold;
-      margin: 0.5rem 0;
-    }
-
-    &__container {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      padding-left: 5rem;
-      padding-right: 5rem;
-    }
-
-    &__bees {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      font-weight: $font-weight-bold;
-    }
-
-    &__bees-paragraph {
-      text-align: left;
-      line-height: 1.6;
-      padding-bottom: 1rem;
-    }
-    &__right {
-      padding-top: 4rem;
-    }
-  }
-  .photos {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: $alabaster;
-
-    &__name {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      font-weight: $font-weight-bold;
-      padding: 2rem;
-    }
-
-    &__gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 2rem;
-      justify-content: space-around;
-    }
-    .gallery-items {
-      width: calc(33.33% - 1rem);
-      margin-bottom: 0.5rem;
-    }
-    img {
-      width: 100%;
-      transition: transform 2s ease, filter 2s ease;
-    }
-    img:hover {
-      filter: brightness(80%);
-      transform: scale(1.2);
-    }
-  }
-  .footer {
-    display: flex;
-    flex-direction: column;
-    background-color: $site-black;
-    color: white;
-    padding-left: 8rem;
-    
-    &__contacts {
-      display: flex;
-      height: fit-content;
-      width: 80%;
-    }
-    &__title {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      padding-right: 4.5rem;
-    }
-
-    &__socials {
-      margin: 1rem 0;
-
-      img {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin: 0 0.3125rem;
-      }
-    }
-    &__categories {
-      display: flex;
-      flex-wrap: nowrap;
-      width: 100%;
-    }
-    &__management {
-      padding-right: 2rem;
-      display: inline-block;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-location {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
-    }
-    &__group {
-      padding-right: 2rem;
-      display: inline-block;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-agent {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
-    }
-    &__arc {
-      padding-right: 2rem;
-      display: inline-block;
-      &-name {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
-      }
-      &-agent {
-        margin-bottom: 1rem;
-      }
-      &-email:hover {
-        color: $silver;
-      }
-    }
-
-    &__logo-container {
-      position: absolute;
-      right: 50px;
-      flex: 1;
-      justify-content: flex-end;
-      display: flex;
-      align-items: center;
-
-      &__logo {
-        width: 7.125rem;
-        height: 1.1875rem;
-        padding-bottom: 1rem;
-      }
-    }
-    .copyright {
-      padding-top: 2rem;
-      font-size: x-small;
-    }
-  }
-}

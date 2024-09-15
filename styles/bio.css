@@ -224,152 +224,418 @@ img {
   padding-bottom: 0.5rem;
 }
 
-@media only screen and (min-width: 20rem) {
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #323232;
-    padding: 0;
-  }
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323232;
+  padding: 0;
+}
+.header__logo {
+  height: 2rem;
+  width: auto;
+  padding-top: 2rem;
+}
+@media only screen and (min-width: 48rem) {
   .header__logo {
-    height: 2rem;
-    width: auto;
+    height: 2.5rem;
+    padding-top: 0;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .header__logo {
+    height: 3rem;
+    padding-left: 2rem;
+    padding-top: 0;
+  }
+}
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+@media only screen and (min-width: 48rem) {
+  .header__nav {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .header__nav {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+@media only screen and (min-width: 48rem) {
+  .header__menu {
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .header__menu {
+    flex-direction: row;
+    gap: 3rem;
+    font-size: 2rem;
+  }
+}
+.header__link {
+  position: relative;
+}
+.header__link a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Avenir Next", sans-serif;
+}
+.header__link--active {
+  font-weight: 600;
+}
+.header__link--active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1rem;
+  width: 150%;
+  height: 0.3rem;
+  background-color: #ffffff;
+  transform: translateX(-50%);
+}
+@media only screen and (min-width: 48rem) {
+  .header__link--active::after {
+    bottom: -1.5rem;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .header__link--active::after {
+    bottom: -2rem;
+    width: 100%;
+  }
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.hero__image {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  overflow: hidden;
+}
+@media only screen and (min-width: 48rem) {
+  .hero__image {
+    height: 80vh;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .hero__image {
+    height: 90vh;
+  }
+}
+.hero__background {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hero__name {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 48rem) {
+  .hero__name {
+    left: 35%;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .hero__name {
+    left: 35%;
+  }
+}
+.hero__title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 48rem) {
+  .hero__title {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .hero__title {
+    font-size: 4rem;
+  }
+}
+
+.about {
+  text-align: left;
+  padding: 1rem;
+}
+@media only screen and (min-width: 48rem) {
+  .about {
+    padding-right: 4rem;
+    padding-left: 4rem;
     padding-top: 2rem;
   }
-  .header__nav {
-    display: flex;
-    flex-direction: row;
-  }
-  .header__menu {
-    display: flex;
-    list-style: none;
-    margin-top: 1rem;
-    padding: 0;
-    gap: 12rem;
-    font-size: 1.5rem;
-  }
-  .header__link {
-    position: relative;
-  }
-  .header__link a {
-    text-decoration: none;
-    color: #ffffff;
-    font-family: "Avenir Next", sans-serif;
-  }
-  .header__link--active {
-    font-weight: 600;
-  }
-  .header__link--active::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -1.5rem;
-    width: 250%;
-    height: 0.3rem;
-    background-color: #ffffff;
-    transform: translateX(-53%);
-  }
-  .hero {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  .hero__image {
-    position: relative;
-    width: 100%;
-    height: 55vh;
-    overflow: hidden;
-  }
-  .hero__background {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .hero__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .hero__name {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-  }
-  .hero__title {
-    font-size: 2rem;
-    font-weight: 600;
-  }
+}
+@media only screen and (min-width: 80rem) {
   .about {
     text-align: left;
-    padding: 1rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
   }
+}
+.about__title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 48rem) {
   .about__title {
-    font-size: 1.8rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .about__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .about__us {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding-left: 5rem;
     font-weight: 600;
   }
+}
+@media only screen and (min-width: 80rem) {
+  .about__us {
+    padding-right: 5rem;
+    font-weight: 700;
+  }
+}
+.about__say {
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+.about__name {
+  font-weight: 600;
+}
+@media only screen and (min-width: 48rem) {
+  .about__name {
+    font-size: smaller;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .about__name {
+    font-size: smaller;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+.about__bees {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+@media only screen and (min-width: 48rem) {
+  .about__bees {
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .about__bees {
+    font-weight: 600;
+  }
+}
+.about__bees-paragraph {
+  text-align: left;
+  line-height: 1.6;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 48rem) {
+  .about__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-left: 5rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .about__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .about__right {
+    padding-top: 4rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .about__right {
+    padding-top: 4rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
   .about__say {
     font-weight: 600;
     margin: 0.5rem 0;
   }
-  .about__name {
-    font-weight: 600;
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+.photos__name {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+@media only screen and (min-width: 48rem) {
+  .photos__name {
+    font-size: 3rem;
+    padding: 2rem;
   }
-  .about__bees {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 400;
+}
+@media only screen and (min-width: 80rem) {
+  .photos__name {
+    font-size: 2rem;
+    padding: 2rem;
   }
-  .about__bees-paragraph {
-    text-align: left;
-    line-height: 1.6;
-    padding-bottom: 1rem;
+}
+.photos__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media only screen and (min-width: 48rem) {
+  .photos__gallery {
+    padding: 2rem;
+    justify-content: space-around;
   }
-  .photos {
+}
+@media only screen and (min-width: 80rem) {
+  .photos__gallery {
+    padding: 2rem;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .photos__gallery .gallery-items {
+    width: calc(33.33% - 1rem);
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .photos__gallery .gallery-items {
+    width: calc(33.33% - 1rem);
+    margin-bottom: 0.5rem;
+  }
+}
+.photos__gallery img {
+  width: 100%;
+  transition: transform 2s ease, filter 2s ease;
+}
+.photos__gallery img:hover {
+  filter: brightness(80%);
+  transform: scale(1.2);
+}
+
+@media only screen and (min-width: 20rem) {
+  .footer {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    background-color: #fafafa;
-  }
-  .photos__name {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-  }
-  .photos__gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .photos__gallery img {
-    width: 100%;
-    transition: transform 2s ease, filter 2s ease;
-  }
-  .photos__gallery img:hover {
-    filter: brightness(80%);
-    transform: scale(1.2);
-  }
-  .footer {
     background-color: #323232;
     color: white;
     padding: 1rem;
     text-align: left;
-    display: flex;
-    flex-direction: column;
   }
+}
+@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+  .footer {
+    padding: 3rem;
+  }
+}
+@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+  .footer {
+    padding-left: 8rem;
+  }
+}
+@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+  .footer__contacts {
+    display: flex;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+  .footer__contacts {
+    display: flex;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 20rem) {
   .footer__title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-size: "Avenir Next", sans-serif;
   }
+}
+@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+  .footer__title {
+    font-size: 2rem;
+    padding-right: 4.5rem;
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+  .footer__title {
+    font-size: 2rem;
+    padding-right: 4.5rem;
+  }
+}
+@media only screen and (min-width: 20rem) {
   .footer__socials {
     margin: 1rem 0;
   }
@@ -378,14 +644,49 @@ img {
     height: 1.25rem;
     margin: 0 0.3125rem;
   }
+}
+@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+  .footer__socials img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+  .footer__socials img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+@media only screen and (min-width: 20rem) {
   .footer__categories {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+}
+@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+  .footer__categories {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 20rem) {
   .footer__management {
     margin-bottom: 1rem;
   }
+}
+@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+  .footer__management {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+  .footer__management {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 20rem) {
   .footer__management-name {
     font-weight: 600;
     margin-bottom: 1rem;
@@ -409,519 +710,111 @@ img {
   .footer__group-email:hover, .footer__arc-email:hover {
     color: #afafaf;
   }
+}
+@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+  .footer__group {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__group-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__group-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__group-email:hover {
+    color: #afafaf;
+  }
+}
+@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+  .footer__group {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__group-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__group-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__group-email:hover {
+    color: #afafaf;
+  }
+}
+@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+  .footer__arc {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__arc-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__arc-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__arc-email:hover {
+    color: #afafaf;
+  }
+}
+@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+  .footer__arc {
+    padding-right: 2rem;
+    display: inline-block;
+  }
+  .footer__arc-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer__arc-agent {
+    margin-bottom: 1rem;
+  }
+  .footer__arc-email:hover {
+    color: #afafaf;
+  }
+}
+@media only screen and (min-width: 20rem) {
   .footer__logo-container {
     padding-top: 2rem;
   }
+}
+@media only screen and (min-width: 20rem) and (min-width: 48rem) {
+  .footer__logo-container {
+    position: absolute;
+    right: 50px;
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+  }
+  .footer__logo-container__logo {
+    width: 7.125rem;
+    height: 1.1875rem;
+    padding-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 20rem) and (min-width: 80rem) {
+  .footer__logo-container {
+    position: absolute;
+    right: 50px;
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+  }
+  .footer__logo-container__logo {
+    width: 7.125rem;
+    height: 1.1875rem;
+    padding-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 20rem) {
   .footer__logo {
     width: 7.125rem;
     height: 1.1875rem;
-  }
-  .footer .copyright {
-    padding-top: 2rem;
-    font-size: x-small;
-  }
-}
-@media only screen and (min-width: 48rem) {
-  .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: #323232;
-  }
-  .header__logo {
-    height: 2.5rem;
-    width: auto;
-    padding-left: 2rem;
-    padding-top: 0;
-  }
-  .header__home {
-    padding: 0;
-  }
-  .header__nav {
-    display: flex;
-    flex-direction: row;
-    padding-left: 8rem;
-  }
-  .header__menu {
-    display: flex;
-    list-style: none;
-    margin-top: 2rem;
-    padding: 0;
-    gap: 6rem;
-    font-size: 2rem;
-  }
-  .header__link {
-    position: relative;
-  }
-  .header__link a {
-    text-decoration: none;
-    color: #ffffff;
-    font-family: "Avenir Next", sans-serif;
-  }
-  .header__link--active {
-    font-weight: 600;
-  }
-  .header__link--active::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -3.5rem;
-    width: 100%;
-    height: 0.3rem;
-    background-color: #ffffff;
-  }
-  .hero {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  .hero__image {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-  }
-  .hero__background {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .hero__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .hero__name {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-  }
-  .hero__title {
-    font-size: 4rem;
-    font-weight: 600;
-  }
-  .about {
-    text-align: left;
-    padding-right: 4rem;
-    padding-left: 4rem;
-    padding-top: 2rem;
-  }
-  .about__title {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-  }
-  .about__us {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    padding-left: 5rem;
-    font-weight: 600;
-  }
-  .about__name {
-    font-size: smaller;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-  }
-  .about__container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    padding-left: 5rem;
-  }
-  .about__bees {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    font-style: 600;
-  }
-  .about__bees-paragraph {
-    text-align: left;
-    line-height: 1.6;
-    padding-bottom: 1rem;
-  }
-  .about__right {
-    padding-top: 4rem;
-  }
-  .photos {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: #fafafa;
-  }
-  .photos__name {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    padding: 2rem;
-  }
-  .photos__gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem;
-    justify-content: space-around;
-  }
-  .photos .gallery-items {
-    width: calc(33.33% - 1rem);
-    margin-bottom: 0.5rem;
-  }
-  .photos img {
-    width: 100%;
-    transition: transform 2s ease, filter 2s ease;
-  }
-  .photos img:hover {
-    filter: brightness(80%);
-    transform: scale(1.2);
-  }
-  .footer {
-    background-color: #323232;
-    color: white;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .footer__contacts {
-    display: flex;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 80%;
-  }
-  .footer__title {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    padding-right: 4.5rem;
-    font-weight: 600;
-  }
-  .footer__socials {
-    margin: 1rem 0;
-  }
-  .footer__socials img {
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.3125rem;
-  }
-  .footer__categories {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    flex-direction: row;
-  }
-  .footer__management {
-    padding-right: 2rem;
-    display: inline-block;
-  }
-  .footer__management-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__management-location {
-    margin-bottom: 1rem;
-  }
-  .footer__management-email:hover {
-    color: #afafaf;
-  }
-  .footer__group {
-    padding-right: 2rem;
-    display: inline-block;
-  }
-  .footer__group-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__group-agent {
-    margin-bottom: 1rem;
-  }
-  .footer__group-email:hover {
-    color: #afafaf;
-  }
-  .footer__arc {
-    padding-right: 2rem;
-    display: inline-block;
-  }
-  .footer__arc-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__arc-agent {
-    margin-bottom: 1rem;
-  }
-  .footer__arc-email:hover {
-    color: #afafaf;
-  }
-  .footer__logo-container {
-    position: absolute;
-    right: 50px;
-    flex: 1;
-    justify-content: flex-end;
-    display: flex;
-    align-items: center;
-    padding-top: 0;
-  }
-  .footer__logo-container__logo {
-    width: 7.125rem;
-    height: 1.1875rem;
-    padding-bottom: 1rem;
-  }
-  .footer .copyright {
-    padding-top: 2rem;
-    font-size: x-small;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 8rem;
-    background-color: #323232;
-  }
-  .header__logo {
-    height: 1.5rem;
-    width: auto;
-    padding-left: 2rem;
-  }
-  .header__nav {
-    display: flex;
-    flex-direction: row;
-    padding-left: 8rem;
-  }
-  .header__menu {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    gap: 6rem;
-    font-size: 1.5rem;
-  }
-  .header__link {
-    position: relative;
-  }
-  .header__link a {
-    text-decoration: none;
-    color: #ffffff;
-    font-family: "Avenir Next", sans-serif;
-  }
-  .header__link--active {
-    font-weight: 600;
-  }
-  .header__link--active::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -3rem;
-    width: 100%;
-    height: 0.3rem;
-    background-color: #ffffff;
-  }
-  .hero {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  .hero__image {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-  }
-  .hero__background {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .hero__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .hero__name {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-  }
-  .hero__title {
-    font-size: 4rem;
-    font-weight: 600;
-  }
-  .about {
-    text-align: left;
-    padding-right: 4rem;
-    padding-left: 4rem;
-    padding-top: 2rem;
-  }
-  .about__title {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-  }
-  .about__us {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    font-weight: 700;
-  }
-  .about__name {
-    font-size: smaller;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-  }
-  .about__say {
-    font-weight: 600;
-    margin: 0.5rem 0;
-  }
-  .about__container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-  .about__bees {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  .about__bees-paragraph {
-    text-align: left;
-    line-height: 1.6;
-    padding-bottom: 1rem;
-  }
-  .about__right {
-    padding-top: 4rem;
-  }
-  .photos {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: #fafafa;
-  }
-  .photos__name {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    padding: 2rem;
-  }
-  .photos__gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem;
-    justify-content: space-around;
-  }
-  .photos .gallery-items {
-    width: calc(33.33% - 1rem);
-    margin-bottom: 0.5rem;
-  }
-  .photos img {
-    width: 100%;
-    transition: transform 2s ease, filter 2s ease;
-  }
-  .photos img:hover {
-    filter: brightness(80%);
-    transform: scale(1.2);
-  }
-  .footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #323232;
-    color: white;
-    padding-left: 8rem;
-  }
-  .footer__contacts {
-    display: flex;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 80%;
-  }
-  .footer__title {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    padding-right: 4.5rem;
-  }
-  .footer__socials {
-    margin: 1rem 0;
-  }
-  .footer__socials img {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0 0.3125rem;
-  }
-  .footer__categories {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-  .footer__management {
-    padding-right: 2rem;
-    display: inline-block;
-  }
-  .footer__management-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__management-location {
-    margin-bottom: 1rem;
-  }
-  .footer__management-email:hover {
-    color: #afafaf;
-  }
-  .footer__group {
-    padding-right: 2rem;
-    display: inline-block;
-  }
-  .footer__group-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__group-agent {
-    margin-bottom: 1rem;
-  }
-  .footer__group-email:hover {
-    color: #afafaf;
-  }
-  .footer__arc {
-    padding-right: 2rem;
-    display: inline-block;
-  }
-  .footer__arc-name {
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer__arc-agent {
-    margin-bottom: 1rem;
-  }
-  .footer__arc-email:hover {
-    color: #afafaf;
-  }
-  .footer__logo-container {
-    position: absolute;
-    right: 50px;
-    flex: 1;
-    justify-content: flex-end;
-    display: flex;
-    align-items: center;
-  }
-  .footer__logo-container__logo {
-    width: 7.125rem;
-    height: 1.1875rem;
-    padding-bottom: 1rem;
   }
   .footer .copyright {
     padding-top: 2rem;
