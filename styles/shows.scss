@@ -13,7 +13,6 @@
 
   @include tablet {
     flex-direction: row;
-    // padding: 1.5rem;
   }
   @include desktop {
     flex-direction: row;
@@ -155,7 +154,7 @@
     transform: translate(-50%, -50%);
     color: white;
     @include tablet {
-      max-height: 20.125rem;
+      max-height: 24.125rem;
     }
     @include desktop {
       display: flex;
@@ -180,7 +179,7 @@
     font-size: 2rem;
     font-weight: $font-weight-bold;
     @include tablet {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
     @include desktop {
       font-size: 3rem;
@@ -599,7 +598,4 @@
     height: 1.1875rem;
   }
   .copyright {
-    padding-top: 2rem;
-    font-size: x-small;
-  }
-}
+    padding-top: 2r

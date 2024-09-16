@@ -52,7 +52,6 @@ img {
 @media only screen and (min-width: 48rem) {
   .header {
     flex-direction: row;
-    padding: 1.5rem;
   }
 }
 @media only screen and (min-width: 80rem) {
@@ -147,11 +146,13 @@ img {
   .header__link--active::after {
     bottom: -3.5rem;
     width: 100%;
+    height: 1.8rem;
   }
 }
 @media only screen and (min-width: 80rem) {
   .header__link--active::after {
     bottom: -2rem;
+    height: 0.35rem;
   }
 }
 

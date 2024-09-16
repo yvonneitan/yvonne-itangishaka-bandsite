@@ -204,7 +204,7 @@ img {
 }
 @media only screen and (min-width: 48rem) {
   .hero__name {
-    max-height: 20.125rem;
+    max-height: 24.125rem;
   }
 }
 @media only screen and (min-width: 80rem) {
@@ -232,7 +232,7 @@ img {
 }
 @media only screen and (min-width: 48rem) {
   .hero__title {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 @media only screen and (min-width: 80rem) {

@@ -43,6 +43,28 @@ class BandSiteApi {
       return [];
     }
   }
+  // Like comments
+  async likeComments(likeCommentId) {
+    try {
+      const response = await axios.put(
+        `${this.baseUrl}comments/${likeCommentId}/like?api_key=${this.apiKey}`);
+      console.log("Likes:", response.data);
+      return response.data;
+    } catch (error) {
+      console.error("Failed to like comment", error);
+    }
+  }
+// Delete comments
+  async deleteComments(deleteCommentId) {
+    try {
+      const response = await axios.delete(
+        `${this.baseUrl}comments/${deleteCommentId}?api_key=${this.apiKey}`
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Failed to delete comment", error);
+    }
+  }
 }
 // Initialize your API class with the API key
 
