@@ -511,6 +511,10 @@ img {
 .comments__container {
   width: 100%;
 }
+.comments__like--button {
+  border: none;
+  background-color: #ffffff;
+}
 .comments__header {
   display: flex;
   justify-content: space-between;

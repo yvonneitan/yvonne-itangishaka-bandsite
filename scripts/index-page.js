@@ -44,7 +44,7 @@ function renderComment(comment) {
 
   // Add the Like button and counter
   const likeButton = document.createElement("button");
-  likeButton.classList.add("comments__like-button");
+  likeButton.classList.add("comments__like--button");
   likeButton.innerText = `❤️  ${comment.likes}`;
   
   likeButton.addEventListener("click", async () => {
@@ -59,7 +59,7 @@ function renderComment(comment) {
 
   // Add the Delete button
   const deleteButton = document.createElement("button");
-  deleteButton.classList.add("comments__delete-button");
+  deleteButton.classList.add("comments__delete--button");
   deleteButton.innerText = "Delete";
   
   deleteButton.addEventListener("click", async () => {
