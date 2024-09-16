@@ -31,7 +31,7 @@ class BandSiteApi {
       return null;
     }
   }
-   // Get shows from api
+  // Get shows from api
   async getShows() {
     try {
       const response = await axios.get(
@@ -46,7 +46,7 @@ class BandSiteApi {
 }
 // Initialize your API class with the API key
 
-const api = new BandSiteApi("5aff78d3-787e-4a59-866d-a60127fe6cd5");
+const api = new BandSiteApi("130f7e6c-ffe0-4b34-be64-bbfe7d92cffb");
 
 // Export the instance for use in other files
 export default api;

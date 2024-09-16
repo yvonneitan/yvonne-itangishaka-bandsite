@@ -69,25 +69,31 @@ async function displayComments() {
 displayComments();
 
 
+// Ensure this file is loaded and executed correctly
+document.addEventListener('DOMContentLoaded', () => {
+  const formEl = document.querySelector("#comments-form");
 
-const formEl = document.querySelector("#comments-form");
+  if (formEl) {
+      formEl.addEventListener("submit", async function (event) {
+          event.preventDefault();
 
-// console.log(formEl);
-formEl.addEventListener("submit", async function (event) {
-  event.preventDefault();
+          const author = document.getElementById("name").value;
+          const comment = document.getElementById("comment").value;
 
-  const author = document.getElementById("name").value;
-  const comment = document.getElementById("comment").value;
-
-  const newComment = {
-    name: author,
-    comment: comment,
-  };
-  try {
-    await api.postComment(newComment);
-    formEl.reset();
-    displayComments();
-  } catch (error) {
-    console.error("Error posting comment", error);
+          const newComment = {
+              name: author,
+              comment: comment,
+          };
+          try {
+              await api.postComment(newComment);
+              formEl.reset();
+              displayComments();
+          } catch (error) {
+              console.error("Error posting comment", error);
+          }
+      });
+  } else {
+      console.error("Form element not found.");
   }
 });
+
