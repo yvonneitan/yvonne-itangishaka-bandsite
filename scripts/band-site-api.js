@@ -68,7 +68,7 @@ class BandSiteApi {
 }
 // Initialize your API class with the API key
 
-const api = new BandSiteApi("130f7e6c-ffe0-4b34-be64-bbfe7d92cffb");
+const api = new BandSiteApi("8df3ab52-7465-4da7-b9b3-b1840ea51095");
 
 // Export the instance for use in other files
 export default api;
